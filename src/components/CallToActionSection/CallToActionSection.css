@@ -1,0 +1,69 @@
+/* src/components/CallToActionSection/CallToActionSection.css */
+.cta-section {
+  background-color: #1a1a1a; /* Dark background */
+  padding-top: 60px;
+  padding-bottom: 60px;
+  text-align: center;
+  position: relative; /* Establish stacking context */
+  z-index: 2; /* Ensure it's above hero section's base */
+}
+
+.cta-section h2 {
+  margin-bottom: 30px;
+  font-size: 2.8rem;
+}
+
+.cta-text {
+  font-size: 1.2rem;
+  color: #b0b0b0;
+  max-width: 700px;
+  margin: 0 auto 20px auto;
+  line-height: 1.7;
+}
+
+.cta-buttons {
+  margin-top: 30px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.cta-button {
+  padding: 12px 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-transform: uppercase;
+  border: none;
+}
+
+.cta-button.primary {
+  background-color: #FFD700;
+  color: #1a1a1a;
+}
+
+.cta-button.primary:hover {
+  background-color: #e6c200;
+  transform: translateY(-2px);
+}
+
+.cta-button.secondary {
+  background-color: transparent;
+  color: #FFD700;
+  border: 2px solid #FFD700;
+}
+
+.cta-button.secondary:hover {
+  background-color: #FFD700;
+  color: #1a1a1a;
+  transform: translateY(-2px);
+}
+
+.gold-text {
+  color: #FFD700;
+  font-weight: bold;
+} 

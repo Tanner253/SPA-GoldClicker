@@ -1,0 +1,126 @@
+/* src/components/EcosystemSection/EcosystemSection.css */
+.ecosystem-section {
+  background-color: #1a1a1a;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  position: relative; /* Establish stacking context */
+  z-index: 2; /* Ensure it's above hero section's base */
+}
+
+.ecosystem-section h2 {
+  margin-bottom: 20px;
+}
+
+.ecosystem-section .section-intro {
+  text-align: center;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+  font-size: 1.15rem;
+  color: #b0b0b0;
+}
+
+.ecosystem-core-loop,
+.global-boost-system {
+  background-color: #252525;
+  padding: 30px;
+  border-radius: 8px;
+  margin-bottom: 40px;
+  border: 1px solid #333;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.ecosystem-core-loop h3,
+.global-boost-system h3 {
+  color: #FFD700;
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.loop-steps {
+  list-style-type: none;
+  padding-left: 0;
+  counter-reset: step-counter;
+}
+
+.loop-steps li {
+  color: #cccccc;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  position: relative;
+  padding-left: 45px; /* Space for counter */
+}
+
+.loop-steps li::before {
+  counter-increment: step-counter;
+  content: counter(step-counter);
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #FFD700;
+  color: #1a1a1a;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.loop-steps li strong {
+  color: #e0e0e0; /* Slightly brighter for emphasis */
+}
+
+.loop-summary {
+  margin-top: 20px;
+  font-style: italic;
+  color: #b0b0b0;
+  text-align: center;
+  border-top: 1px dashed #444;
+  padding-top: 20px;
+}
+
+.global-boost-system p {
+  color: #cccccc;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.global-boost-system ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.global-boost-system ul li {
+  color: #cccccc;
+  margin-bottom: 10px;
+  padding-left: 30px;
+  position: relative;
+}
+
+.boost-icon {
+  position: absolute;
+  left: 0;
+  top: 2px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.boost-icon.green {
+  color: #4CAF50; /* Green for up */
+}
+
+.boost-icon.red {
+  color: #F44336; /* Red for down */
+}
+
+.global-boost-system ul li strong {
+  color: #FFD700;
+} 

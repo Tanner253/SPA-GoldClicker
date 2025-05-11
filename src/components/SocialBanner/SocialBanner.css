@@ -1,0 +1,84 @@
+/* src/components/SocialBanner/SocialBanner.css */
+.social-banner {
+  background-color: #FFD700; /* Gold background for high visibility */
+  color: #1a1a1a; /* Dark text for contrast */
+  padding: 10px 20px;
+  text-align: center;
+  position: fixed; /* Fixed at the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure it's above all other content */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-banner-content {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Space between text and links */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  justify-content: center;
+}
+
+.banner-text {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-right: 10px; /* Space before the first link */
+}
+
+.social-link {
+  color: #1a1a1a;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-flex; /* Align icon and text */
+  align-items: center;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.social-link svg {
+  margin-right: 8px;
+  fill: #1a1a1a; /* Ensure SVG fill matches text color */
+}
+
+.social-link:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Specific hover for better theming if needed */
+.x-link:hover {
+  /* background-color: #000; */ /* Example: Black background for X on hover */
+  /* color: #fff; */
+}
+
+/* .x-link:hover svg {
+  fill: #fff;
+} */
+
+.telegram-link:hover {
+  /* background-color: #0088cc; */ /* Example: Telegram blue on hover */
+  /* color: #fff; */
+}
+
+/* .telegram-link:hover svg {
+  fill: #fff;
+} */
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .social-banner-content {
+    flex-direction: column; /* Stack elements vertically */
+    gap: 8px;
+  }
+  .banner-text {
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
+  .social-link {
+    font-size: 0.9rem;
+  }
+} 
