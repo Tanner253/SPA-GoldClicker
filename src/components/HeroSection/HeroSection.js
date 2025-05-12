@@ -97,7 +97,7 @@ const HeroSection = () => {
           <p className="hero-intro">
             Discover a revolutionary clicker game that merges addictive gameplay with real economic incentives. 
             Dive into a world of endless clicking, strategic upgrades, and the thrill of earning $GCM memecoins.
-            Most Game developers pocket 100% of revenue from their games, I am offering 80% back to the user through memecoin ($GCM).
+            Most Game developers pocket 100% of revenue from their games, I am offering 80% back to the user through memecoin ($GCM), no tricks, its that simple.
           </p>
           {/* <button className="hero-cta-button">Learn More</button> */}
         </div>
