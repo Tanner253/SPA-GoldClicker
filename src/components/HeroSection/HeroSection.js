@@ -15,6 +15,8 @@ const HeroSection = () => {
     // await console.log(container);
   }, []);
 
+  // --- GoFundMe Script loading is now handled within GoFundMeWidget component --- 
+
   const particleOptions = {
     background: {
       color: {
@@ -99,6 +101,9 @@ const HeroSection = () => {
             Dive into a world of endless clicking, strategic upgrades, and the thrill of earning $GCM memecoins.
             Most Game developers pocket 100% of revenue from their games, I am offering 80% back to the user through memecoin ($GCM), no tricks, its that simple.
           </p>
+          
+          {/* GoFundMe widget was here, now removed */}
+
           {/* <button className="hero-cta-button">Learn More</button> */}
         </div>
       </div>

@@ -108,10 +108,9 @@
 
 @media (max-width: 480px) {
   .hero-section {
-    height: auto; /* Allow content to define height */
-    min-height: 90vh; /* Still substantial */
-    padding-top: 70px; /* Increased padding for smaller screens due to banner */
-    /* padding-bottom: 40px; */
+    height: auto; 
+    min-height: 90vh; 
+    padding-top: 70px; 
   }
   .hero-title {
     font-size: 2.5rem;
@@ -123,6 +122,8 @@
     font-size: 1.2rem;
   }
   .hero-overlay {
-    padding: 40px 20px; /* More padding on small screens for the content */
+    padding: 40px 20px; 
   }
-} 
+}
+
+/* Removed GoFundMe Widget Container styles */ 

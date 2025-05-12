@@ -3,6 +3,7 @@ import './App.css';
 
 import SocialBanner from './components/SocialBanner/SocialBanner';
 import HeroSection from './components/HeroSection/HeroSection';
+import GoFundMeSection from './components/GoFundMeSection/GoFundMeSection';
 import AboutGameSection from './components/AboutGameSection/AboutGameSection';
 import AdModelSection from './components/AdModelSection/AdModelSection';
 import EarnMemecoinSection from './components/EarnMemecoinSection/EarnMemecoinSection';
@@ -22,6 +23,7 @@ function App() {
       <EcosystemSection />
       <FeaturesSection />
       <CallToActionSection />
+      <GoFundMeSection />
       <Footer />
     </div>
   );

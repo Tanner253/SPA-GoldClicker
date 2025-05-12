@@ -1,0 +1,24 @@
+/* src/components/GoFundMeWidget/GoFundMeWidget.css */
+
+/* 
+  Container styles are handled by .gfm-widget-container in HeroSection.css. 
+  This file is here for potential future component-specific overrides.
+*/ 
+
+.gfm-embed-iframe-wrapper {
+  width: 100%;
+  display: flex; /* Helps if you want to center the iframe itself if its width is less than container */
+  justify-content: center;
+  border-radius: 12px; /* Adjust as desired */
+  overflow: hidden; /* Crucial for making border-radius apply to the iframe content */
+  /* You might need to ensure the iframe itself has a background if there are any gaps, 
+     but GoFundMe widget usually handles its own background. */
+  /* Add a subtle shadow for better depth if desired */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.gfm-embed-iframe {
+  max-width: 100%; /* Ensures iframe doesn't overflow its wrapper */
+  /* Height is set directly on the iframe element in the JS file based on GFM's large widget */
+  /* The iframe itself might ignore border-radius, so we apply it to the wrapper */
+}
