@@ -1,0 +1,23 @@
+/* src/components/GoFundMeSection/GoFundMeSection.css */
+.gofundme-section {
+  background-color: #222; /* Slightly different background to distinguish it */
+  padding-top: 40px;
+  padding-bottom: 40px;
+  text-align: center;
+  position: relative; /* For potential z-index if needed, though unlikely now */
+  z-index: 2;
+}
+
+.gofundme-section h2 {
+  color: #FFD700;
+  margin-bottom: 30px;
+}
+
+.gfm-section-widget-container {
+  max-width: 500px; /* Or adjust based on desired widget width */
+  width: 95%; /* Use percentage for better responsiveness */
+  margin: 0 auto; /* Center the container */
+  /* Temporary styles removed */
+}
+
+/* If the widget loads, it should fill this container or be centered within it */ 
