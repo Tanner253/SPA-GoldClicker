@@ -3,6 +3,7 @@ import './App.css';
 
 import SocialBanner from './components/SocialBanner/SocialBanner';
 import HeroSection from './components/HeroSection/HeroSection';
+import GameplayVideoSection from './components/GameplayVideoSection/GameplayVideoSection';
 import GoFundMeSection from './components/GoFundMeSection/GoFundMeSection';
 import AboutGameSection from './components/AboutGameSection/AboutGameSection';
 import AdModelSection from './components/AdModelSection/AdModelSection';
@@ -17,6 +18,7 @@ function App() {
     <div className="App">
       <SocialBanner />
       <HeroSection />
+      <GameplayVideoSection />
       <AboutGameSection />
       <AdModelSection />
       <EarnMemecoinSection />
