@@ -1,8 +1,8 @@
 /* src/components/GoFundMeSection/GoFundMeSection.css */
 .gofundme-section {
   background-color: #222; /* Slightly different background to distinguish it */
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 60px; /* Increased padding for more space */
+  padding-bottom: 60px;
   text-align: center;
   position: relative; /* For potential z-index if needed, though unlikely now */
   z-index: 2;
@@ -10,14 +10,22 @@
 
 .gofundme-section h2 {
   color: #FFD700;
-  margin-bottom: 30px;
+  margin-bottom: 20px; /* Adjusted margin */
+}
+
+.gfm-intro-text {
+  color: #cccccc;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  max-width: 650px;
+  margin: 0 auto 30px auto; /* Center and provide bottom margin */
 }
 
 .gfm-section-widget-container {
   max-width: 500px; /* Or adjust based on desired widget width */
   width: 95%; /* Use percentage for better responsiveness */
   margin: 0 auto; /* Center the container */
-  /* Temporary styles removed */
+  /* Temporary styles removed previously, should be clean */
 }
 
 /* If the widget loads, it should fill this container or be centered within it */ 

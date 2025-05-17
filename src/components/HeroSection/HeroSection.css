@@ -70,24 +70,56 @@
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
+.hero-cta-buttons-container {
+  display: flex;
+  flex-direction: column; /* Stack buttons on small screens */
+  align-items: center;
+  gap: 15px; /* Space between buttons */
+  margin-top: 30px;
+}
+
 .hero-cta-button {
-  background-color: #FFD700; /* Gold */
-  color: #1a1a1a; /* Dark text for contrast */
+  background-color: #FFD700; /* Reverted to solid gold */
+  color: #1a1a1a; 
   padding: 15px 30px;
   font-size: 1.1rem;
   font-weight: bold;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px; 
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   text-transform: uppercase;
   box-shadow: 0px 4px 15px rgba(255, 215, 0, 0.2);
+  min-width: 220px; 
+  text-align: center;
 }
 
 .hero-cta-button:hover {
-  background-color: #e6c200; /* Darker gold */
+  background-color: #e6c200; /* Reverted to solid darker gold on hover */
   transform: translateY(-3px);
   box-shadow: 0px 6px 20px rgba(255, 215, 0, 0.3);
+}
+
+/* Secondary button style for Hero section - This one was already transparent, so no gradient to revert here */
+.hero-cta-button.secondary {
+  background-color: transparent;
+  color: #FFD700;
+  border: 2px solid #FFD700;
+  box-shadow: none;
+}
+
+.hero-cta-button.secondary:hover {
+  background-color: rgba(255, 215, 0, 0.1); 
+  color: #FFD700;
+  transform: translateY(-3px);
+  box-shadow: 0px 6px 20px rgba(255, 215, 0, 0.1);
+}
+
+@media (min-width: 600px) {
+  .hero-cta-buttons-container {
+    flex-direction: row; /* Buttons side-by-side on larger screens */
+    justify-content: center;
+  }
 }
 
 /* Responsive adjustments */
@@ -124,6 +156,6 @@
   .hero-overlay {
     padding: 40px 20px; 
   }
-}
+} 
 
 /* Removed GoFundMe Widget Container styles */ 

@@ -15,6 +15,13 @@ const HeroSection = () => {
     // await console.log(container);
   }, []);
 
+  const handleScrollToTarget = (targetId) => {
+    const section = document.getElementById(targetId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   // --- GoFundMe Script loading is now handled within GoFundMeWidget component --- 
 
   const particleOptions = {
@@ -104,7 +111,14 @@ const HeroSection = () => {
           
           {/* GoFundMe widget was here, now removed */}
 
-          {/* <button className="hero-cta-button">Learn More</button> */}
+          <div className="hero-cta-buttons-container">
+            <button onClick={() => handleScrollToTarget('about-game-section')} className="hero-cta-button">
+              Explore the Gold Mines!
+            </button>
+            <button onClick={() => handleScrollToTarget('become-tester-section')} className="hero-cta-button secondary">
+              Join Testers Team!
+            </button>
+          </div>
         </div>
       </div>
     </section>
