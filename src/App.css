@@ -29,16 +29,53 @@
 }
 
 .section-container h2 {
-  color: #FFD700; /* Gold for section titles */
+  /* color: #FFD700; */ /* Old solid color */
+  background: linear-gradient(135deg, #FFF8B5 0%, #FFC107 100%); /* Corrected Gold gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
   text-align: center;
   margin-bottom: 30px;
   font-size: 2.5rem;
+  padding-bottom: 5px; /* Add a little space for the gradient to show if text is short */
 }
 
 .section-container p {
   margin-bottom: 1.5rem;
   font-size: 1.1rem;
   color: #cccccc; /* Lighter gray for paragraph text */
+}
+
+/* Scroll Animation Base Styles */
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(40px); /* Start slightly lower and to the side */
+  transition: opacity 0.7s cubic-bezier(0.645, 0.045, 0.355, 1), transform 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition-delay: 0.1s; /* Default small delay */
+}
+
+.scroll-animate.is-visible {
+  opacity: 1;
+  transform: translateY(0) translateX(0);
+}
+
+/* Optional: Staggered animation for items within a revealed section */
+.stagger-children > .scroll-animate {
+  /* Add delays dynamically in JS if needed, or define fixed ones here */
+}
+
+/* Example: if you want a different animation for cards */
+.scroll-animate-card {
+  opacity: 0;
+  transform: scale(0.95) translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transition-delay: 0.2s;
+}
+
+.scroll-animate-card.is-visible {
+  opacity: 1;
+  transform: scale(1) translateY(0);
 }
 
 /* Add more styles as components are built */ 

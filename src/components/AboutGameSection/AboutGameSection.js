@@ -1,9 +1,16 @@
 import React from 'react';
+import useIntersectionObserver from '../../hooks/useIntersectionObserver';
 import './AboutGameSection.css';
 
 const AboutGameSection = () => {
+  const [sectionRef, isVisible] = useIntersectionObserver({ threshold: 0.1, triggerOnce: true });
+
   return (
-    <section className="section-container about-game-section">
+    <section 
+      ref={sectionRef} 
+      id="about-game-section" 
+      className={`section-container about-game-section scroll-animate ${isVisible ? 'is-visible' : ''}`}
+    >
       <h2>What is Gold Clicker Mining?</h2>
       <div className="about-content">
         <div className="about-text">
