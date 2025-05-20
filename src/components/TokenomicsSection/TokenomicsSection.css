@@ -1,0 +1,211 @@
+.tokenomics-section {
+  padding: 60px 15px; /* Added horizontal padding for smaller screens */
+  text-align: center;
+  background-color: #1a1a1a; /* Dark background */
+  color: #f0f0f0; /* Light text */
+  position: relative; /* Ensure it creates a stacking context */
+  z-index: 2;       /* Set a z-index higher than HeroSection */
+}
+
+.tokenomics-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #FFD700; /* Gold color for main title */
+}
+
+.tokenomics-section .subtitle {
+  font-size: 1.1rem;
+  color: #cccccc; /* Lighter gray for subtitle */
+  margin-bottom: 40px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+/* Tabs Styling */
+.tokenomics-tabs {
+  display: flex;
+  flex-wrap: wrap; /* Allow tabs to wrap on smaller screens */
+  justify-content: center;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #333; /* Darker border */
+}
+
+.tab-button {
+  padding: 10px 20px;
+  margin: 0 5px 10px 5px; /* Added bottom margin for wrapped tabs */
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #aaaaaa; /* Medium gray for inactive tabs */
+  transition: color 0.3s ease, border-bottom-color 0.3s ease;
+  border-bottom: 3px solid transparent;
+}
+
+.tab-button.active {
+  color: #FFD700; /* Gold for active tab */
+  border-bottom-color: #FFD700;
+}
+
+.tab-button:hover {
+  color: #f0f0f0; /* Lighter color on hover */
+}
+
+/* InfoCard Styling */
+.tokenomics-content-area {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+@keyframes fadeInSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.info-card {
+  background-color: #2c2c2c; 
+  border-radius: 8px;
+  padding: 25px;
+  margin-top: 20px;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); 
+  /* transition: transform 0.3s ease, box-shadow 0.3s ease; */ /* Can be removed if animation is preferred */
+  border: 1px solid #444; 
+  animation: fadeInSlideUp 0.5s ease-out forwards; /* Apply animation */
+}
+
+/* .info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+} */ /* Hover effect can be kept or removed based on preference with animation */
+
+.info-card-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  /* background-color: #e7f3ff; Light blue background for icon container */
+  /* width: 70px; */
+  /* height: 70px; */
+  /* border-radius: 50%; */
+}
+
+/* Specific icon styling can be done here or inline if varied */
+
+.info-card-title {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  color: #FFD700; /* Gold for card titles */
+  text-align: center;
+  font-weight: 600;
+}
+
+.info-card-content p,
+.info-card-content ul,
+.info-card-content ol {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #cccccc; /* Lighter text in cards */
+  margin-bottom: 12px;
+}
+
+.info-card-content ul,
+.info-card-content ol {
+  padding-left: 25px;
+}
+
+.info-card-content code {
+  background-color: #3f3f3f; /* Darker code background */
+  padding: 0.2em 0.4em;
+  margin: 0;
+  font-size: 0.9em;
+  border-radius: 3px;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+  color: #f0f0f0;
+}
+
+.info-card-content h4 {
+  font-size: 1.2rem;
+  color: #e0e0e0; /* Lighter heading in card */
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+/* Token Distribution Visual Placeholder */
+.token-distribution-visual {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #e9ecef;
+  border-radius: 8px;
+}
+
+.token-distribution-visual h4 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+.chart-placeholder {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  font-style: italic;
+  color: #666;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Mobile-first: Styles for smaller screens */
+@media (max-width: 768px) {
+  .tokenomics-section h2 {
+    font-size: 2rem;
+  }
+
+  .tokenomics-section .subtitle {
+    font-size: 1rem;
+    padding: 0 10px; /* Adjusted padding */
+  }
+
+  .tab-button {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+
+  .info-card-title {
+    font-size: 1.4rem;
+  }
+
+  .info-card-content p,
+  .info-card-content ul,
+  .info-card-content ol {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+    .tokenomics-tabs {
+        justify-content: flex-start; /* Align tabs to start for better scroll/view */
+        overflow-x: auto; /* Allow horizontal scrolling for many tabs */
+        padding-bottom: 5px; /* Space for scrollbar if it appears */
+    }
+    .tab-button {
+        white-space: nowrap; /* Prevent tab text from wrapping */
+        margin: 0 2px 5px 2px;
+    }
+    .info-card {
+        padding: 20px;
+    }
+} 

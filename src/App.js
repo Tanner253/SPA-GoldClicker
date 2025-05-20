@@ -10,6 +10,7 @@ import AboutGameSection from './components/AboutGameSection/AboutGameSection';
 import AdModelSection from './components/AdModelSection/AdModelSection';
 import EarnMemecoinSection from './components/EarnMemecoinSection/EarnMemecoinSection';
 import EcosystemSection from './components/EcosystemSection/EcosystemSection';
+import TokenomicsSection from './components/TokenomicsSection/TokenomicsSection';
 import FeaturesSection from './components/FeaturesSection/FeaturesSection';
 import KeyDifferentiatorsSection from './components/KeyDifferentiatorsSection/KeyDifferentiatorsSection';
 import BecomeTesterSection from './components/BecomeTesterSection/BecomeTesterSection';
@@ -22,6 +23,8 @@ function App() {
     <div className="App">
       <SocialBanner />
       <HeroSection />
+      <SectionDivider />
+      <TokenomicsSection />
       <SectionDivider />
       <YouTubeVideoSection />
       <SectionDivider />

@@ -25,11 +25,11 @@ const HeroSection = () => {
   // --- GoFundMe Script loading is now handled within GoFundMeWidget component --- 
 
   const particleOptions = {
-    background: {
-      color: {
-        value: '#1a1a1a', // Dark background for particles to show up
-      },
-    },
+    // background: { // Temporarily remove this to see if it's causing an overlay
+    //   color: {
+    //     value: '#1a1a1a',
+    //   },
+    // },
     fpsLimit: 60,
     interactivity: {
       events: {
@@ -103,6 +103,7 @@ const HeroSection = () => {
         <div className="hero-content section-container">
           <h1 className="hero-title">Gold Clicker Mining <span className="hero-ticker">($GCM)</span></h1>
           <p className="hero-tagline">Stack Bars. Break Stars. Mine Your Fortune.</p>
+          <p className="hero-tagline">Meme: Tap a gold bar to mine $GCM memecoin.</p>
           <p className="hero-intro">
             Discover a revolutionary clicker game that merges addictive gameplay with real economic incentives. 
             Dive into a world of endless clicking, strategic upgrades, and the thrill of earning $GCM memecoins.
