@@ -103,6 +103,7 @@ const HeroSection = () => {
         <div className="hero-content section-container">
           <h1 className="hero-title">Gold Clicker Mining <span className="hero-ticker">($GCM)</span></h1>
           <p className="hero-tagline">Stack Bars. Break Stars. Mine Your Fortune.</p>
+          <p className="hero-tagline">WE DO NOT HAVE A COIN LAUNCHED YET, ANY CHART CAN BE PUT BEHIND THIS GAME, REACH OUT FOR COLLABS</p>
           <p className="hero-tagline">Meme: Tap a gold bar to mine $GCM memecoin.</p>
           <p className="hero-intro">
             Discover a revolutionary clicker game that merges addictive gameplay with real economic incentives. 
