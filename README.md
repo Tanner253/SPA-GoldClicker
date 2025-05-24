@@ -82,30 +82,6 @@ In the project directory, you can run:
 *   `npm run build` / `yarn build`: Builds the app for production to the `build` folder.
 *   `npm run eject` / `yarn eject`: **Note: this is a one-way operation. Once you `eject`, you can't go back!** If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time.
 
-## 🖼️ Adding Images
-
-To add images like a logo or gameplay screenshots:
-
-1.  Create an `assets` folder in your `public` directory (e.g., `public/assets`).
-2.  Place your images in this folder (e.g., `public/assets/logo.png`, `public/assets/gameplay.gif`).
-3.  In this README, update the `src` attribute of the `<img>` tags:
-    *   For a logo: `<img src="public/assets/logo.png" ... />`
-    *   For gameplay: `<img src="public/assets/gameplay.gif" ... />`
-    *   Alternatively, if you push these images to your GitHub repository (e.g., in an `assets` folder at the root), you can use relative paths like `src="assets/logo.png"`. For wider compatibility, especially if you plan to publish this as a website from the repo, using paths relative to where the README.md will be viewed (or absolute URLs to raw GitHub content) is best.
-
-## 🤝 Contributing
-
-Contributions are welcome! If you have ideas for improvements, new features, or bug fixes, please:
-
-1.  Fork the repository.
-2.  Create a new branch (`git checkout -b feature/YourAmazingFeature`).
-3.  Make your changes.
-4.  Commit your changes (`git commit -m 'Add some AmazingFeature'`).
-5.  Push to the branch (`git push origin feature/YourAmazingFeature`).
-6.  Open a Pull Request.
-
-Please make sure to update tests as appropriate.
-
 ## 💡 Future Ideas (To be expanded in full Whitepaper)
 
 *   Detailed Tokenomics for $GCM (Supply, Distribution, Utility) (See [GCM_Tokenomics.txt](GCM_Tokenomics.txt) for initial thoughts)
