@@ -27,6 +27,24 @@
   font-weight: bold;
   font-size: 1rem;
   margin-right: 10px; /* Space before the first link */
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.18);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  border: 1px solid #ffe066;
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+/* Make the first .banner-text (ETA) more prominent */
+.social-banner-content .banner-text:first-child {
+  background: #111;
+  color: #FFD700;
+  border: 1.5px solid #FFD700;
+  box-shadow: 0 2px 8px rgba(255,215,0,0.10);
+  font-size: 1.08rem;
+  margin-right: 18px;
+  margin-bottom: 0;
 }
 
 .social-link {
@@ -77,6 +95,14 @@
   .banner-text {
     margin-right: 0;
     margin-bottom: 5px;
+    width: 100%;
+    text-align: center;
+  }
+  .social-banner-content .banner-text:first-child {
+    margin-bottom: 5px;
+    margin-right: 0;
+    width: 100%;
+    font-size: 1rem;
   }
   .social-link {
     font-size: 0.9rem;

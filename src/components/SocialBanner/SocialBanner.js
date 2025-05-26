@@ -18,6 +18,7 @@ const SocialBanner = () => {
   return (
     <div className="social-banner">
       <div className="social-banner-content">
+        <span className="banner-text">🚀 Project Launch ETA: ~2 months</span>
         <span className="banner-text">Join our Community!</span>
         <a href="https://x.com/GoldClickerSOL" target="_blank" rel="noopener noreferrer" className="social-link x-link">
           <XIcon />
