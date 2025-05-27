@@ -86,6 +86,15 @@
   fill: #fff;
 } */
 
+.social-links-container {
+  display: flex;
+  flex-direction: row; /* Ensure links are in a row */
+  justify-content: center; /* Center the links within this container */
+  align-items: center;
+  gap: 10px; /* Space between social links */
+  width: 100%; /* Allow it to take full width if needed, then center its content */
+}
+
 /* Responsive adjustments */
 @media (max-width: 600px) {
   .social-banner-content {
@@ -106,5 +115,15 @@
   }
   .social-link {
     font-size: 0.9rem;
+    padding: 5px 8px; /* Slightly reduce padding for smaller icons */
+  }
+  .social-links-container {
+    /* Styles from above for row layout are already good */
+    /* May need to adjust gap if icons are too close or too far */
+    gap: 8px; 
+  }
+  .social-link span {
+    /* Optionally hide text on very small screens if icons alone are clear */
+    /* display: none; */ 
   }
 } 
