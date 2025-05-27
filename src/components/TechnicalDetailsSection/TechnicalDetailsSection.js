@@ -1,6 +1,6 @@
 import React from 'react';
 import { Line } from 'react-chartjs-2';
-import { FaReact, FaUnity, FaDatabase, FaCloud, FaKey, FaFire } from 'react-icons/fa';
+import { FaReact, FaUnity, FaDatabase, FaCloud, FaKey, FaFire, FaGlobe, FaAndroid, FaApple, FaSteam, FaLaptop } from 'react-icons/fa';
 import './TechnicalDetailsSection.css';
 
 import {
@@ -36,7 +36,7 @@ const stats = [
 const totalLines = 46002;
 
 const chartData = {
-  labels: ['Start', 'MVP', 'Alpha', 'Beta', '1000x'],
+  labels: ['Start', 'MVP', 'Alpha Testing', 'Beta Testing', '1000x'],
   datasets: [
     {
       label: 'Lines of Code Growth',
@@ -79,16 +79,36 @@ const chartOptions = {
   }
 };
 
+// Define platform details array
+const platformDetails = [
+  { name: 'Android', icon: <FaAndroid />, status: 'Live!', storeLink: 'become-tester-section', color: '#3DDC84' }, // Android green
+  { name: 'iOS', icon: <FaApple />, status: 'Soon', storeLink: 'become-tester-section', color: '#AEAEB2' },     // Apple grey
+  { name: 'Steam', icon: <FaSteam />, status: 'Soon', storeLink: 'become-tester-section', color: '#1b2838' },    // Steam dark blue/grey
+  { name: 'Web App', icon: <FaLaptop />, status: 'Soon', storeLink: 'become-tester-section', color: '#4A90E2' } // Generic web blue
+];
+
 const techStack = [
   { name: 'React', icon: <FaReact color="#61dafb" />, desc: 'Modern SPA frontend' },
   { name: 'Unity', icon: <FaUnity color="#fff" />, desc: 'AAA-quality game engine' },
   { name: 'Firebase', icon: <FaFire color="#ffca28" />, desc: 'Realtime backend & auth' },
   { name: 'JWT', icon: <FaKey color="#FFD700" />, desc: 'Secure token auth' },
   { name: 'PostgreSQL', icon: <FaDatabase color="#336791" />, desc: 'Robust SQL database' },
-  { name: 'Azure', icon: <FaCloud color="#0089d6" />, desc: 'Cloud hosting & scaling' }
+  { name: 'Azure', icon: <FaCloud color="#0089d6" />, desc: 'Cloud hosting & scaling' },
+  {
+    name: 'Platforms',
+    icon: <FaGlobe color="#90EE90" />,
+    isPlatformsCard: true // Add a flag to identify this card for special rendering
+  }
 ];
 
 export default function TechnicalDetailsSection() {
+  const handleScrollToTarget = (targetId) => {
+    const section = document.getElementById(targetId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <section className="technical-details-section section-container">
       <h2 className="tech-title">Technical Details & Project Scale</h2>
@@ -124,7 +144,28 @@ export default function TechnicalDetailsSection() {
           <div className="tech-stack-item" key={tech.name}>
             <span className="tech-icon">{tech.icon}</span>
             <span className="tech-name">{tech.name}</span>
-            <span className="tech-desc">{tech.desc}</span>
+            {tech.isPlatformsCard ? (
+              <div className="platform-details-container">
+                {platformDetails.map(platform => (
+                  <div 
+                    key={platform.name} 
+                    className="platform-item" 
+                    onClick={() => handleScrollToTarget(platform.storeLink)}
+                    title={`Go to ${platform.name} ${platform.status === 'Live!' ? 'details' : 'tester info'}`}
+                  >
+                    <span className="platform-icon" style={{ color: platform.color }}>{platform.icon}</span>
+                    <span className="platform-name">{platform.name}</span>
+                    <span 
+                      className={`platform-status ${platform.status === 'Live!' ? 'live' : ''}`}
+                    >
+                      {platform.status}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <span className="tech-desc" dangerouslySetInnerHTML={{ __html: tech.desc }}></span>
+            )}
           </div>
         ))}
       </div>

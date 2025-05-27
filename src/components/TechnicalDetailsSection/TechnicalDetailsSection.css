@@ -120,12 +120,14 @@
 .tech-stack-item {
   background: #232323;
   border-radius: 8px;
-  padding: 16px 20px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
   min-width: 120px;
   box-shadow: 0 2px 8px rgba(255,215,0,0.05);
+  min-height: 150px;
 }
 
 .tech-icon {
@@ -156,6 +158,74 @@
 .gold-text {
   color: #FFD700;
   font-weight: bold;
+}
+
+.platform-details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  margin-top: 10px;
+  gap: 8px;
+}
+
+.platform-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+  width: 100%;
+}
+
+.platform-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.platform-icon {
+  font-size: 1.5em;
+  display: flex;
+  align-items: center;
+}
+
+.platform-name {
+  font-weight: 500;
+  color: #f0f0f0;
+}
+
+.platform-status {
+  font-size: 0.8em;
+  color: #FFD700;
+  margin-left: auto;
+  font-style: italic;
+}
+
+.platform-status.live {
+  color: #3DDC84;
+  font-weight: bold;
+  font-size: 0.9em;
+  text-transform: uppercase;
+}
+
+.tech-stack-item .tech-icon {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.tech-stack-item .tech-name {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+  color: #FFD700;
+}
+
+.tech-stack-item .tech-desc {
+  font-size: 0.9em;
+  color: #ccc;
+  line-height: 1.5;
+  text-align: center;
+  width: 100%;
 }
 
 @media (max-width: 900px) {
