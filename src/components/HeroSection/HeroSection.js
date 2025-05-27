@@ -103,11 +103,18 @@ const HeroSection = () => {
         <div className="hero-content section-container">
           <h1 className="hero-title">Gold Clicker Mining <span className="hero-ticker">($GCM)</span></h1>
           <p className="hero-tagline">Stack Bars. Break Stars. Mine Your Fortune.</p>
-          <p className="hero-tagline">WE DO NOT HAVE A COIN LAUNCHED YET, ANY CHART CAN BE PUT BEHIND THIS GAME, REACH OUT FOR COLLABS</p>
+          <p className="hero-tagline hero-deployment-shoutout"> 
+            <span className="hero-special-deployment-text">
+              WE ARE DEPLOYED IN THE ANDROID APP STORE FOR TESTERS
+            </span>
+            , PLEASE JOIN THE TESTERS TEAM TO EARN AIRDROPS!
+          </p>
           <p className="hero-tagline">Meme: Tap a gold bar to mine $GCM memecoin.</p>
           <p className="hero-intro">
             Discover a revolutionary clicker game that merges addictive gameplay with real economic incentives. 
             Dive into a world of endless clicking, strategic upgrades, and the thrill of earning $GCM memecoins.
+          </p>
+          <p className="hero-revenue-share">
             Most Game developers pocket 100% of revenue from their games, I am offering 80% back to the user through memecoin ($GCM), no tricks, its that simple.
           </p>
           <p>live on pumpfun:  https://pump.fun/coin/CA281fpA6AiHcDxZdmRJFVTMCzupxgK9JyVGBegPpump CA: CA281fpA6AiHcDxZdmRJFVTMCzupxgK9JyVGBegPpump</p>
