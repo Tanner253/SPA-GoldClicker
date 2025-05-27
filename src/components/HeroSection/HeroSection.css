@@ -1,16 +1,18 @@
 /* src/components/HeroSection/HeroSection.css */
 .hero-section {
   /* background: url(...) no-repeat center center/cover; */ /* Old static background removed */
-  height: 100vh; /* Full viewport height */
+  /* height: 100vh; */ /* Let min-height and content dictate height more flexibly */
+  min-height: 100vh; /* Ensure it AT LEAST tries to fill the viewport */
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   position: relative; /* Crucial for layering */
   color: #fff;
-  overflow: hidden; /* Prevent particles from causing scrollbars if they go outside bounds */
+  overflow: hidden; /* Keep this to prevent particle overflow for now */
   z-index: 1; /* Define a base stacking context for the hero section */
-  padding-top: 50px; /* Adjust this value based on actual banner height */
+  padding-top: 70px; /* Default for desktop banner - INSPECT AND ADJUST */
+  box-sizing: border-box; /* Add this */
 }
 
 .hero-particles {
@@ -33,10 +35,12 @@
   position: relative; /* To ensure it's above particles */
   z-index: 1; /* Overlay above particles but below content */
   padding: 20px; /* Add some padding for smaller screens */
+  box-sizing: border-box; /* Add this to ensure padding is included in width/height */
 }
 
 .hero-content {
   max-width: 800px;
+  width: 100%; /* Make hero-content take available width within overlay padding */
   position: relative; /* To ensure content is above overlay if needed, though z-index on overlay should handle it */
   z-index: 2; /* Content above overlay */
 }
@@ -68,6 +72,16 @@
   line-height: 1.7;
   margin-bottom: 2rem;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  word-wrap: break-word; /* Add for text wrapping */
+  overflow-wrap: break-word; /* Add for text wrapping */
+}
+
+/* Target the specific paragraph with the long URL and other p tags for safety */
+.hero-content p {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto; /* Optional: for better looking breaks */
+  text-align: center; /* Ensure text aligns center if it wraps */
 }
 
 .hero-cta-buttons-container {
@@ -136,13 +150,29 @@
   .hero-intro {
     font-size: 1rem;
   }
+  .hero-overlay {
+    padding: 20px 15px; /* Slightly reduce horizontal padding on medium tablets */
+  }
+  /* No padding-top adjustment here anymore, will be handled by 600px */
+}
+
+/* NEW/ADJUSTED BREAKPOINT for banner height change */
+@media (max-width: 600px) {
+  .hero-section {
+    /* CRITICAL: Replace 150px with the ACTUAL MEASURED HEIGHT of your STACKED banner */
+    padding-top: 150px; /* Example: Adjust this based on your banner's height */
+    height: auto; /* Allow section to grow based on content */
+    min-height: calc(100vh - 150px); /* Ensure it still tries to fill remaining screen, but can grow */
+    /* If content is shorter than viewport, it will be 100vh - banner. */
+    /* If content is taller, it will grow, and page will scroll. */
+  }
 }
 
 @media (max-width: 480px) {
   .hero-section {
-    height: auto; 
-    min-height: 90vh; 
-    padding-top: 70px; 
+    /* padding-top and min-height are inherited from (max-width: 600px) */
+    /* If banner height changes drastically AGAIN at 480px, override padding-top and min-height here */
+    /* height: auto; is already inherited and correct */
   }
   .hero-title {
     font-size: 2.5rem;
@@ -154,7 +184,7 @@
     font-size: 1.2rem;
   }
   .hero-overlay {
-    padding: 40px 20px; 
+    padding: 30px 10px; /* Adjust padding for very small screens */
   }
 } 
 

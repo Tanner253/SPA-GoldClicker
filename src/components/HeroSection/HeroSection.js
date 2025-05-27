@@ -110,7 +110,8 @@ const HeroSection = () => {
             Dive into a world of endless clicking, strategic upgrades, and the thrill of earning $GCM memecoins.
             Most Game developers pocket 100% of revenue from their games, I am offering 80% back to the user through memecoin ($GCM), no tricks, its that simple.
           </p>
-          
+          <p>live on pumpfun:  https://pump.fun/coin/CA281fpA6AiHcDxZdmRJFVTMCzupxgK9JyVGBegPpump CA: CA281fpA6AiHcDxZdmRJFVTMCzupxgK9JyVGBegPpump</p>
+          <p>This is a development stream, please do not invest unless you understand the risks</p>
           {/* GoFundMe widget was here, now removed */}
 
           <div className="hero-cta-buttons-container">
