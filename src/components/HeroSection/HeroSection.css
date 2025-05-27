@@ -70,10 +70,52 @@
   font-size: 1.2rem;
   color: #cccccc;
   line-height: 1.7;
-  margin-bottom: 2rem;
+  margin-bottom: 2rem; /* Default margin for intro text */
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   word-wrap: break-word; /* Add for text wrapping */
   overflow-wrap: break-word; /* Add for text wrapping */
+}
+
+.hero-deployment-shoutout {
+  font-weight: bold;
+  /* It will inherit font-size and color from hero-tagline unless overridden */
+  margin-bottom: 1.5rem; /* Consistent with other taglines */
+}
+
+.hero-revenue-share {
+  font-weight: bold;
+  /* color: #3DDC84; */ /* Previous solid green color - replaced by gradient */
+  
+  /* Gradient text effect */
+  background: linear-gradient(90deg, rgba(255, 242, 0, 1) 0%, rgba(11, 212, 195, 1) 35%, rgba(4, 144, 61, 1) 71%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent; /* Fallback if text-fill-color is not supported, though unlikely needed with -webkit version */
+  
+  /* Font size: 10px larger than hero-intro base */
+  font-size: calc(1.2rem + 10px) !important; /* Added !important for testing */
+  line-height: 1.6 !important; /* Added !important for testing */
+  text-shadow: 1px 1px 2px #FFFFFF !important; /* Added !important for testing */
+  
+  margin-top: 1rem !important;
+  margin-bottom: 2rem !important;
+  padding: 10px !important; /* Added !important for testing */
+  border-radius: 4px !important; /* Added !important for testing */
+}
+
+.hero-special-deployment-text {
+  font-weight: bold !important;
+  /* Gradient text effect */
+  background: linear-gradient(90deg, rgba(255, 242, 0, 1) 0%, rgba(11, 212, 195, 1) 35%, rgba(4, 144, 61, 1) 71%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  color: transparent !important; 
+  
+  /* Font size will now be inherited from .hero-tagline or set in media queries */
+  text-shadow: 1px 1px 2px #FFFFFF !important; /* White shadow */
+  display: inline !important; 
 }
 
 /* Target the specific paragraph with the long URL and other p tags for safety */
@@ -149,6 +191,16 @@
   }
   .hero-intro {
     font-size: 1rem;
+    margin-bottom: 1.5rem; /* Adjusted margin for smaller screens */
+  }
+  .hero-content .hero-revenue-share, /* Increased specificity */
+  .hero-revenue-share {
+    font-size: calc(1rem + 10px) !important; /* Added !important for testing */
+    margin-bottom: 1.5rem !important;
+  }
+  .hero-special-deployment-text {
+    /* 10% larger than hero-tagline at this breakpoint (1.5rem * 1.1 = 1.65rem) */
+    font-size: calc(1.5rem * 1.1) !important; 
   }
   .hero-overlay {
     padding: 20px 15px; /* Slightly reduce horizontal padding on medium tablets */
@@ -185,6 +237,17 @@
   }
   .hero-overlay {
     padding: 30px 10px; /* Adjust padding for very small screens */
+  }
+  .hero-intro {
+    /* Font size might be inherited or set again */
+  }
+  .hero-content .hero-revenue-share, /* Increased specificity */
+  .hero-revenue-share {
+    font-size: calc(1rem + 10px) !important; /* Added !important for testing */
+  }
+  .hero-special-deployment-text {
+    /* 10% larger than hero-tagline at this breakpoint (1.2rem * 1.1 = 1.32rem) */
+    font-size: calc(1.2rem * 1.1) !important; 
   }
 } 
 
