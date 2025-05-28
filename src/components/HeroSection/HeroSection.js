@@ -102,7 +102,6 @@ const HeroSection = () => {
       <div className="hero-overlay"> {/* This overlay ensures text is readable over particles */}
         <div className="hero-content section-container">
           <h1 className="hero-title">Gold Clicker Mining <span className="hero-ticker">($GCM)</span></h1>
-          <p className="hero-tagline">Stack Bars. Break Stars. Mine Your Fortune. Ask me to demo on stream.</p>
           <p className="hero-tagline hero-deployment-shoutout"> 
             <span className="hero-special-deployment-text">
               WE ARE DEPLOYED IN THE ANDROID APP STORE FOR TESTERS
@@ -111,8 +110,7 @@ const HeroSection = () => {
           </p>
           <p className="hero-tagline">Meme: Tap a gold bar to mine $GCM memecoin.</p>
           <p className="hero-intro">
-            Discover a revolutionary clicker game that merges addictive gameplay with real economic incentives. 
-            Dive into a world of endless clicking, strategic upgrades, and the thrill of earning $GCM memecoins.
+            Addictive game generates ad revenue, 80% of which is injected into GCM chart for distribution to gamers.
           </p>
           <p className="hero-revenue-share">
             Most Game developers pocket 100% of revenue from their games, I am offering 80% back to the user through memecoin ($GCM), no tricks, its that simple.
@@ -122,9 +120,12 @@ const HeroSection = () => {
           <img src="/images/lock.jpg" alt="Token Lock Information" className="hero-lock-image" />
 
           <p>live on pumpfun:  https://pump.fun/coin/CA281fpA6AiHcDxZdmRJFVTMCzupxgK9JyVGBegPpump CA: CA281fpA6AiHcDxZdmRJFVTMCzupxgK9JyVGBegPpump</p>
-          <p>This is a development stream, please do not invest unless you understand the risks THIS IS A DEVELOPMENT STREAM TO SUPPORT THE DEVELOPMENT OF THE GAME</p>
+          <p className="hero-warning-text">This is a development stream, please do not invest unless you understand the risks, IT IS A SUPPORT STREAM TO SUPPORT THE DEVELOPMENT OF THE GAME AND MARKET THE UPCOMING LAUNCH. IF THIS CHART DOES WELL ITS GOOD FOR GMC LAUNCH (2 months eta) which is good for everyone. 🚀💛</p>
           {/* GoFundMe widget was here, now removed */}
-          <p>$CMINER will be sold by the dev when supply is unlocked, and when GCM is going to launch. It will be used to help fund the treasury deposit I currently have to pay for out of the thin budget I currently have.</p>
+          <p className="hero-positive-note">
+            $CMINER sales by the dev (when supply unlocks post-GCM launch) will help fund the treasury, ensuring long-term project health. 
+            Rest assured, 100% of the initial dev supply is locked, safeguarding against any rug pull.
+          </p>
           <div className="hero-cta-buttons-container">
             <button onClick={() => handleScrollToTarget('about-game-section')} className="hero-cta-button">
               Explore the Gold Mines!
