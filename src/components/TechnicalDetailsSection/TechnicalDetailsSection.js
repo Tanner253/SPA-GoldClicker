@@ -1,6 +1,6 @@
 import React from 'react';
 import { Line } from 'react-chartjs-2';
-import { FaReact, FaUnity, FaDatabase, FaCloud, FaKey, FaFire, FaGlobe, FaAndroid, FaApple, FaSteam, FaLaptop } from 'react-icons/fa';
+import { FaReact, FaUnity, FaDatabase, FaCloud, FaKey, FaFire, FaGlobe, FaAndroid, FaApple, FaSteam, FaLaptop, FaLock } from 'react-icons/fa';
 import './TechnicalDetailsSection.css';
 
 import {
@@ -98,6 +98,13 @@ const techStack = [
     name: 'Platforms',
     icon: <FaGlobe color="#90EE90" />,
     isPlatformsCard: true // Add a flag to identify this card for special rendering
+  },
+  {
+    name: 'CMINER Token Lock', // Title for the new card
+    icon: <FaLock color="#FFD700" />, // Main icon for this card
+    contentType: 'image', // Special type for rendering logic
+    contentSrc: '/images/lockd.jpg', // Path to your image
+    contentAlt: 'CMINER Token Lock Details'
   }
 ];
 
@@ -163,6 +170,8 @@ export default function TechnicalDetailsSection() {
                   </div>
                 ))}
               </div>
+            ) : tech.contentType === 'image' ? (
+              <img src={tech.contentSrc} alt={tech.contentAlt} className="tech-item-content-image" />
             ) : (
               <span className="tech-desc" dangerouslySetInnerHTML={{ __html: tech.desc }}></span>
             )}

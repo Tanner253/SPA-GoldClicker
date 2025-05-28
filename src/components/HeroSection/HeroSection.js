@@ -41,20 +41,20 @@ const HeroSection = () => {
       },
       modes: {
         repulse: {
-          distance: 100,
-          duration: 0.4,
+          distance: 120,
+          duration: .5,
         },
       },
     },
     particles: {
       color: {
-        value: "#FFD700", // Gold color for particles
+        value: "random", // Changed from "#FFD700" to random
       },
       links: {
-        color: "#FFD700",
+        color: "random", // Changed from "#FFD700" to random
         distance: 150,
-        enable: false, // No links for a cleaner falling dust look
-        opacity: 0.3,
+        enable: true, // Changed from false to true
+        opacity: 0.4, // Adjusted opacity slightly for visibility, can be tweaked
         width: 1,
       },
       collisions: {
@@ -73,18 +73,18 @@ const HeroSection = () => {
       number: {
         density: {
           enable: true,
-          area: 800,
+          area:1000,
         },
-        value: 80, // Number of particles
+        value: 300, // Number of particles
       },
       opacity: {
-        value: 0.7, // Particle opacity
+        value:.3, // Particle opacity
       },
       shape: {
         type: "circle", // Shape of particles
       },
       size: {
-        value: { min: 1, max: 3 }, // Particle size
+        value: { min: 1, max: 2 }, // Particle size
       },
     },
     detectRetina: true,
@@ -102,7 +102,7 @@ const HeroSection = () => {
       <div className="hero-overlay"> {/* This overlay ensures text is readable over particles */}
         <div className="hero-content section-container">
           <h1 className="hero-title">Gold Clicker Mining <span className="hero-ticker">($GCM)</span></h1>
-          <p className="hero-tagline">Stack Bars. Break Stars. Mine Your Fortune.</p>
+          <p className="hero-tagline">Stack Bars. Break Stars. Mine Your Fortune. Ask me to demo on stream.</p>
           <p className="hero-tagline hero-deployment-shoutout"> 
             <span className="hero-special-deployment-text">
               WE ARE DEPLOYED IN THE ANDROID APP STORE FOR TESTERS
@@ -117,10 +117,14 @@ const HeroSection = () => {
           <p className="hero-revenue-share">
             Most Game developers pocket 100% of revenue from their games, I am offering 80% back to the user through memecoin ($GCM), no tricks, its that simple.
           </p>
-          <p>live on pumpfun:  https://pump.fun/coin/CA281fpA6AiHcDxZdmRJFVTMCzupxgK9JyVGBegPpump CA: CA281fpA6AiHcDxZdmRJFVTMCzupxgK9JyVGBegPpump</p>
-          <p>This is a development stream, please do not invest unless you understand the risks</p>
-          {/* GoFundMe widget was here, now removed */}
+          <p>100% dev supply locked.</p>
+          {/* New lock.jpg image */}
+          <img src="/images/lock.jpg" alt="Token Lock Information" className="hero-lock-image" />
 
+          <p>live on pumpfun:  https://pump.fun/coin/CA281fpA6AiHcDxZdmRJFVTMCzupxgK9JyVGBegPpump CA: CA281fpA6AiHcDxZdmRJFVTMCzupxgK9JyVGBegPpump</p>
+          <p>This is a development stream, please do not invest unless you understand the risks THIS IS A DEVELOPMENT STREAM TO SUPPORT THE DEVELOPMENT OF THE GAME</p>
+          {/* GoFundMe widget was here, now removed */}
+          <p>$CMINER will be sold by the dev when supply is unlocked, and when GCM is going to launch. It will be used to help fund the treasury deposit I currently have to pay for out of the thin budget I currently have.</p>
           <div className="hero-cta-buttons-container">
             <button onClick={() => handleScrollToTarget('about-game-section')} className="hero-cta-button">
               Explore the Gold Mines!
