@@ -1,6 +1,7 @@
 /* src/components/KeyDifferentiatorsSection/KeyDifferentiatorsSection.css */
 .key-differentiators-section {
-  background-color: #1f1f1f; /* Matching other content sections */
+  /* background-color: #1f1f1f; */ /* Old background */
+  background-color: transparent;
   padding-top: 60px;
   padding-bottom: 60px;
   position: relative;

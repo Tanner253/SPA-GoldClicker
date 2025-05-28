@@ -1,6 +1,7 @@
 /* src/components/GoFundMeSection/GoFundMeSection.css */
 .gofundme-section {
-  background-color: #1e1e1e; /* Slightly darker base for the section */
+  /* background-color: #1e1e1e; */ /* Old background */
+  background-color: transparent;
   padding-top: 60px; /* Increased padding for more space */
   padding-bottom: 60px;
   text-align: center;

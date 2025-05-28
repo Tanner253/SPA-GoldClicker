@@ -25,16 +25,25 @@ const SocialBanner = () => {
     <div className="social-banner">
       <div className="social-banner-content">
         <span className="banner-text">🚀 Project Launch ETA: ~2 months</span>
-        <span className="banner-text">Join our Community!</span>
+        
+        {/* Container for Join Community button and stats */}
+        <div className="community-info-container">
+          <span className="banner-text join-community-button">Join our Community!</span>
+          <div className="community-stats">
+            <span className="stat-item">1k+ Telegram members</span>
+            <span className="stat-item">350+ X followers</span>
+          </div>
+        </div>
+
         <div className="social-links-container">
-        <a href="https://x.com/GoldClickerSOL" target="_blank" rel="noopener noreferrer" className="social-link x-link">
-          <XIcon />
-          <span>Follow on X</span>
-        </a>
-        <a href="https://t.me/GoldClickerMining" target="_blank" rel="noopener noreferrer" className="social-link telegram-link">
-          <TelegramIcon />
-          <span>Join Telegram</span>
-        </a>
+          <a href="https://x.com/GoldClickerSOL" target="_blank" rel="noopener noreferrer" className="social-link x-link">
+            <XIcon />
+            <span>Follow on X</span>
+          </a>
+          <a href="https://t.me/GoldClickerMining" target="_blank" rel="noopener noreferrer" className="social-link telegram-link">
+            <TelegramIcon />
+            <span>Join Telegram</span>
+          </a>
           <a href="https://discord.gg/mvbx7J295m" target="_blank" rel="noopener noreferrer" className="social-link discord-link">
             <DiscordIcon />
             <span>Join Discord</span>

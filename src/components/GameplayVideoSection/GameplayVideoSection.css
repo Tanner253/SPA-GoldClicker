@@ -1,6 +1,7 @@
 /* src/components/GameplayVideoSection/GameplayVideoSection.css */
 .gameplay-video-section {
-  background-color: #1a1a1a; /* Or a slightly different dark shade */
+  /* background-color: #1a1a1a; */ /* Old background */
+  background-color: transparent;
   padding-top: 60px;
   padding-bottom: 60px;
   text-align: center;

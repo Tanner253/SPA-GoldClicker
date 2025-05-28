@@ -1,6 +1,7 @@
 /* src/components/YouTubeVideoSection/YouTubeVideoSection.css */
 .youtube-video-section {
-  background-color: #222; /* Consistent with other media sections */
+  /* background-color: #222; */ /* Old background */
+  background-color: transparent;
   padding-top: 60px;
   padding-bottom: 60px;
   text-align: center;

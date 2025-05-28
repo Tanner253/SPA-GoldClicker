@@ -1,6 +1,7 @@
 /* src/components/EcosystemSection/EcosystemSection.css */
 .ecosystem-section {
-  background-color: #1a1a1a;
+  /* background-color: #1a1a1a; */ /* Old background */
+  background-color: transparent;
   padding-top: 60px;
   padding-bottom: 60px;
   position: relative; /* Establish stacking context */

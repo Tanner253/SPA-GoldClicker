@@ -1,7 +1,8 @@
 .tokenomics-section {
   padding: 60px 15px; /* Added horizontal padding for smaller screens */
   text-align: center;
-  background-color: #1a1a1a; /* Dark background */
+  /* background-color: #1a1a1a; */ /* Old background */
+  background-color: transparent; /* Make section background transparent */
   color: #f0f0f0; /* Light text */
   position: relative; /* Ensure it creates a stacking context */
   z-index: 2;       /* Set a z-index higher than HeroSection */
@@ -40,10 +41,12 @@
   border: none;
   background-color: transparent;
   font-size: 1rem;
-  font-weight: 500;
-  color: #aaaaaa; /* Medium gray for inactive tabs */
+  font-weight: bold; /* Changed to bold */
+  color: #FFFFFF; /* Changed to white */
   transition: color 0.3s ease, border-bottom-color 0.3s ease;
   border-bottom: 3px solid transparent;
+  text-transform: uppercase; /* Optional: make tabs stand out more */
+  letter-spacing: 0.5px; /* Optional: slight letter spacing */
 }
 
 .tab-button.active {
@@ -52,7 +55,7 @@
 }
 
 .tab-button:hover {
-  color: #f0f0f0; /* Lighter color on hover */
+  color: #dddddd; /* Slightly off-white for hover, if base is pure white */
 }
 
 /* InfoCard Styling */
