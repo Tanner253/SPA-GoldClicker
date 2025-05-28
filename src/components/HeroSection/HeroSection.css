@@ -298,6 +298,39 @@
   animation-delay: 0.2s !important; /* Slight delay to desynchronize from other wave */
 }
 
+/* New style for the warning text paragraph */
+.hero-warning-text {
+  font-weight: bold;
+  color: #C00000; /* Dark red color for warning */
+  /* Consider adjusting font-size if it needs to be different from other <p> tags in .hero-content */
+  /* font-size: 1rem; */ /* Example if needed */
+  margin-top: 15px; /* Add some space above it */
+  margin-bottom: 15px; /* Add some space below it */
+  padding: 10px; /* Optional padding to make it stand out a bit */
+  background-color: rgba(255, 0, 0, 0.05); /* Optional: very subtle reddish background tint */
+  border-left: 3px solid #C00000; /* Optional: a left border for emphasis */
+  text-align: center; /* Ensure it remains centered like other hero content */
+}
+
+/* New style for the positive note paragraph */
+.hero-positive-note {
+  font-weight: normal; /* Or bold if preferred, but distinct from warning */
+  color: #4CAF50; /* Pleasant, trustworthy green */
+  font-size: 1rem; /* Adjust as needed, keeping it readable */
+  line-height: 1.6;
+  margin-top: 15px;
+  margin-bottom: 25px; /* A bit more space before CTA buttons */
+  padding: 12px;
+  background-color: rgba(76, 175, 80, 0.1); /* Very subtle green background tint */
+  border-left: 3px solid #4CAF50; /* Green left border for emphasis */
+  border-radius: 4px;
+  text-align: center;
+}
+
+.hero-positive-note strong { /* If you add <strong> tags inside */
+  color: #388E3C; /* Darker green for strong emphasis within */
+}
+
 /* New style for the lock.jpg image in hero section */
 .hero-lock-image {
   display: block; 
