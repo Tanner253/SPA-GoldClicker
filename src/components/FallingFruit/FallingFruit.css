@@ -13,7 +13,11 @@
   position: absolute;
   top: -60px; /* Start above the screen */
   will-change: transform; /* Optimize animation performance */
+  opacity: 0.3; /* Set opacity to 30% */
   /* Animation properties are now set via inline style in the component */
+  animation-timing-function: linear;
+  animation-iteration-count: 1; /* Fall once */
+  animation-fill-mode: forwards;
 }
 
 @keyframes fallAndRotate {

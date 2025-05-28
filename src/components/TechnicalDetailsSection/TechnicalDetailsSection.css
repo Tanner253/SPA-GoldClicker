@@ -229,6 +229,16 @@
   width: 100%;
 }
 
+/* New style for images within tech-stack-item */
+.tech-item-content-image {
+  width: 100%; /* Make image responsive within the card */
+  max-width: 250px; /* Max width for the image, adjust as needed */
+  height: auto;
+  border-radius: 6px; /* Optional: if you want rounded corners for the image */
+  margin-top: 10px; /* Space below the card title */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Optional: subtle shadow for the image */
+}
+
 @media (max-width: 900px) {
   .tech-stats-cards {
     flex-direction: column;
