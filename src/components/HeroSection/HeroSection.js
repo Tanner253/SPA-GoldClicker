@@ -147,7 +147,7 @@ const HeroSection = () => {
               {/* Warning and Positive notes remain */}
               <p className="hero-warning-text">This is a development stream, please do not invest unless you understand the risks, IT IS A SUPPORT STREAM TO SUPPORT THE DEVELOPMENT OF THE GAME AND MARKET THE UPCOMING LAUNCH. IF THIS CHART DOES WELL ITS GOOD FOR GMC LAUNCH (2 months eta) which is good for everyone. 🚀💛</p>
               <p className="hero-positive-note">
-                $CMINER sales by the dev (when supply unlocks post-GCM launch) will help fund the treasury, ensuring long-term project health. 
+                $CMINER will sell CMINER dev wallet at GCM launch to help suppliment treasury wallet costs.
                 Rest assured, 100% of the initial dev supply is locked, safeguarding against any rug pull.
               </p>
               <p className="card-footer-ca">CA: CA281fpA6AiHcDxZdmRJFVTMCzupxgK9JyVGBegPpump</p>
