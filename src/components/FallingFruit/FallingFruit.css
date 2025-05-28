@@ -1,0 +1,26 @@
+.falling-fruit-container {
+  position: fixed; /* Or absolute if relative to a specific container */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Allow clicks to pass through */
+  overflow: hidden; /* Prevent scrollbars if fruit starts slightly off-screen */
+  z-index: 0; /* Or -1, or temporarily 9999 for testing */
+}
+
+.falling-fruit-item {
+  position: absolute;
+  top: -60px; /* Start above the screen */
+  will-change: transform; /* Optimize animation performance */
+  /* Animation properties are now set via inline style in the component */
+}
+
+@keyframes fallAndRotate {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(calc(100vh + 60px)) rotate(720deg); 
+  }
+} 

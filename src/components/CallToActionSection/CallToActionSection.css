@@ -1,6 +1,7 @@
 /* src/components/CallToActionSection/CallToActionSection.css */
 .cta-section {
-  background-color: #1a1a1a; /* Dark background */
+  /* background-color: #1a1a1a; */ /* Old background */
+  background-color: transparent;
   padding-top: 60px;
   padding-bottom: 60px;
   text-align: center;

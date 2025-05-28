@@ -1,6 +1,7 @@
 /* src/components/EarnMemecoinSection/EarnMemecoinSection.css */
 .earn-memecoin-section {
-  background-color: #1f1f1f; /* Section background color */
+  /* background-color: #1f1f1f; */ /* Old background */
+  background-color: transparent;
   padding-top: 60px;
   padding-bottom: 60px;
   position: relative; /* Establish stacking context */

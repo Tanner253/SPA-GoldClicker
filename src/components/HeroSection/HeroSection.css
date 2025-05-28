@@ -252,3 +252,48 @@
 } 
 
 /* Removed GoFundMe Widget Container styles */ 
+
+@keyframes textWave {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-6px) scale(1.05); /* Wave height and 5% size increase */
+  }
+}
+
+.hero-revenue-share {
+  font-weight: bold !important;
+  /* ... gradient styles ... */
+  background: linear-gradient(90deg, rgba(255, 242, 0, 1) 0%, rgba(11, 212, 195, 1) 35%, rgba(4, 144, 61, 1) 71%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  color: transparent !important; 
+  
+  font-size: calc(1.2rem + 10px) !important; 
+  line-height: 1.6 !important;
+  text-shadow: 1px 1px 2px #FFFFFF !important; 
+  
+  margin-top: 1rem !important;
+  margin-bottom: 2rem !important;
+  padding: 10px !important; 
+  border-radius: 4px !important; 
+  animation: textWave 2.5s ease-in-out infinite !important;
+}
+
+.hero-special-deployment-text {
+  font-weight: bold !important;
+  /* ... gradient styles ... */
+  background: linear-gradient(90deg, rgba(255, 242, 0, 1) 0%, rgba(11, 212, 195, 1) 35%, rgba(4, 144, 61, 1) 71%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  color: transparent !important; 
+  
+  /* Font size will now be inherited from .hero-tagline or set in media queries */
+  text-shadow: 1px 1px 2px #FFFFFF !important; 
+  display: inline-block !important; /* Changed from inline for transform animation */
+  animation: textWave 2.5s ease-in-out infinite !important;
+  animation-delay: 0.2s !important; /* Slight delay to desynchronize from other wave */
+} 

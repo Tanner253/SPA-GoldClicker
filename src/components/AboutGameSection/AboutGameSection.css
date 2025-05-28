@@ -1,6 +1,7 @@
 /* src/components/AboutGameSection/AboutGameSection.css */
 .about-game-section {
-  background-color: #1f1f1f; /* Slightly different dark shade for section variety */
+  background-color: #1f1f1f; /* Restoring old background */
+  /* background-color: transparent; */ /* Make section background transparent */
   padding-top: 60px;
   padding-bottom: 60px;
   position: relative; /* Establish stacking context */

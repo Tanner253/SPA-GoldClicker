@@ -18,10 +18,12 @@ import BecomeTesterSection from './components/BecomeTesterSection/BecomeTesterSe
 import GoFundMeSection from './components/GoFundMeSection/GoFundMeSection';
 import CallToActionSection from './components/CallToActionSection/CallToActionSection';
 import Footer from './components/Footer/Footer';
+import FallingFruit from './components/FallingFruit/FallingFruit'; // Adjust path if necessary
 
 function App() {
   return (
-    <div className="App">
+    <div className="App"> 
+      <FallingFruit />
       <SocialBanner />
       <HeroSection />
       <TechnicalDetailsSection />
