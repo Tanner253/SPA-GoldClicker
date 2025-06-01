@@ -11,7 +11,7 @@
   color: #fff;
   overflow: hidden; /* Keep this to prevent particle overflow for now */
   z-index: 1; /* Define a base stacking context for the hero section */
-  padding-top: 70px; /* Default for desktop banner - INSPECT AND ADJUST */
+  padding-top: 60px; /* Adjust based on banner */
   box-sizing: border-box; /* Add this */
 }
 
@@ -25,7 +25,7 @@
 }
 
 .hero-overlay {
-  background-color: rgba(0, 0, 0, 0.65); 
+  background-color: rgba(0, 0, 0, 0.7); /* Slightly less transparent for better readability */
   width: 100%;
   height: 100%;
   display: flex;
@@ -34,615 +34,336 @@
   justify-content: flex-start; /* Align content to the top */
   position: relative; 
   z-index: 1; 
-  padding: 10px 20px; /* Reduced top/bottom padding */
-  box-sizing: border-box; 
+  padding: 10px 15px; /* Adjusted padding */
   overflow-y: auto; 
+  box-sizing: border-box;
 }
 
-/* Updated main content container to be a grid */
-.hero-content-grid {
-  /* Was .hero-content section-container */
-  /* section-container might have global styles like max-width, padding - keep if needed */
-  /* For now, let's assume section-container might provide max-width and horizontal centering */
+.hero-content { 
   width: 100%;
-  max-width: 1100px; 
+  max-width: 1280px; /* Increased max-width for more room */
   margin: 0 auto;
-  padding: 10px 0; /* Reduced vertical padding */
-  position: relative; 
-  z-index: 2; 
-
-  display: grid;
-  /* Define grid columns - this is a starting point, adjust as needed */
-  /* Example: A main area and a sidebar/details area on wider screens */
-  grid-template-columns: 1fr; /* Default to single column for mobile-first */
-  gap: 15px; /* Reduced gap */
+  padding: 15px 0; /* Slightly more vertical padding for content block */
+  z-index: 2;
+  display: flex; 
+  flex-direction: column;
+  gap: 15px; 
 }
 
-/* Main info block - could span full width initially or be a specific grid area */
+/* Main Info on top */
 .hero-main-info {
   text-align: center; 
-  padding-bottom: 10px; /* Reduced space */
-}
-
-.hero-announcement-card {
-  background-color: rgba(17, 17, 17, 0.8); /* Dark, slightly transparent card */
-  padding: 15px; /* Reduced padding */
-  border-radius: 12px;
-  margin: 15px auto; /* Reduced margin */
-  border: 1px solid rgba(255, 215, 0, 0.5); /* Gold accent border */
-  box-shadow: 0 8px 32px rgba(0,0,0,0.3), 0 0 15px rgba(255,215,0,0.1) inset; /* Outer shadow and inner glow */
-  max-width: 750px; 
-}
-
-.hero-announcement-card .hero-tagline { /* Specific for tagline inside this card */
-  margin-bottom: 0; /* Remove bottom margin if it's the only content */
-}
-
-/* Area for details cards - could become a 2-column grid itself */
-.hero-details-area {
-  display: grid;
-  grid-template-columns: 1fr; 
-  gap: 15px; /* Reduced gap */
-}
-
-.hero-detail-card {
-  background-color: rgba(30, 30, 30, 0.75); 
-  padding: 15px;
-  border-radius: 10px;
-  border: 1px solid rgba(70, 70, 70, 0.5);
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-  display: flex;
-  flex-direction: column;
-  text-align: center; /* Center text content within detail cards */
-}
-
-.hero-card-title {
-  color: #FFD700;
-  font-size: clamp(1.1rem, 2.5vw, 1.5rem); 
-  margin-top: 0;
-  margin-bottom: 10px; 
-  text-align: center; /* Already centered, but explicit */
-  font-weight: 600;
-}
-
-/* Consistent styling for general text within detail cards */
-.hero-detail-card > p, /* Direct paragraph children */
-.hero-intro-card .hero-intro { /* Specifically target .hero-intro */
-  color: #e0e0e0; /* Consistent light color for readability */
-  font-size: clamp(0.85rem, 2vw, 0.95rem);
-  line-height: 1.6;
-  margin-bottom: 10px; /* Consistent bottom margin for paragraphs */
-  font-weight: normal; /* Default weight, bold will be from specific classes */
-  text-align: center; /* Ensure all such paragraphs are centered */
-}
-
-.hero-intro-card .hero-revenue-share { /* Retains its special animated style */
-  margin-bottom: 8px; 
-  margin-top: 10px; 
-  text-align: center; /* Ensure it's centered */
-}
-
-.lock-status-text {
-  font-weight: 500;
-  color: #e0e0e0;
-  font-size: 0.9rem; 
-}
-
-/* Styles for the lock image, now a direct child of hero-content-grid */
-.hero-lock-image-card { 
-  width: 100%; 
-  max-width: 100%; 
-  height: auto;
-  display: block;
-  margin: 5px 0; /* Significantly reduced vertical margin */
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-  object-fit: contain; 
-}
-
-.hero-status-disclaimer-card .card-subtitle { 
-  text-align: center;
-  font-weight: 500;
-  color: #e0e0e0;
-  margin-bottom: 10px; 
-  font-size: 0.9rem; 
-}
-
-.pumpfun-info-card-internal {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 10px; 
-}
-
-.hero-warning-text, 
-.hero-positive-note {
-  max-width: 100%; 
-  margin-left: auto; 
-  margin-right: auto;
-  padding: 8px;
-  font-size: clamp(0.8rem, 1.8vw, 0.9rem); 
-  text-align: center; /* Centering these blocks */
-  /* Their specific background/border/color styles remain */
-}
-
-.hero-warning-text {
-  margin-top: 8px; 
-  margin-bottom: 8px;
-}
-
-.hero-positive-note {
-  margin-top: 8px;
-  margin-bottom: 10px; 
-}
-
-.card-footer-ca {
-  margin-top: auto; /* This will only work well if card has flexible height from content */
-  padding-top: 5px; /* Reduced */
-  font-size: clamp(0.65rem, 1.4vw, 0.75rem); /* Smaller CA text */
-  color: #999; /* Lighter grey for less emphasis */
-  text-align: center;
-  word-break: break-all; 
-}
-
-/* Additional Info Styling */
-.hero-additional-info {
-  text-align: center; 
-  padding-top: 0;
-  margin-top: 10px; /* Add some top margin if needed */
-}
-
-.pumpfun-links {
-  margin: 10px 0; /* Reduced margin */
-  font-size: clamp(0.75rem, 1.8vw, 0.9rem);
-  color: #bbb; 
-  line-height: 1.6;
-}
-.pumpfun-links a {
-  color: #FFD700;
-  text-decoration: none; /* Remove underline, rely on color */
-  font-weight: 500;
-}
-.pumpfun-links a:hover {
-  text-decoration: underline;
+  padding-bottom: 5px;
 }
 
 .hero-title {
-  font-size: clamp(2.2rem, 5vw, 4rem); /* Slightly reduced max */
+  font-size: clamp(2.8rem, 6vw, 4.5rem); /* Restored larger, prominent size */
   font-weight: 700;
-  color: #FFD700; 
-  margin-bottom: 0.3rem;
+  color: #FFD700; /* Gold */
+  margin-bottom: 0.2rem; /* Tightened from 0.5rem previously */
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
 .hero-ticker {
   color: #f0f0f0; 
-  font-size: clamp(1.3rem, 3.5vw, 2.5rem); /* Slightly reduced max */
+  font-size: clamp(1.8rem, 4vw, 2.8rem); /* Restored larger size */
+  font-weight: normal; /* Ensure it's not double-bolded if title is bold */
 }
 
-.hero-tagline {
-  font-size: clamp(0.9rem, 2.2vw, 1.3rem); /* Slightly reduced */
-  color: #e0e0e0;
-  margin-bottom: 0.8rem;
-  font-weight: 300;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+.hero-tagline { font-size: clamp(0.9rem, 2.2vw, 1.2rem); margin-bottom: 0.5rem; }
+
+.hero-announcement-card {
+  background-color: rgba(17, 17, 17, 0.8); /* Dark, slightly transparent card */
+  padding: 12px;
+  border-radius: 12px;
+  margin: 12px auto;
+  border: 1px solid rgba(255, 215, 0, 0.5); /* Gold accent border */
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3), 0 0 15px rgba(255,215,0,0.1) inset; /* Outer shadow and inner glow */
+  max-width: 700px; 
 }
 
-.hero-intro {
-  font-size: 1.2rem;
-  color: #cccccc;
-  line-height: 1.7;
-  margin-bottom: 2rem; /* Default margin for intro text */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-  word-wrap: break-word; /* Add for text wrapping */
-  overflow-wrap: break-word; /* Add for text wrapping */
+.hero-details-area { 
+  display: grid;
+  grid-template-columns: 1fr; /* Mobile: stack cards and video */
+  gap: 15px; 
+  width: 100%;
+  align-items: stretch; 
 }
 
-.hero-deployment-shoutout {
-  font-weight: bold;
-  /* It will inherit font-size and color from hero-tagline unless overridden */
-  margin-bottom: 1.5rem; /* Consistent with other taglines */
+.hero-detail-card {
+  padding: 15px; 
+  background-color: rgba(25, 25, 25, 0.85); /* Darker, more solid card background */
+  border: 1px solid rgba(100, 100, 100, 0.5);
+  border-radius: 10px; 
+  display: flex; 
+  flex-direction: column; 
+  text-align: center; 
+  justify-content: space-between; 
+}
+
+.hero-card-title { 
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  margin-bottom: 10px; 
+  color: #FFD700;
+  font-weight: 600;
+}
+
+/* Restore/Ensure Specific Text Styles */
+.hero-detail-card > p, .hero-intro-card .hero-intro,
+.hero-status-disclaimer-card .lock-status-text,
+.hero-status-disclaimer-card .card-subtitle {
+  font-size: clamp(0.85rem, 1.9vw, 0.95rem);
+  margin-bottom: 10px; 
+  line-height: 1.5;
+  color: #ccc; /* General card text */
+  text-align: center;
+  font-weight: normal;
 }
 
 .hero-revenue-share {
-  font-weight: bold;
-  /* color: #3DDC84; */ /* Previous solid green color - replaced by gradient */
-  
-  /* Gradient text effect */
-  background: linear-gradient(90deg, rgba(255, 242, 0, 1) 0%, rgba(11, 212, 195, 1) 35%, rgba(4, 144, 61, 1) 71%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent; /* Fallback if text-fill-color is not supported, though unlikely needed with -webkit version */
-  
-  /* Font size: 10px larger than hero-intro base */
-  font-size: calc(1.2rem + 10px) !important; /* Added !important for testing */
-  line-height: 1.6 !important; /* Added !important for testing */
-  text-shadow: 1px 1px 2px #FFFFFF !important; /* Added !important for testing */
-  
-  margin-top: 1rem !important;
-  margin-bottom: 2rem !important;
-  padding: 10px !important; /* Added !important for testing */
-  border-radius: 4px !important; /* Added !important for testing */
-}
-
-.hero-special-deployment-text {
   font-weight: bold !important;
-  /* Gradient text effect */
   background: linear-gradient(90deg, rgba(255, 242, 0, 1) 0%, rgba(11, 212, 195, 1) 35%, rgba(4, 144, 61, 1) 71%) !important;
   -webkit-background-clip: text !important;
   background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
   color: transparent !important; 
-  
-  /* Font size will now be inherited from .hero-tagline or set in media queries */
-  text-shadow: 1px 1px 2px #FFFFFF !important; /* White shadow */
-  display: inline !important; 
+  font-size: calc(1rem + 8px) !important; /* Based on a base of ~1rem for card text */
+  line-height: 1.4 !important;
+  text-shadow: 1px 1px 2px #FFFFFF !important; 
+  margin: 10px auto !important;
+  padding: 8px !important; 
+  border-radius: 4px !important; 
+  animation: textWave 2.5s ease-in-out infinite !important;
+  text-align: center;
 }
 
-/* Target the specific paragraph with the long URL and other p tags for safety */
-.hero-content p {
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-  hyphens: auto; /* Optional: for better looking breaks */
-  text-align: center; /* Ensure text aligns center if it wraps */
+.hero-special-deployment-text { /* This is inside .hero-announcement-card .hero-tagline */
+  font-weight: bold !important;
+  background: linear-gradient(90deg, rgba(255, 242, 0, 1) 0%, rgba(11, 212, 195, 1) 35%, rgba(4, 144, 61, 1) 71%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  color: transparent !important; 
+  font-size: calc(1em + 2px) !important; /* Relative to parent .hero-tagline font-size */
+  text-shadow: 1px 1px 2px #FFFFFF !important; 
+  display: inline-block !important; 
+  animation: textWave 2.5s ease-in-out infinite 0.2s !important;
+  line-height: 1.3 !important;
 }
 
-.hero-cta-buttons-container {
-  margin-top: 10px; /* Further reduced to pull buttons up */
-  display: flex;
-  flex-direction: column; /* Stack buttons on small screens */
+.card-header-info {
+  justify-content: space-between; /* Keep this for wide, use center for wrapped */
   align-items: center;
-  gap: 15px; /* Space between buttons */
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0 5px; 
+  margin-bottom: 10px;
+}
+.lock-status-text { font-size: 0.9rem; color: #e0e0e0; }
+.pumpfun-icon-link.header-link { 
+  padding: 4px 8px; font-size: 0.9rem; /* text, icon color from animation */ 
+  /* ... existing animation and other link styles ... */
+  text-decoration: none; font-weight: bold; border-radius: 6px; display: inline-flex; align-items: center; gap: 8px; text-align: left; animation: rgbTextCycle 4s linear infinite alternate; border: 1px solid transparent; transition: background-color 0.2s ease;
+}
+.pumpfun-icon-link.header-link:hover { background-color: rgba(255,255,255,0.1); animation-play-state: paused; }
+.pumpfun-icon-link.header-link span, .pumpfun-icon-link.header-link svg { /* Ensure color inherit for animation */ color: inherit; }
+.pumpfun-icon-link.header-link span { white-space: normal; word-break: break-word; }
+.pumpfun-icon-link.header-link svg { font-size: 1.1em; flex-shrink: 0; }
+
+.hero-warning-text {
+  font-weight: bold;
+  color: #C00000;
+  font-size: clamp(0.8rem, 1.8vw, 0.9rem);
+  margin: 8px 0;
+  padding: 8px;
+  background-color: rgba(255, 0, 0, 0.05);
+  border-left: 3px solid #C00000;
+  text-align: center; 
+}
+
+.hero-positive-note {
+  font-weight: normal;
+  color: #4CAF50;
+  font-size: clamp(0.8rem, 1.8vw, 0.9rem);
+  margin: 8px 0;
+  padding: 8px;
+  background-color: rgba(76, 175, 80, 0.1);
+  border-left: 3px solid #4CAF50;
+  border-radius: 4px;
+  text-align: center;
+}
+.card-footer-ca { font-size: clamp(0.7rem, 1.4vw, 0.8rem); padding-top: 6px; margin-top: auto; border-top: 1px solid rgba(80,80,80,0.3); color: #a0a0a0; }
+
+/* VIDEO AREA STYLES */
+.hero-video-area {
+  display: flex;
+  flex-direction: column; /* Allow caption below if added */
+  justify-content: center; 
+  align-items: center; 
+  /* The following will help it match card appearance IF it becomes a direct grid item next to cards */
+  /* background-color: rgba(30, 30, 30, 0.8);  */
+  /* border-radius: 10px; */
+  /* padding: 10px; */ /* If you want it to look like a card containing the phone */
+}
+
+.phone-mockup { 
+  background-color: #111;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3), 0 0 0 3px #0a0a0a;
+  padding: 10px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 220px; /* Base small size */
+}
+
+.phone-screen { background-color: #000; width: 100%; aspect-ratio: 9 / 16; overflow: hidden; border-radius: 5px; }
+.gameplay-video { display: block; width:100%; height:100%; object-fit:contain; }
+
+/* DESKTOP LAYOUT: Card | Card | Video */
+@media (min-width: 1024px) { 
+  .hero-details-area {
+    grid-template-columns: 1fr 1fr 1fr; /* Card | Card | Video - Equal thirds initially */
+    gap: 20px; 
+    align-items: stretch; 
+  }
+  .hero-detail-card {
+    flex-grow: 1; 
+    padding: 20px; /* More padding on desktop cards */
+    justify-content: flex-start; /* Align content to top, let it flow down */
+  }
+  .hero-video-area {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center phone in its column */
+  }
+  .phone-mockup {
+    width: 100%; 
+    max-width: 300px; /* Max size for phone in its column, adjust as needed */
+    /* Consider a min-height on hero-video-area or phone-mockup if stretch isn't enough */
+  }
+  .hero-lock-image-card { max-width: 650px; margin: 15px auto; }
+  .hero-cta-buttons-container { flex-direction: row; justify-content: center; margin-top: 20px;}
+}
+
+/* TABLET LAYOUT: Card | Card -- Video stacks below */
+@media (min-width: 769px) and (max-width: 1023px) {
+  .hero-details-area {
+    grid-template-columns: 1fr 1fr; 
+  }
+   .hero-video-area {
+    grid-column: 1 / -1; /* Make video span full width when it stacks */
+    margin-top: 20px; 
+    max-width: 320px; 
+    margin-left: auto; margin-right: auto;
+  }
+  .phone-mockup { max-width: 100%; }
+  .hero-cta-buttons-container { flex-direction: row; justify-content: center; }
+}
+
+/* ... other media queries ... */
+
+@media (max-width: 768px) { /* Specific overrides for smaller tablets/large phones */
+  .hero-revenue-share { font-size: calc(1rem + 6px) !important; } 
+  .hero-special-deployment-text { font-size: calc(1em + 1px) !important; }
+  .card-header-info { flex-direction: column; align-items: center; text-align: center; }
+  .pumpfun-icon-link.header-link { justify-content: center; }
+}
+
+@media (max-width: 480px) { /* Mobile specifics */
+  .hero-overlay { padding: 5px; }
+  .hero-content { gap: 10px; padding: 5px 0; }
+  .hero-detail-card { padding: 10px; }
+  .hero-card-title { font-size: clamp(0.9rem, 2.2vw, 1.1rem); margin-bottom: 6px;}
+  .hero-main-info { padding-bottom: 0; }
+  .hero-announcement-card { padding: 8px; margin: 8px auto; max-width: 90%; }
+  .phone-mockup { max-width: 200px; padding: 8px; }
+  .hero-revenue-share { font-size: calc(0.9rem + 4px) !important; }
+  .hero-lock-image-card { margin: 8px auto; }
+  .hero-cta-button { padding: 10px 15px; font-size: 0.9rem; }
+}
+
+/* Ensure keyframes are defined */
+@keyframes textWave { /* ... as defined before ... */
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-6px) scale(1.05); }
+}
+@keyframes rgbTextCycle { /* ... as defined before ... */
+  0%   { color: #FF0000; text-shadow: 0 0 3px #FF0000; }
+  20%  { color: #FF7F00; text-shadow: 0 0 3px #FF7F00; }
+  40%  { color: #FFFF00; text-shadow: 0 0 3px #FFFF00; }
+  60%  { color: #00FF00; text-shadow: 0 0 3px #00FF00; }
+  80%  { color: #0000FF; text-shadow: 0 0 3px #0000FF; }
+  100% { color: #8B00FF; text-shadow: 0 0 3px #8B00FF; }
+}
+
+.hero-lock-image { display: none; }
+
+/* CTA Buttons - Restore/Ensure Prominent Styling */
+.hero-cta-buttons-container {
+  margin-top: 20px; /* More space before buttons */
+  display: flex;
+  flex-direction: column; /* Stack on mobile */
+  align-items: center;
+  gap: 15px; 
 }
 
 .hero-cta-button {
-  background-color: #FFD700; /* Reverted to solid gold */
-  color: #1a1a1a; 
-  padding: 15px 30px;
-  font-size: 1.1rem;
+  padding: 14px 28px; /* Adjusted padding for good size */
+  font-size: 1.1rem;  /* Clear font size */
   font-weight: bold;
-  border: none;
   border-radius: 8px; 
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   text-transform: uppercase;
-  box-shadow: 0px 4px 15px rgba(255, 215, 0, 0.2);
-  min-width: 220px; 
+  border: 2px solid transparent; /* Base border for consistent sizing, transparent by default */
+  display: inline-flex; 
+  align-items: center;
+  justify-content: center;
+  gap: 8px; 
+  text-decoration: none; 
+  min-width: 240px; /* Ensure good width */
   text-align: center;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Subtle base shadow */
 }
 
 .hero-cta-button:hover {
-  background-color: #e6c200; /* Reverted to solid darker gold on hover */
   transform: translateY(-3px);
-  box-shadow: 0px 6px 20px rgba(255, 215, 0, 0.3);
+  box-shadow: 0px 6px 20px rgba(0,0,0,0.2); /* Enhanced hover shadow */
 }
 
-/* Secondary button style for Hero section - This one was already transparent, so no gradient to revert here */
+.hero-cta-button.primary {
+  background-color: #FFD700; 
+  color: #1a1a1a;
+  border-color: #FFD700; /* Match background */
+  box-shadow: 0px 4px 15px rgba(255, 215, 0, 0.25); /* Gold shadow */
+}
+
+.hero-cta-button.primary:hover {
+  background-color: #e6c200; 
+  border-color: #e6c200;
+  box-shadow: 0px 6px 20px rgba(255, 215, 0, 0.35); /* Enhanced gold shadow */
+}
+
 .hero-cta-button.secondary {
   background-color: transparent;
   color: #FFD700;
   border: 2px solid #FFD700;
-  box-shadow: none;
+  box-shadow: none; /* No base shadow for secondary outline button */
 }
 
 .hero-cta-button.secondary:hover {
   background-color: rgba(255, 215, 0, 0.1); 
   color: #FFD700;
-  transform: translateY(-3px);
-  box-shadow: 0px 6px 20px rgba(255, 215, 0, 0.1);
+  border-color: #FFD700; /* Ensure border stays gold */
+  /* transform translateY is inherited */
+  /* box-shadow can be added on hover if desired for secondary */
 }
 
-@media (min-width: 600px) {
+@media (min-width: 600px) { /* Ensure this applies before larger overrides if needed */
   .hero-cta-buttons-container {
-    flex-direction: row; /* Buttons side-by-side on larger screens */
+    flex-direction: row; 
     justify-content: center;
   }
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .hero-title {
-    font-size: 3rem;
-  }
-  .hero-ticker {
-    font-size: 2rem;
-  }
-  .hero-tagline {
-    font-size: 1.5rem;
-  }
-  .hero-intro {
-    font-size: 1rem;
-    margin-bottom: 1.5rem; /* Adjusted margin for smaller screens */
-  }
-  .hero-content .hero-revenue-share, /* Increased specificity */
-  .hero-revenue-share {
-    font-size: calc(1rem + 10px) !important; /* Added !important for testing */
-    margin-bottom: 1.5rem !important;
-  }
-  .hero-special-deployment-text {
-    /* 10% larger than hero-tagline at this breakpoint (1.5rem * 1.1 = 1.65rem) */
-    font-size: calc(1.5rem * 1.1) !important; 
-  }
-  .hero-overlay {
-    padding: 20px 15px; /* Slightly reduce horizontal padding on medium tablets */
-  }
-  /* No padding-top adjustment here anymore, will be handled by 600px */
-}
-
-/* NEW/ADJUSTED BREAKPOINT for banner height change */
-@media (max-width: 600px) {
-  .hero-section {
-    /* CRITICAL: Replace 150px with the ACTUAL MEASURED HEIGHT of your STACKED banner */
-    padding-top: 150px; /* Example: Adjust this based on your banner's height */
-    height: auto; /* Allow section to grow based on content */
-    min-height: calc(100vh - 150px); /* Ensure it still tries to fill remaining screen, but can grow */
-    /* If content is shorter than viewport, it will be 100vh - banner. */
-    /* If content is taller, it will grow, and page will scroll. */
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-section {
-    /* padding-top and min-height are inherited from (max-width: 600px) */
-    /* If banner height changes drastically AGAIN at 480px, override padding-top and min-height here */
-    /* height: auto; is already inherited and correct */
-  }
-  .hero-title {
-    font-size: 2.5rem;
-  }
-  .hero-ticker {
-    font-size: 1.5rem;
-  }
-  .hero-tagline {
-    font-size: 1.2rem;
-  }
-  .hero-overlay {
-    padding: 30px 10px; /* Adjust padding for very small screens */
-  }
-  .hero-intro {
-    /* Font size might be inherited or set again */
-  }
-  .hero-content .hero-revenue-share, /* Increased specificity */
-  .hero-revenue-share {
-    font-size: calc(1rem + 10px) !important; /* Added !important for testing */
-  }
-  .hero-special-deployment-text {
-    /* 10% larger than hero-tagline at this breakpoint (1.2rem * 1.1 = 1.32rem) */
-    font-size: calc(1.2rem * 1.1) !important; 
-  }
-} 
-
-/* Removed GoFundMe Widget Container styles */ 
-
-@keyframes textWave {
-  0%, 100% {
-    transform: translateY(0) scale(1);
-  }
-  50% {
-    transform: translateY(-6px) scale(1.05); /* Wave height and 5% size increase */
-  }
-}
-
-.hero-revenue-share {
-  font-weight: bold !important;
-  /* ... gradient styles ... */
-  background: linear-gradient(90deg, rgba(255, 242, 0, 1) 0%, rgba(11, 212, 195, 1) 35%, rgba(4, 144, 61, 1) 71%) !important;
-  -webkit-background-clip: text !important;
-  background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  color: transparent !important; 
-  
-  font-size: calc(1.2rem + 10px) !important; 
-  line-height: 1.6 !important;
-  text-shadow: 1px 1px 2px #FFFFFF !important; 
-  
-  margin-top: 1rem !important;
-  margin-bottom: 2rem !important;
-  padding: 10px !important; 
-  border-radius: 4px !important; 
-  animation: textWave 2.5s ease-in-out infinite !important;
-}
-
-.hero-special-deployment-text {
-  font-weight: bold !important;
-  /* ... gradient styles ... */
-  background: linear-gradient(90deg, rgba(255, 242, 0, 1) 0%, rgba(11, 212, 195, 1) 35%, rgba(4, 144, 61, 1) 71%) !important;
-  -webkit-background-clip: text !important;
-  background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  color: transparent !important; 
-  
-  /* Font size will now be inherited from .hero-tagline or set in media queries */
-  text-shadow: 1px 1px 2px #FFFFFF !important; 
-  display: inline-block !important; /* Changed from inline for transform animation */
-  animation: textWave 2.5s ease-in-out infinite !important;
-  animation-delay: 0.2s !important; /* Slight delay to desynchronize from other wave */
-}
-
-/* New style for the warning text paragraph */
-.hero-warning-text {
-  font-weight: bold;
-  color: #C00000; /* Dark red color for warning */
-  /* Consider adjusting font-size if it needs to be different from other <p> tags in .hero-content */
-  /* font-size: 1rem; */ /* Example if needed */
-  margin-top: 15px; /* Add some space above it */
-  margin-bottom: 15px; /* Add some space below it */
-  padding: 10px; /* Optional padding to make it stand out a bit */
-  background-color: rgba(255, 0, 0, 0.05); /* Optional: very subtle reddish background tint */
-  border-left: 3px solid #C00000; /* Optional: a left border for emphasis */
-  text-align: center; /* Ensure it remains centered like other hero content */
-}
-
-/* New style for the positive note paragraph */
-.hero-positive-note {
-  font-weight: normal; /* Or bold if preferred, but distinct from warning */
-  color: #4CAF50; /* Pleasant, trustworthy green */
-  font-size: 1rem; /* Adjust as needed, keeping it readable */
-  line-height: 1.6;
-  margin-top: 15px;
-  margin-bottom: 25px; /* A bit more space before CTA buttons */
-  padding: 12px;
-  background-color: rgba(76, 175, 80, 0.1); /* Very subtle green background tint */
-  border-left: 3px solid #4CAF50; /* Green left border for emphasis */
-  border-radius: 4px;
-  text-align: center;
-}
-
-.hero-positive-note strong { /* If you add <strong> tags inside */
-  color: #388E3C; /* Darker green for strong emphasis within */
-}
-
-/* New style for the lock.jpg image in hero section */
-.hero-lock-image { /* This class was on the img directly before, now we use .hero-lock-image-card */
-  /* Styles for this might be redundant if .hero-lock-image-card is used and styled */
-  /* display: block; */
-  /* margin: 0; */ 
-  /* width: 100%; */
-  /* max-width: 100%; */
-  /* height: auto; */
-  /* border-radius: 8px; */
-  /* box-shadow: 0 5px 15px rgba(0,0,0,0.2); */
-  /* margin-top: 20px; */
-  /* margin-bottom: 20px; */
-}
-
-/* Responsive adjustments for the grid */
-@media (min-width: 769px) { 
-  .hero-content-grid {
-    gap: 25px; 
-  }
-  .hero-details-area {
-    grid-template-columns: 1fr 1fr; 
-    align-items: stretch; /* Make cards in the same row stretch to equal height */
-    gap: 25px; /* Slightly increased gap for desktop cards */
-  }
-  .hero-detail-card {
-    min-height: auto; /* Let content define height, or set a new common min-height */
-  }
-  .hero-status-disclaimer-card {
-    /* Ensure content aligns well even if heights are stretched */
-  }
-  .hero-lock-image-card { /* Adjust if it's a direct child of .hero-content-grid */
-    margin: 20px 0;
-  }
-}
-
-@media (min-width: 1024px) {
-  .hero-content-grid {
-     padding: 20px 0; /* Reduced padding */
-     gap: 30px;
-  }
-  .hero-main-info {
-    padding-bottom: 15px; /* Reduced padding */
-  }
-}
-
-/* Cleanup old .hero-lock-image if it exists and isn't used */
-.hero-lock-image { 
-  display: none; /* Hide if this old class is somehow still present */
-}
-
-/* Ensure existing media queries for text sizes etc. are still relevant or adjust them */
-
-/* Removed width: 100% from .hero-lock-image if it's now .hero-lock-image-card and sized by its new class */
-.hero-lock-image { /* This class was on the img directly before, now we use .hero-lock-image-card */
-  /* Styles for this might be redundant if .hero-lock-image-card is used and styled */
-  /* display: block; */
-  /* margin: 0; */ 
-  /* width: 100%; */
-  /* max-width: 100%; */
-  /* height: auto; */
-  /* border-radius: 8px; */
-  /* box-shadow: 0 5px 15px rgba(0,0,0,0.2); */
-  /* margin-top: 20px; */
-  /* margin-bottom: 20px; */
-}
-
-/* New styles for the combined header info */
-.card-header-info {
-  display: flex;
-  flex-wrap: wrap; 
-  justify-content: space-between; 
-  align-items: center;
-  margin-bottom: 12px; 
-  gap: 10px; 
-  padding-left: 10px;  /* Ensure left padding */
-  padding-right: 10px; /* Ensure right padding */
-  box-sizing: border-box; /* Good practice if padding is added */
-}
-
-.lock-status-text { /* Style for the text itself */
-  font-weight: 500;
-  color: #e0e0e0;
-  font-size: 0.9rem; 
-  /* No specific margin needed here if parent has padding and gap */
-}
-
-@keyframes rgbTextCycle {
-  0%   { color: #FF0000; text-shadow: 0 0 3px #FF0000; } /* Red */
-  20%  { color: #FF7F00; text-shadow: 0 0 3px #FF7F00; } /* Orange */
-  40%  { color: #FFFF00; text-shadow: 0 0 3px #FFFF00; } /* Yellow */
-  60%  { color: #00FF00; text-shadow: 0 0 3px #00FF00; } /* Green */
-  80%  { color: #0000FF; text-shadow: 0 0 3px #0000FF; } /* Blue */
-  100% { color: #8B00FF; text-shadow: 0 0 3px #8B00FF; } /* Violet */
-}
-
-.pumpfun-icon-link.header-link {
-  padding: 6px 10px; 
-  font-size: 0.9rem; 
-  text-decoration: none; 
-  font-weight: bold;   
-  border-radius: 6px;  
-  display: inline-flex; 
-  align-items: center;  
-  gap: 8px;             
-  text-align: left; 
-  /* background-color: rgba(255, 215, 0, 0.1); */ /* Keep or remove subtle gold bg if animating color */
-  /* Remove static color, it will be animated */
-  /* color: #FFD700; */ 
-  animation: rgbTextCycle 4s linear infinite alternate; /* Apply new animation */
-  border: 1px solid transparent; /* Initial border for consistency if shadow makes it look off */
-  transition: background-color 0.2s ease; /* Keep hover for background */
-}
-
-.pumpfun-icon-link.header-link:hover {
-  background-color: rgba(255, 255, 255, 0.1); /* Slightly more opaque on hover */
-  animation-play-state: paused; /* Optional: pause animation on hover */
-}
-
-.pumpfun-icon-link.header-link span,
-.pumpfun-icon-link.header-link svg {
-  /* Ensure they inherit the animated color from parent <a> tag */
-  /* If color isn't inheriting, explicitly set: color: inherit; */
-}
-
-.pumpfun-icon-link.header-link span {
-  white-space: normal; 
-  word-break: break-word; 
-}
-
-.pumpfun-icon-link.header-link svg {
-  font-size: 1.1em; 
-  flex-shrink: 0; 
-}
-
-.pumpfun-info-card-internal { /* This class was removed from JSX, styles might be redundant or need cleanup */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 10px; 
-}
-
-/* Ensure .card-header-info is correctly defined and styled */
-.card-header-info {
-  display: flex;
-  flex-wrap: wrap; 
-  justify-content: space-between; 
-  align-items: center;
-  margin-bottom: 12px; 
-  gap: 10px; 
-  padding-left: 10px;  /* Ensure left padding */
-  padding-right: 10px; /* Ensure right padding */
-  box-sizing: border-box; /* Good practice if padding is added */
-} 
+/* ... other media queries and styles ... */
+/* Make sure these restored styles are not overridden by later general rules for p, button etc. */

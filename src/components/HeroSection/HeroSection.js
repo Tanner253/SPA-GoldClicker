@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react';
 import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim"; // or loadFull if you need more features
-import { FaChartLine, FaVideo } from 'react-icons/fa'; // Added FaVideo, kept FaChartLine for now in case it's used elsewhere or for quick revert
+import { FaVideo } from 'react-icons/fa'; // Removed FaChartLine, only FaVideo is used now
 import './HeroSection.css';
 
 const HeroSection = () => {
@@ -101,9 +101,7 @@ const HeroSection = () => {
         className="hero-particles"
       />
       <div className="hero-overlay"> {/* This overlay ensures text is readable over particles */}
-        <div className="hero-content-grid section-container"> {/* New main grid container */}
-
-          {/* Main Info Area - could span full width or be a large top block */}
+        <div className="hero-content section-container"> 
           <div className="hero-main-info">
             <h1 className="hero-title">Gold Clicker Mining <span className="hero-ticker">($GCM)</span></h1>
             <p className="hero-tagline">Stack Bars. Break Stars. Mine Your Fortune. Ask me to demo on stream.</p>
@@ -121,15 +119,14 @@ const HeroSection = () => {
 
           </div>
 
-          {/* Details Area - could be a 2-column layout on wider screens */}
           <div className="hero-details-area">
             <div className="hero-detail-card hero-intro-card">
               <h3 className="hero-card-title">The Game Concept</h3>
               <p className="hero-intro">
-                Addictive game generates ad revenue, 80% of which is injected into GCM chart for distribution to gamers.
+                Addictive gameplay generates ad revenue. Here's the magic: for every $1 in value distributed to gamers via $GCM, the game aims to generate ~$2 in ad revenue. This creates a positive feedback loop, injecting more value into the $GCM ecosystem than is paid out, fostering sustainable growth.
               </p>
               <p className="hero-revenue-share">
-                Most Game developers pocket 100% of revenue from their games, I am offering 80% back to the user through memecoin ($GCM), no tricks, its that simple.
+                Most game developers pocket 100% of revenue. We flip the script: 80% of net ad revenue is used to benefit the $GCM token & community, making this a true Play-to-Earn venture where your time is valued.
               </p>
             </div>
 
@@ -147,13 +144,31 @@ const HeroSection = () => {
               {/* Warning and Positive notes remain */}
               <p className="hero-warning-text">This is a development stream, please do not invest unless you understand the risks, IT IS A SUPPORT STREAM TO SUPPORT THE DEVELOPMENT OF THE GAME AND MARKET THE UPCOMING LAUNCH. IF THIS CHART DOES WELL ITS GOOD FOR GMC LAUNCH (2 months eta) which is good for everyone. 🚀💛</p>
               <p className="hero-positive-note">
-                $CMINER will sell CMINER dev wallet at GCM launch to help suppliment treasury wallet costs.
+                $CMINER sales by the dev (when supply unlocks post-GCM launch) will help fund the treasury, ensuring long-term project health. 
                 Rest assured, 100% of the initial dev supply is locked, safeguarding against any rug pull.
               </p>
               <p className="card-footer-ca">CA: CA281fpA6AiHcDxZdmRJFVTMCzupxgK9JyVGBegPpump</p>
             </div>
+            
+            {/* Video area moved inside hero-details-area */}
+            <div className="hero-video-area">
+              <div className="video-player-wrapper">
+                <div className="phone-mockup">
+                  <div className="phone-screen">
+                    <video 
+                      className="gameplay-video"
+                      src={process.env.PUBLIC_URL + '/images/demooo.mp4'}
+                      controls autoPlay muted loop playsInline 
+                    >
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-              <img src="/images/lock.jpg" alt="Token Lock Information" className="hero-lock-image-card" /> 
+            
+          <img src="/images/lock.jpg" alt="Token Lock Information" className="hero-lock-image-card" /> 
           
           {/* Additional Info / Disclaimers Area - could be full width below details */}
           <div className="hero-additional-info">
@@ -161,7 +176,7 @@ const HeroSection = () => {
           </div>
 
           <div className="hero-cta-buttons-container">
-            <button onClick={() => handleScrollToTarget('about-game-section')} className="hero-cta-button">
+            <button onClick={() => handleScrollToTarget('about-game-section')} className="hero-cta-button primary">
               Explore the Gold Mines!
             </button>
             <button onClick={() => handleScrollToTarget('become-tester-section')} className="hero-cta-button secondary">

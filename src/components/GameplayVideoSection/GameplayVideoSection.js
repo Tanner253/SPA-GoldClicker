@@ -4,13 +4,13 @@ import './GameplayVideoSection.css';
 const GameplayVideoSection = () => {
   return (
     <section className="section-container gameplay-video-section">
-      <h2>See Gold Clicker Mining in Action!</h2>
+      <h2>See Gold Clicker Mining in Action! (legacy version to show progression)</h2>
       <div className="video-player-wrapper">
         <div className="phone-mockup">
           <div className="phone-screen">
             <video 
               className="gameplay-video"
-              src={process.env.PUBLIC_URL + '/images/gameplay-vert.mp4'}
+              src={process.env.PUBLIC_URL + '/images/demooo.mp4'}
               controls 
               autoPlay
               muted // Autoplay usually requires muted attribute
