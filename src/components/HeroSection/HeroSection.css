@@ -262,10 +262,19 @@
 /* ... other media queries ... */
 
 @media (max-width: 768px) { /* Specific overrides for smaller tablets/large phones */
+  .hero-section {
+    padding-top: 120px; /* More padding for taller banner on mobile */
+  }
   .hero-revenue-share { font-size: calc(1rem + 6px) !important; } 
   .hero-special-deployment-text { font-size: calc(1em + 1px) !important; }
   .card-header-info { flex-direction: column; align-items: center; text-align: center; }
   .pumpfun-icon-link.header-link { justify-content: center; }
+}
+
+@media (max-width: 600px) {
+  .hero-section {
+    padding-top: 160px;
+  }
 }
 
 @media (max-width: 480px) { /* Mobile specifics */
@@ -277,7 +286,11 @@
   .hero-announcement-card { padding: 8px; margin: 8px auto; max-width: 90%; }
   .phone-mockup { max-width: 200px; padding: 8px; }
   .hero-revenue-share { font-size: calc(0.9rem + 4px) !important; }
-  .hero-lock-image-card { margin: 8px auto; }
+  .hero-lock-image-card { 
+    margin: 8px auto; 
+    max-width: 90%; /* Control width on mobile */
+    display: block; /* Ensure margin auto works */
+  }
   .hero-cta-button { padding: 10px 15px; font-size: 0.9rem; }
 }
 
