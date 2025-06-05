@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './TokenomicsSection.css';
-import { FaCoins, FaShieldAlt, FaChartLine, FaMoneyBillWave, FaUniversity, FaBalanceScale, FaExclamationTriangle } from 'react-icons/fa'; // Example icons
+import { FaCoins, FaShieldAlt, FaChartLine, FaMoneyBillWave, FaUniversity, FaBalanceScale, FaExclamationTriangle, FaCodeBranch } from 'react-icons/fa'; // Example icons
 import { Pie } from 'react-chartjs-2'; // Import Pie
 import {
   Chart as ChartJS,
@@ -9,6 +9,7 @@ import {
   Legend,
   Title // Import Title
 } from 'chart.js';
+import DevSupplyDetails from './DevSupplyDetails'; // Import the new component
 
 // Register Chart.js components
 ChartJS.register(
@@ -27,11 +28,16 @@ const InfoCard = ({ icon, title, children }) => (
 );
 
 const TokenomicsSection = () => {
-  const [activeTab, setActiveTab] = useState('overview');
+  const [activeTab, setActiveTab] = useState('devSupply');
   const defaultIconColor = '#e0e0e0'; // Light gray for icons on dark background
   const activeTreasuryIconColor = '#FFD700'; // Gold for treasury icon when active
 
   const tokenomicsData = {
+    devSupply: {
+      title: "Developer Wallet & Holdings",
+      icon: <FaCodeBranch size={40} color={defaultIconColor}/>,
+      content: <DevSupplyDetails />
+    },
     overview: {
       title: "GCM Tokenomics: Quick Look",
       icon: <FaChartLine size={40} color={defaultIconColor}/>,
@@ -194,6 +200,7 @@ const TokenomicsSection = () => {
   };
 
   const tabs = [
+    { id: 'devSupply', label: 'Dev Supply' },
     { id: 'overview', label: 'Overview' },
     { id: 'dualNature', label: 'Dual Nature' },
     { id: 'accruingPoints', label: 'Accruing Points' },
