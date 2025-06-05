@@ -1,0 +1,136 @@
+.dev-supply-details {
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  color: #e0e0e0; /* Light text for dark theme */
+}
+
+.dev-supply-details h4 {
+  color: #FFD700; /* Gold color for headings */
+  margin-top: 25px;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+}
+
+.dev-supply-details h4 svg {
+  margin-right: 10px;
+}
+
+.dev-supply-details .intro-text,
+.dev-supply-details .explanation-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #cccccc;
+}
+
+.main-wallet-section,
+.future-plans {
+  background-color: #333333; /* Slightly lighter than info-card background */
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  border: 1px solid #444444;
+}
+
+.wallet-info {
+  display: flex;
+  align-items: center;
+  background-color: #383838; /* Darker item background */
+  padding: 12px 18px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  border-left: 4px solid #FFD700; /* Gold accent border */
+  transition: background-color 0.3s ease;
+}
+
+.wallet-info:hover {
+  background-color: #4a4a4a;
+}
+
+.wallet-icon {
+  color: #FFD700; /* Gold icon */
+  font-size: 1.5rem;
+  margin-right: 15px;
+}
+
+.wallet-details {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.wallet-alias {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #f0f0f0;
+  margin-bottom: 3px;
+}
+
+.wallet-address {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.85rem;
+  color: #b0b0b0;
+  word-break: break-all; /* Ensure long addresses don't break layout */
+}
+
+.wallet-percentage {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #FFD700; /* Gold for percentage */
+  margin-left: 20px;
+  white-space: nowrap;
+}
+
+.distribution-list {
+  display: grid;
+  gap: 15px;
+}
+
+.dev-supply-details code {
+  background-color: #4f4f4f;
+  padding: 0.2em 0.4em;
+  margin: 0;
+  font-size: 0.9em;
+  border-radius: 3px;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+  color: #f0f0f0;
+}
+
+.future-plans p {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.future-plans em {
+  color: #cccccc;
+  font-size: 0.9rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .wallet-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .wallet-icon {
+    margin-bottom: 8px;
+  }
+
+  .wallet-percentage {
+    margin-left: 0;
+    margin-top: 8px;
+    align-self: flex-end;
+  }
+
+  .dev-supply-details h4 {
+    font-size: 1.2rem;
+  }
+
+  .dev-supply-details .intro-text,
+  .dev-supply-details .explanation-text {
+    font-size: 0.95rem;
+  }
+} 
