@@ -3,7 +3,6 @@ import './App.css';
 
 import SocialBanner from './components/SocialBanner/SocialBanner';
 import HeroSection from './components/HeroSection/HeroSection';
-import CminerPurposeSection from './components/CminerPurposeSection/CminerPurposeSection';
 import DexScreenerSection from './components/DexScreenerSection/DexScreenerSection';
 import TechnicalDetailsSection from './components/TechnicalDetailsSection/TechnicalDetailsSection';
 import SectionDivider from './components/SectionDivider/SectionDivider';
@@ -28,8 +27,6 @@ function App() {
       <FallingFruit />
       <SocialBanner />
       <HeroSection />
-      <CminerPurposeSection />
-      <SectionDivider />
       <DexScreenerSection />
       <TechnicalDetailsSection />
       <SectionDivider />

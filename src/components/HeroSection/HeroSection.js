@@ -170,9 +170,22 @@ const HeroSection = () => {
             
           <img src="/images/lock.jpg" alt="Token Lock Information" className="hero-lock-image-card" /> 
           
-          {/* Additional Info / Disclaimers Area - could be full width below details */}
-          <div className="hero-additional-info">
-            {/* Pump.fun links moved into the card */}
+          <div className="hero-detail-card hero-purpose-card">
+            <h3 className="hero-card-title">Purpose of $CMINER</h3>
+            <p>$CMINER is a prototype development token designed to support and test the core systems of our play-to-earn game prior to the launch of our main token, $GCM. While $CMINER is not the final product, it plays a critical role in ensuring the stability, balance, and economic integrity of the game ecosystem.</p>
+            
+            <h3 className="hero-card-title" style={{ marginTop: '15px' }}>Short-Term Utility, Long-Term Value</h3>
+            <p>The $CMINER chart serves as an essential short-term testing environment to validate:</p>
+            <ul style={{ textAlign: 'left', display: 'inline-block', margin: '10px auto', paddingLeft: '20px' }}>
+                <li>Game functionality</li>
+                <li>Economic distribution mechanics</li>
+                <li>Real-time feedback on valuation and reward pacing</li>
+                <li>On-chain integration and analytics tracking</li>
+            </ul>
+            <p>This real-world simulation allows us to refine formulas, calibrate rewards, and stress test monetization loops before $GCM's full deployment.</p>
+            <p>More importantly, $CMINER will not be abandoned. While its primary utility is short-term, it will receive a long-term support post-launch (TBD) as a part of our broader ecosystem.</p>
+            
+            <p className="hero-positive-note" style={{marginTop: '15px'}}>For traders, $CMINER is a golden opportunity to benefit from the snowball rewards effects from the testing of the game economic integration.</p>
           </div>
 
           <div className="hero-cta-buttons-container">
@@ -183,7 +196,6 @@ const HeroSection = () => {
               Join Testers Team!
             </button>
           </div>
-
         </div>
       </div>
     </section>
