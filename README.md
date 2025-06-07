@@ -41,6 +41,7 @@ This website itself acts as an initial whitepaper, providing a glimpse into the 
 *   **Crypto Rewards:** Earn tangible value in the form of $GCM tokens.
 *   **Memecoin Gaming Future:** We believe in the potential of combining meme culture with engaging gaming experiences and real economic incentives.
 *   **Community Driven:** (To be elaborated) Future plans may include community governance, player-influenced development, and social features.
+*   **$CMINER Token:** Learn about our prototype development token and its role in the ecosystem.
 
 A more detailed and formal whitepaper will be developed to cover tokenomics, roadmap, technical architecture, and governance in greater depth.
 
@@ -84,7 +85,7 @@ In the project directory, you can run:
 
 ## 💡 Future Ideas (To be expanded in full Whitepaper)
 
-*   Detailed Tokenomics for $GCM (Supply, Distribution, Utility) (See [GCM_Tokenomics.txt](GCM_Tokenomics.txt) for initial thoughts)
+*   Detailed Tokenomics for $GCM (Supply, Distribution, Utility)
 *   NFT Integration (e.g., for special mining tools, land, characters)
 *   Staking $GCM for rewards
 *   Marketplace for in-game items or NFTs
