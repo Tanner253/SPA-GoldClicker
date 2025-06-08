@@ -1,5 +1,6 @@
 import React from 'react';
 import './BecomeTesterSection.css';
+import { FaTelegramPlane } from 'react-icons/fa';
 
 // Re-using TelegramIcon from CallToActionSection for consistency
 const TelegramIcon = () => (
@@ -24,9 +25,14 @@ const BecomeTesterSection = () => {
           <li>Our community admins will guide you through the next steps and add you to the testers list for early access builds and feedback channels.</li>
         </ol>
       </div>
-      <a href="https://t.me/GoldClickerMining" target="_blank" rel="noopener noreferrer" className="cta-button primary telegram-tester-button">
-        <TelegramIcon /> Join Telegram &amp; Ask to Test!
-      </a>
+      <p>Your feedback during this phase is invaluable. Join our pioneers and help shape the future of Gold Clicker Mining!</p>
+      
+      <div className="button-container">
+        <a href="https://t.me/GCMOfficialPortal" target="_blank" rel="noopener noreferrer" className="cta-button primary telegram-tester-button">
+          <FaTelegramPlane className="button-icon" />
+          Join the Testers Telegram
+        </a>
+      </div>
       <p className="tester-thanks">
         Your contribution as a tester is invaluable and will help us make $GCM the best play-to-earn clicker game possible!
       </p>

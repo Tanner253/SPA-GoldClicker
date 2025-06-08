@@ -1,5 +1,6 @@
 import React from 'react';
 import './CallToActionSection.css';
+import { FaTwitter, FaTelegramPlane } from 'react-icons/fa';
 
 // Re-adding simple icons for consistency, can be improved later
 const XIcon = () => (
@@ -17,18 +18,19 @@ const TelegramIcon = () => (
 const CallToActionSection = () => {
   return (
     <section className="section-container cta-section">
-      <h2>Ready to Dig In &amp; Join the Community?</h2>
-      <p className="cta-text">
-        The Gold Clicker Mining adventure is just beginning! Follow our progress, join the conversation, and be the first to know about updates, beta access, and the official $GCM launch.
-      </p>
-      
-      <div className="cta-buttons">
-        <a href="https://x.com/GoldClickerSOL" target="_blank" rel="noopener noreferrer" className="cta-button primary">
-          <XIcon /> Follow on X (Twitter)
-        </a>
-        <a href="https://t.me/GoldClickerMining" target="_blank" rel="noopener noreferrer" className="cta-button secondary">
-          <TelegramIcon /> Join Telegram Group
-        </a>
+      <div className="cta-content">
+        <h2>Ready to Dive In?</h2>
+        <p>Follow our journey, get the latest updates, and be the first to know when the Gold Rush begins!</p>
+        <div className="cta-buttons">
+          <a href="https://x.com/GoldClickerG" target="_blank" rel="noopener noreferrer" className="cta-button primary">
+            <FaTwitter className="button-icon" />
+            Follow on X
+          </a>
+          <a href="https://t.me/GCMOfficialPortal" target="_blank" rel="noopener noreferrer" className="cta-button secondary">
+            <FaTelegramPlane className="button-icon" />
+            Join our Telegram
+          </a>
+        </div>
       </div>
 
       <p className="cta-text additional-info">
