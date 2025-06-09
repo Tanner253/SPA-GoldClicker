@@ -240,7 +240,7 @@
     max-width: 300px; /* Max size for phone in its column, adjust as needed */
     /* Consider a min-height on hero-video-area or phone-mockup if stretch isn't enough */
   }
-  .hero-lock-image-card { max-width: 650px; margin: 15px auto; }
+  .hero-lock-image-card { max-width: 90%; margin: 15px auto; }
   .hero-cta-buttons-container { flex-direction: row; justify-content: center; margin-top: 20px;}
 }
 
