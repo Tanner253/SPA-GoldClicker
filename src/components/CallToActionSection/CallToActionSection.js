@@ -22,7 +22,7 @@ const CallToActionSection = () => {
         <h2>Ready to Dive In?</h2>
         <p>Follow our journey, get the latest updates, and be the first to know when the Gold Rush begins!</p>
         <div className="cta-buttons">
-          <a href="https://x.com/GoldClickerG" target="_blank" rel="noopener noreferrer" className="cta-button primary">
+          <a href="https://x.com/GoldClickerSOL" target="_blank" rel="noopener noreferrer" className="cta-button primary">
             <FaTwitter className="button-icon" />
             Follow on X
           </a>

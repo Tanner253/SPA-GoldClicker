@@ -36,7 +36,7 @@ const SocialBanner = () => {
         </div>
 
         <div className="social-links-container">
-        <a href="https://x.com/GoldClickerG" target="_blank" rel="noopener noreferrer" className="social-link x-link">
+        <a href="https://x.com/GoldClickerSOL" target="_blank" rel="noopener noreferrer" className="social-link x-link">
           <XIcon />
           <span>Follow on X</span>
         </a>
