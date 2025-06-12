@@ -30,8 +30,8 @@ const SocialBanner = () => {
         <div className="community-info-container">
           <span className="banner-text join-community-button">Join our Community!</span>
           <div className="community-stats">
-            <span className="stat-item">1k+ Telegram members</span>
-            <span className="stat-item">350+ X followers</span>
+            <span className="stat-item">100+ Telegram members</span>
+            <span className="stat-item">500+ X followers</span>
           </div>
         </div>
 
