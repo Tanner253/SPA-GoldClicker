@@ -24,7 +24,7 @@ const SocialBanner = () => {
   return (
     <div className="social-banner">
       <div className="social-banner-content">
-        <span className="banner-text">🚀 Project Launch ETA: ~2 months</span>
+        <span className="banner-text">🚀 Project Launch ETA: 4-6 weeks</span>
         
         {/* Container for Join Community button and stats */}
         <div className="community-info-container">
