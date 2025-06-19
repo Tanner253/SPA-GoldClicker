@@ -134,6 +134,15 @@
   fill: #fff;
 } */
 
+.google-play-link:hover {
+  /* background-color: #4CAF50; */ /* Example: Google Play green on hover */
+  /* color: #fff; */
+}
+
+/* .google-play-link:hover svg {
+  fill: #fff;
+} */
+
 .social-links-container {
   display: flex;
   flex-direction: row; /* Ensure links are in a row */

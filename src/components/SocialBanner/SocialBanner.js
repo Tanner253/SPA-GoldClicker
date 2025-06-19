@@ -1,5 +1,6 @@
 import React from 'react';
 import './SocialBanner.css';
+import { FaGooglePlay } from 'react-icons/fa';
 
 // Simple icons (can be replaced with SVGs or an icon library later for better visuals)
 const XIcon = () => (
@@ -47,6 +48,10 @@ const SocialBanner = () => {
           <a href="https://discord.gg/mvbx7J295m" target="_blank" rel="noopener noreferrer" className="social-link discord-link">
             <DiscordIcon />
             <span>Join Discord</span>
+          </a>
+          <a href="https://play.google.com/store/apps/details?id=com.osknyo.CryptonClicker" target="_blank" rel="noopener noreferrer" className="social-link google-play-link">
+            <FaGooglePlay />
+            <span>Download on Google Play!</span>
           </a>
         </div>
       </div>
