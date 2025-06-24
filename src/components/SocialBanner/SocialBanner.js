@@ -31,15 +31,15 @@ const SocialBanner = () => {
         <div className="community-info-container">
           <span className="banner-text join-community-button">Join our Community!</span>
           <div className="community-stats">
-            <span className="stat-item">100+ Telegram members</span>
-            <span className="stat-item">500+ X followers</span>
+            <span className="stat-item">300+ Telegram members</span>
+            <span className="stat-item">had 600+ X followers</span>
           </div>
         </div>
 
         <div className="social-links-container">
-        <a href="https://x.com/GoldClickerSOL" target="_blank" rel="noopener noreferrer" className="social-link x-link">
+        <a href="https://x.com/GCM_SOL" target="_blank" rel="noopener noreferrer" className="social-link x-link">
           <XIcon />
-          <span>Follow on X</span>
+          <span>Follow on X - we got suspended.</span>
         </a>
         <a href="https://t.me/GCMOfficialPortal" target="_blank" rel="noopener noreferrer" className="social-link telegram-link">
           <TelegramIcon />
