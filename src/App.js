@@ -20,6 +20,7 @@ import GoFundMeSection from './components/GoFundMeSection/GoFundMeSection';
 import CallToActionSection from './components/CallToActionSection/CallToActionSection';
 import Footer from './components/Footer/Footer';
 import FallingFruit from './components/FallingFruit/FallingFruit'; // Adjust path if necessary
+import ActivityFeed from './components/ActivityFeed/ActivityFeed';
 
 function App() {
   return (
@@ -54,6 +55,7 @@ function App() {
       <SectionDivider />
       <CallToActionSection />
       <Footer />
+      <ActivityFeed />
     </div>
   );
 }
