@@ -16,43 +16,63 @@ const ActivityFeed = () => {
     // ---------------------------------
 
     useEffect(() => {
-        const fetchHistory = async () => {
-            const historyApiUrl = process.env.NODE_ENV === 'development'
+        if (!isOpen) return;
+
+        const fetchData = async () => {
+            setActivities([]); // Clear existing activities
+
+            const historyUrl = process.env.NODE_ENV === 'development'
                 ? 'http://localhost:5238/api/activity/history'
-                : 'https://api.goldclicker.com/api/activity/history';
+                : 'https://apicryptonclicker-c7f5e6dsb3facfaw.canadacentral-01.azurewebsites.net/api/activity/history';
             
-            console.log("Fetching history from:", historyApiUrl); // Diagnostic log
+            const summaryUrl = process.env.NODE_ENV === 'development'
+                ? 'http://localhost:5238/api/leaderboards/summary'
+                : 'https://apicryptonclicker-c7f5e6dsb3facfaw.canadacentral-01.azurewebsites.net/api/leaderboards/summary';
 
             try {
-                const response = await fetch(historyApiUrl);
-                console.log("History response status:", response.status); // Diagnostic log
+                const [historyResponse, summaryResponse] = await Promise.all([
+                    fetch(historyUrl),
+                    fetch(summaryUrl)
+                ]);
 
-                if (response.ok) {
-                    const responseText = await response.text();
-                    console.log("History response text:", responseText); // Diagnostic log
-                    try {
-                        const history = JSON.parse(responseText);
-                        // Reverse the history so newest is at the bottom for initial load
-                        setActivities(history.reverse());
-                        setTimeout(() => {
-                            if (listRef.current) {
-                                listRef.current.scrollTop = listRef.current.scrollHeight;
-                            }
-                        }, 100);
-                    } catch (jsonError) {
-                        console.error("Failed to parse history JSON:", jsonError); // Diagnostic log
-                    }
+                let history = [];
+                if (historyResponse.ok) {
+                    history = (await historyResponse.json()).reverse();
                 } else {
-                    console.error("History response was not OK:", response);
+                    console.error("Failed to fetch history");
                 }
+
+                let summaryEvent = null;
+                if (summaryResponse.ok) {
+                    summaryEvent = {
+                        id: 'leaderboard-summary',
+                        message: await summaryResponse.text(),
+                        timestamp: new Date().toISOString()
+                    };
+                } else {
+                    console.error("Failed to fetch summary");
+                }
+                
+                const finalActivities = [...history];
+                if (summaryEvent) {
+                    finalActivities.push(summaryEvent);
+                }
+
+                setActivities(finalActivities);
+
+                setTimeout(() => {
+                    if (listRef.current) {
+                        listRef.current.scrollTop = listRef.current.scrollHeight;
+                    }
+                }, 100);
+
             } catch (error) {
-                console.error("Failed to fetch activity history:", error);
+                console.error("Error fetching initial activity data:", error);
             }
         };
 
-        if (isOpen) {
-            fetchHistory();
-        }
+        fetchData();
+
     }, [isOpen]);
 
     useEffect(() => {
@@ -60,10 +80,13 @@ const ActivityFeed = () => {
 
         const signalrApiUrl = process.env.NODE_ENV === 'development'
             ? 'http://localhost:5238/activityHub'
-            : 'https://api.goldclicker.com/activityHub';
+            : 'https://apicryptonclicker-c7f5e6dsb3facfaw.canadacentral-01.azurewebsites.net/activityHub';
 
         const connection = new signalR.HubConnectionBuilder()
-            .withUrl(signalrApiUrl)
+            .withUrl(signalrApiUrl, {
+                // Forcing Server-Sent Events to bypass environment-specific WebSocket issues.
+                transport: signalR.HttpTransportType.ServerSentEvents
+            })
             .withAutomaticReconnect()
             .build();
 
