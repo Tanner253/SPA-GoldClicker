@@ -88,7 +88,7 @@
 
 /* ADDED: Alternating row colors for readability */
 .activity-feed li:nth-child(even) {
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: rgba(0, 0, 0, 0.4); /* Darker for more contrast */
 }
 
 .activity-feed li .timestamp {
@@ -130,13 +130,13 @@
 
 .resize-handle {
     position: absolute;
-    right: 0;
-    bottom: 0;
+    top: 0;
+    left: 0;
     width: 15px;
     height: 15px;
     cursor: nwse-resize;
-    border-bottom: 2px solid #ffd700;
-    border-right: 2px solid #ffd700;
+    border-top: 2px solid #ffd700;
+    border-left: 2px solid #ffd700;
 }
 
 @keyframes fadeIn {
