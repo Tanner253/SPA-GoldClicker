@@ -1,0 +1,58 @@
+import React from 'react';
+import { FaDiscord, FaTelegramPlane, FaGooglePlay, FaApple, FaInstagram, FaTiktok, FaGithub, FaYoutube } from 'react-icons/fa';
+import { FiX, FiMail } from "react-icons/fi";
+import { SiDexcaster } from 'react-icons/si';
+import DisclaimerBlock from '../DisclaimerBlock/DisclaimerBlock';
+import './UI-Footer.css';
+
+const UIFooter = ({ onHireMeClick }) => {
+    const currentYear = new Date().getFullYear();
+
+    return (
+        <footer className="ui-footer">
+            <div className="footer-container">
+                <div className="footer-column about-column">
+                    <h3 className="footer-title">Gold Clicker Mining</h3>
+                    <p className="footer-disclaimer">
+                        $GCM is a memecoin for a game. Play responsibly. Not financial advice. The chart's longevity is supported by ad revenue, creating a unique economic model.
+                    </p>
+                </div>
+
+                <div className="footer-column links-column">
+                    <h3 className="footer-title">Quick Links</h3>
+                    <ul>
+                        <li><a href="#the-game">The Game</a></li>
+                        <li><a href="#tokenomics">Tokenomics</a></li>
+                        <li><a href="#community">Community</a></li>
+                        <li><a href="https://dexscreener.com/solana/DgjLq7AWAxf6Fn6LeMEdrimZn3kYwke2UJDWwFbUy8wT" target="_blank" rel="noopener noreferrer">Live Chart</a></li>
+                        <li><a href="https://tanner253.github.io/crypton-clicker-privacy-policy/" target="_blank" rel="noopener noreferrer">Privacy Policy</a></li>
+                        <li><a href="https://tanner253.github.io/crypton-clicker-privacy-policy/" target="_blank" rel="noopener noreferrer">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <div className="footer-column contact-column">
+                    <h3 className="footer-title">Get In Touch</h3>
+                    <div className="social-links-footer">
+                        <a href="https://t.me/GCMOfficialPortal" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><FaTelegramPlane /></a>
+                        <a href="https://discord.gg/mvbx7J295m" target="_blank" rel="noopener noreferrer" aria-label="Discord"><FaDiscord /></a>
+                        <a href="https://x.com/GCM_SOL" target="_blank" rel="noopener noreferrer" aria-label="X"><FiX /></a>
+                        <a href="https://www.instagram.com/goldclickermining/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaInstagram /></a>
+                        <a href="https://www.tiktok.com/@goldclickermining?lang=en" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><FaTiktok /></a>
+                        <a href="https://www.youtube.com/@osknyo" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><FaYoutube /></a>
+                        <a href="https://github.com/Tanner253" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><FaGithub /></a>
+                        <a href="mailto:GoldClickerMining@gmail.com" aria-label="Email"><FiMail /></a>
+                    </div>
+                </div>
+            </div>
+            <div className="footer-bottom">
+                <p>&copy; {currentYear} Gold Clicker Mining ($GCM). All Rights Reserved.</p>
+                <button onClick={onHireMeClick} className="hire-me-btn">
+                    Looking for a Developer?
+                </button>
+            </div>
+            <DisclaimerBlock type="footer" />
+        </footer>
+    );
+};
+
+export default UIFooter; 

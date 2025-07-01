@@ -1,0 +1,241 @@
+* {
+    box-sizing: border-box;
+    font-family: "arial";
+}
+
+/*Main Rulez*/
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+a:focus,
+button:focus,
+a:active,
+button:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+body {
+    perspective: 600px;
+}
+
+/*Start Header*/
+.header {
+    background-image: linear-gradient(to left top, rgb(63, 2, 168), rgb(139, 63, 174));
+    position: relative;
+    overflow: hidden;
+}
+
+.main-menu nav {
+    z-index: 99;
+}
+
+
+.main-menu a {
+    color: #fff !important;
+    font-size: 17px;
+    text-transform: capitalize;
+    padding-right: 1rem !important;
+    padding-left: 1rem !important;
+}
+
+.main-menu .active {
+    font-weight: bold;
+}
+
+.main-menu .navbar-brand img {
+    width: 80px;
+    height: 70px;
+}
+
+
+.main-menu .logo {
+    position: relative;
+    bottom: 9px;
+}
+
+.header .modal-footer button {
+    background-color: #290856;
+    border-color: #2b0a56;
+}
+
+.header .wave {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    background: url(https://res.cloudinary.com/rocket-landing-page/image/upload/v1549206068/wave.png) no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    z-index: 9;
+    animation: wave 1.4s linear infinite;
+}
+
+.big-rocket {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    bottom: 16%;
+    display: flex;
+    justify-content: center;
+    animation: rocket 5s linear infinite;
+    transform-origin: bottom;
+    z-index: 10;
+}
+
+.big-rocket:after {
+    content: "";
+    width: 100px;
+    height: 100px;
+    display: block;
+    background: url(https://res.cloudinary.com/rocket-landing-page/image/upload/v1549206064/fire-rock.png) no-repeat;
+    top: 95%;
+    position: absolute;
+    margin-left: 35px;
+}
+
+.shine {
+    top: -9%;
+    position: relative;
+    animation: shine 4s linear infinite;
+    left: -31%;
+}
+
+.shine-2 {
+    animation: shine 4s linear infinite 2s;
+}
+
+.moon {
+    position: absolute;
+    top: 20%;
+    right: 25%;
+}
+
+.moon-1 {
+    position: absolute;
+    top: 30%;
+    left: 25%;
+}
+/*End Header*/
+/*Start Responsive*/
+@media (min-width: 1024px) {
+    .main-menu .navbar {
+        padding: 2.5rem 1rem;
+    }
+
+    .main-menu .logo:before {
+        content: "";
+        background: url(https://res.cloudinary.com/rocket-landing-page/image/upload/v1549206064/rock-3.png) no-repeat;
+        background-size: contain;
+        background-position: center;
+        display: block;
+        width: 69px;
+        height: 50px;
+        line-height: 50px;
+        margin-bottom: 5px;
+    }
+
+    .main-menu {
+        display: flex;
+
+
+    }
+
+    .big-rocket {
+        bottom: 23%;
+    }
+
+}
+
+@media (max-width:1024px) {
+    .header .wave {
+        background: url(https://res.cloudinary.com/rocket-landing-page/image/upload/v1549206068/wave.png) no-repeat;
+        background-position: bottom center;
+        background-size: contain;
+    }
+
+}
+
+@media (max-width:768px) {
+    .main-menu div#navbarNavAltMarkup {
+        background: rgba(0, 0, 0, .3);
+    }
+
+}
+
+/*End Responsive*/
+/*..................................................................................*/
+/*Start animation 3d*/
+
+@keyframes shine {
+    from {
+        top: -35%;
+        left: 0%;
+
+    }
+
+    to {
+        top: 100%;
+        left: 100%;
+    }
+}
+
+@keyframes wave {
+
+    0% {
+        transform: translateY(0px);
+    }
+
+    25% {
+        transform: translateY(5px);
+    }
+
+
+
+}
+
+@keyframes rocket {
+
+    0%,
+    100% {
+        transform: rotate(10deg);
+    }
+
+    50% {
+        transform: rotate(-10deg);
+
+    }
+}
+
+@keyframes starwave {
+
+}
+/* 
+@keyframes swing {
+
+    0%,
+    100% {
+        transform: rotate(-10deg);
+    }
+
+    50% {
+        transform: rotate(10deg);
+    }
+}
+
+@keyframes moon {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(360deg);
+    }
+} */ 

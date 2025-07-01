@@ -1,0 +1,11 @@
+.default-style {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 3rem 0;
+    margin: 0 100px;
+}
+
+.footer-style {
+    border-top: 1px solid #3a3a5a; /* A single, consistent border */
+    padding: 2rem 0;
+    margin: 0;
+} 

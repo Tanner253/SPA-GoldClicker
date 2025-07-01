@@ -1,0 +1,52 @@
+.ui-navbar {
+    background: rgba(16, 16, 26, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(58, 58, 90, 0.5);
+    -webkit-backdrop-filter: saturate(180%) blur(10px);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.ui-navbar a {
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+#mobile-menu {
+    background: rgba(19, 15, 38, 0.95);
+    backdrop-filter: saturate(180%) blur(10px);
+    -webkit-backdrop-filter: saturate(180%) blur(10px);
+}
+
+.central-logo-link {
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.central-logo-link:hover {
+    transform: scale(1.1);
+}
+
+.nav-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.top-left-icon {
+    position: absolute;
+    left: 1rem; /* Corresponds to px-4 */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.central-icon {
+    transition: transform 0.3s ease;
+}
+
+.central-logo-link:hover .central-icon {
+    transform: scale(1.1) rotate(-5deg);
+}
+
+#mobile-menu a {
+    display: block;
+} 
+ 

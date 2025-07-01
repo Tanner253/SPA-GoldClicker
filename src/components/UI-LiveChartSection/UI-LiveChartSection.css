@@ -1,0 +1,98 @@
+.ui-live-chart-section {
+    background-color: #0f0f1a;
+    padding: 4rem 1rem;
+    overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.chart-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    gap: 2rem;
+    max-width: 1600px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.chart-grid-item {
+    grid-column: 2 / 3;
+    grid-row: 1 / 4;
+    height: 1000px;
+}
+
+.chart-embed-container {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.chart-embed-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.meme-quote-grid-item {
+    background: rgba(30, 27, 50, 0.7);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    border: 1px solid transparent; /* Start with a transparent border */
+    animation: pulse-border 5s infinite ease-in-out;
+}
+
+.quote-content {
+    backdrop-filter: blur(4px);
+}
+
+.quote-text {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: white;
+}
+
+.quote-author {
+    font-size: 0.9rem;
+    color: #a3a3a3;
+    text-align: right;
+    margin-top: 0.5rem;
+}
+
+/* Specific item placement in the grid */
+.item-1 { grid-column: 1 / 2; grid-row: 1 / 2; justify-self: end; align-self: end; }
+.item-2 { grid-column: 3 / 4; grid-row: 1 / 2; justify-self: start; align-self: end; }
+.item-3 { grid-column: 1 / 2; grid-row: 2 / 3; justify-self: end; align-self: center; }
+.item-4 { grid-column: 3 / 4; grid-row: 2 / 3; justify-self: start; align-self: center; }
+.item-5 { grid-column: 1 / 2; grid-row: 3 / 4; justify-self: end; align-self: start; }
+.item-6 { grid-column: 3 / 4; grid-row: 3 / 4; justify-self: start; align-self: start; }
+
+@keyframes pulse-border {
+  0% { border-color: rgba(139, 63, 174, 0.2); }
+  50% { border-color: rgba(139, 63, 174, 0.7); }
+  100% { border-color: rgba(139, 63, 174, 0.2); }
+}
+
+@media (max-width: 1024px) {
+    .chart-grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        padding: 2rem 0;
+    }
+    .chart-grid-item, .meme-quote-grid-item {
+        grid-column: 1 / 2;
+        grid-row: auto;
+        justify-self: center;
+        max-width: 500px;
+        width: 100%;
+    }
+    .chart-grid-item { order: 1; }
+    .item-1, .item-2, .item-3 { order: 0; }
+    .item-4, .item-5, .item-6 { order: 2; }
+} 

@@ -1,0 +1,181 @@
+.ui-the-game-section {
+    background-color: #0f0f1a;
+    background-image: radial-gradient(circle at 10% 20%, rgba(63, 2, 168, 0.2) 0%, transparent 50%),
+                      radial-gradient(circle at 80% 90%, rgba(139, 63, 174, 0.15) 0%, transparent 40%);
+    color: #e0e0e0;
+    overflow: hidden;
+}
+
+.game-section-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.left-sticky-col {
+    grid-column: span 5;
+    position: relative;
+}
+
+.sticky-content {
+    position: sticky;
+    top: 10rem; /* Adjust based on navbar height and desired spacing */
+    height: calc(100vh - 12rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Aligns content to the top */
+    padding-top: 16rem; /* Added padding for visual alignment */
+}
+
+.sticky-content .prose-lg {
+    font-size: 1.25rem; /* Larger font size */
+    line-height: 1.7;
+    grid-column: span 7;
+}
+
+.right-scroll-col {
+    grid-column: span 7;
+}
+
+.features-full-width {
+    padding: 4rem 0;
+}
+
+.differentiators-section {
+    padding: 4rem 0;
+    background-color: #11111b; /* Slightly different dark shade */
+}
+
+.trust-section,
+.why-invest-section,
+.kyc-section {
+    padding: 10px 0;
+}
+
+.content-block {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 4rem;
+}
+
+/* Phone Mockup for Video */
+.phone-mockup {
+    position: relative;
+    max-width: 300px;
+    margin: 0 auto;
+    background: #1e1e1e;
+    border-radius: 40px;
+    padding: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 
+                inset 0 0 5px rgba(255, 255, 255, 0.1);
+}
+
+.phone-screen {
+    background: #000;
+    border-radius: 30px;
+    overflow: hidden;
+    aspect-ratio: 9 / 19.5;
+}
+
+.gameplay-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Feature Cards */
+.feature-card {
+    background: rgba(30, 27, 50, 0.6);
+    backdrop-filter: saturate(180%) blur(10px);
+    -webkit-backdrop-filter: saturate(180%) blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    height: 100%; /* Make cards in a row equal height */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(97, 3, 148, 0.2);
+}
+
+.feature-icon {
+    color: #d19cff;
+    display: inline-block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .game-section-container {
+        grid-template-columns: 1fr;
+    }
+    .left-sticky-col {
+        text-align: center; /* Center align text on smaller screens */
+    }
+    .left-sticky-col, .sticky-content {
+        position: static;
+        height: auto;
+        margin-bottom: 3rem;
+        padding-top: 0; /* Reset padding */
+    }
+    .content-block {
+        min-height: auto;
+    }
+}
+
+.kyc-section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.revenue-engine-section {
+    padding: 6rem 0;
+    background-color: #0f172a; /* slate-900 */
+}
+
+.revenue-card {
+    background-color: #1e293b; /* slate-800 */
+    padding: 2.5rem 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    border: 1px solid #334155; /* slate-700 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.revenue-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.revenue-icon {
+    font-size: 3rem;
+    color: #4f46e5; /* indigo-600 */
+    margin-bottom: 1.5rem;
+    display: inline-block;
+}
+
+.revenue-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 0.75rem;
+}
+
+.revenue-description {
+    color: #94a3b8; /* slate-400 */
+    line-height: 1.6;
+}
+
+/* Add some spacing to the last sections */
+#the-game > .container > div:last-child {
+    margin-bottom: 4rem;
+}
+
+ 
