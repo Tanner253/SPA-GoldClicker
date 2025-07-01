@@ -52,7 +52,7 @@
 .trust-section,
 .why-invest-section,
 .kyc-section {
-    padding: 10px 0;
+    padding: 3rem 0;
 }
 
 .content-block {
@@ -130,11 +130,6 @@
     }
 }
 
-.kyc-section {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-}
-
 .revenue-engine-section {
     padding: 6rem 0;
     background-color: #0f172a; /* slate-900 */
@@ -176,6 +171,10 @@
 /* Add some spacing to the last sections */
 #the-game > .container > div:last-child {
     margin-bottom: 4rem;
+}
+
+.kyc-section {
+    padding-bottom: 3rem;
 }
 
  

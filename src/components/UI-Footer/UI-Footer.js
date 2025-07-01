@@ -1,7 +1,6 @@
 import React from 'react';
-import { FaDiscord, FaTelegramPlane, FaGooglePlay, FaApple, FaInstagram, FaTiktok, FaGithub, FaYoutube } from 'react-icons/fa';
-import { FiX, FiMail } from "react-icons/fi";
-import { SiDexcaster } from 'react-icons/si';
+import { FaDiscord, FaTelegramPlane, FaInstagram, FaTiktok, FaYoutube } from 'react-icons/fa';
+import { FiX } from 'react-icons/fi';
 import DisclaimerBlock from '../DisclaimerBlock/DisclaimerBlock';
 import './UI-Footer.css';
 
@@ -39,8 +38,6 @@ const UIFooter = ({ onHireMeClick }) => {
                         <a href="https://www.instagram.com/goldclickermining/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaInstagram /></a>
                         <a href="https://www.tiktok.com/@goldclickermining?lang=en" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><FaTiktok /></a>
                         <a href="https://www.youtube.com/@osknyo" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><FaYoutube /></a>
-                        <a href="https://github.com/Tanner253" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><FaGithub /></a>
-                        <a href="mailto:GoldClickerMining@gmail.com" aria-label="Email"><FiMail /></a>
                     </div>
                 </div>
             </div>

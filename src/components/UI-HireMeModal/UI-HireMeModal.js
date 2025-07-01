@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiX, FiMail, FiCode, FiDatabase, FiCloud, FiTerminal } from 'react-icons/fi';
-import { FaReact, FaUnity, FaAws, FaNodeJs, FaHtml5, FaCss3Alt, FaSass, FaDocker, FaGitAlt } from 'react-icons/fa';
+import { FaReact, FaAws, FaNodeJs, FaHtml5, FaCss3Alt, FaSass, FaDocker, FaGitAlt } from 'react-icons/fa';
 import { SiDotnet, SiJavascript, SiPostgresql, SiMysql, SiMongodb, SiBlazor, SiUnity } from 'react-icons/si';
 import { VscJson } from 'react-icons/vsc';
 

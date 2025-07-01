@@ -1,7 +1,7 @@
 import React from 'react';
 import './UI-CommunitySection.css';
-import { FaDiscord, FaTelegramPlane, FaGooglePlay, FaUsers, FaUserPlus, FaApple, FaInstagram, FaTiktok, FaYoutube } from 'react-icons/fa';
-import { FiX, FiHeart } from "react-icons/fi";
+import { FaDiscord, FaTelegramPlane, FaGooglePlay, FaUserPlus, FaApple, FaInstagram, FaTiktok, FaYoutube } from 'react-icons/fa';
+import { FiX } from "react-icons/fi";
 import GoFundMeWidget from '../GoFundMeWidget/GoFundMeWidget';
 import UIMintFeed from '../UI-MintFeed/UIMintFeed'; // Import the new component
 
@@ -47,8 +47,8 @@ const UICommunitySection = () => {
                         <UIMintFeed />
                     </div>
 
-                    {/* Right Side - Stats & Support */}
-                    <div className="community-extra-info">
+                    {/* Right Column Wrapper */}
+                    <div className="community-right-column">
                         <div className="community-stats-card">
                             <h4>Community Strength</h4>
                             <div className="stats-grid">

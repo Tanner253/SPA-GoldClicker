@@ -1,12 +1,14 @@
 /* UI-MintFeed.css */
 
 .ui-mint-feed {
-    margin-top: 25px;
+    border: 1px solid #3a3a5a;
+    border-radius: 10px;
     padding: 20px;
-    background: rgba(0, 0, 0, 0.2);
-    border-radius: 15px;
-    border: 1px solid #4a4a6a;
-    flex-shrink: 0; /* Prevent the feed from shrinking */
+    background-color: rgba(0, 0, 0, 0.2);
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .mint-feed-title {
@@ -15,12 +17,12 @@
     color: #ffd700;
     margin-bottom: 15px;
     text-align: center;
+    padding-bottom: 10px;
 }
 
 .mint-feed-list {
-    height: 180px; /* Approx height for 5 items */
-    overflow: hidden;
-    position: relative;
+    overflow-y: auto;
+    flex-grow: 1;
 }
 
 .ui-mint-feed ul {
@@ -33,12 +35,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 8px 10px;
+    padding: 10px 5px;
     border-radius: 8px;
     margin-bottom: 8px;
     background-color: rgba(255, 255, 255, 0.05);
     font-size: 0.9rem;
     animation: slideIn 0.5s ease-out forwards;
+    border-bottom: 1px solid #3a3a5a;
 }
 
 .mint-message {

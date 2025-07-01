@@ -1,6 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { FiAward, FiZap, FiGlobe, FiTrendingUp, FiUsers, FiGift, FiShield, FiRefreshCw, FiMessageSquare, FiDollarSign, FiBarChart2, FiLock, FiUserCheck, FiPlayCircle, FiShoppingCart, FiMonitor, FiBriefcase } from 'react-icons/fi';
+import { FiAward, FiZap, FiGlobe, FiTrendingUp, FiUsers, FiShield, FiRefreshCw, FiMessageSquare, FiDollarSign, FiBarChart2, FiLock, FiUserCheck, FiPlayCircle, FiShoppingCart, FiMonitor, FiBriefcase } from 'react-icons/fi';
 import './UI-TheGameSection.css';
 import UIActivityFeed from '../UI-ActivityFeed/UI-ActivityFeed';
 import UIInfoCard from '../UI-InfoCard/UI-InfoCard';
@@ -131,7 +130,7 @@ const UITheGameSection = () => {
             </div>
 
             {/* KYC Section */}
-            <div className="kyc-section why-invest-section">
+            <div className="kyc-section">
                 <div className="container mx-auto px-4">
                     <UIInfoCard icon={<FiUserCheck />} title="How We Navigate KYC & Payouts">
                         <p className="max-w-3xl mx-auto">
