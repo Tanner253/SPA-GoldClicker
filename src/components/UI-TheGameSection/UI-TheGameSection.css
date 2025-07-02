@@ -13,6 +13,7 @@
     max-width: 1400px;
     margin: 0 auto;
     padding: 4rem 2rem;
+    margin-bottom: 400px;
 }
 
 .left-sticky-col {
@@ -171,6 +172,25 @@
 /* Add some spacing to the last sections */
 #the-game > .container > div:last-child {
     margin-bottom: 4rem;
+}
+
+.tldr-box {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-left: 4px solid #ffd700;
+    border-radius: 8px;
+}
+
+.tldr-box p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #e0e0e0;
+}
+
+.tldr-box strong {
+    color: #ffd700;
 }
 
 .kyc-section {

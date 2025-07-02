@@ -3,7 +3,6 @@ import { FiAward, FiZap, FiGlobe, FiTrendingUp, FiUsers, FiShield, FiRefreshCw, 
 import './UI-TheGameSection.css';
 import UIActivityFeed from '../UI-ActivityFeed/UI-ActivityFeed';
 import UIInfoCard from '../UI-InfoCard/UI-InfoCard';
-import DisclaimerBlock from '../DisclaimerBlock/DisclaimerBlock';
 
 const UITheGameSection = () => {
     const features = [
@@ -36,10 +35,10 @@ const UITheGameSection = () => {
                 <div className="left-sticky-col">
                     <div className="sticky-content">
                         <div>
-                            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">What is Gold Clicker?</h2>
+                            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">What is Gold Clicker Mining?</h2>
                             <div className="prose-lg text-slate-300">
                                 <p><strong>Gold Clicker Mining ($GCM)</strong> is not just another clicker game. It's a meticulously crafted experience designed to be genuinely fun, addicting, and rewarding.</p>
-                                <p>Inspired by classics like Cookie Clicker and AdVenture Capitalist, $GCM offers exponential idle clicker progression where every click and every upgrade brings you closer to unparalleled virtual wealth.</p>
+                                <p>Inspired by classics like Cookie Clicker and AdVenture Capitalist, $GCM offers exponential idle clicker progression where every click and every upgrade brings you closer to unparalleled virtual wealth. GCM is the first game of many to come to the ARCADE system we are building.</p>
                             </div>
 
                             <h3 className="text-3xl font-bold text-white mt-10 mb-4">Why Consider $GCM?</h3>
@@ -134,11 +133,17 @@ const UITheGameSection = () => {
                 <div className="container mx-auto px-4">
                     <UIInfoCard icon={<FiUserCheck />} title="How We Navigate KYC & Payouts">
                         <p className="max-w-3xl mx-auto">
-                            All in-game currency is virtual. You play to earn "GCM Points," which keeps all value strictly within the game's ecosystem. When you request a withdrawal, you can enter any string—a wallet address or otherwise. We don't need to know who you are.
+                            To keep things simple and secure, our game operates in a "crypto-free" environment. You play and earn virtual, in-game rewards called <strong>"GCM Points."</strong> These points have no direct cash value and exist only within the game.
                         </p>
                         <p className="max-w-3xl mx-auto mt-4">
-                            The reception of funds at a valid wallet implies that the wallet holder has already completed a KYC process with their provider. Once we verify your request, your points balance is updated, and a payload is sent to a **completely separate, isolated server**. This external server simply sends the corresponding supply from the treasury to the recipient. The game and its servers never touch crypto or Web3, ensuring a clean and compliant separation.
+                            When you're ready to convert your "GCM Points" into real `$GCM` tokens, you initiate a withdrawal. You provide us with a recipient address—we don't ask for any personal information. Our game server then tells a completely separate, isolated payout server to send the `$GCM` tokens from our treasury to your address.
                         </p>
+                        <p className="max-w-3xl mx-auto mt-4">
+                            This separation is key: the game itself never handles cryptocurrency, ensuring compliance and reducing risk. We assume that any user providing a wallet address has already completed the necessary KYC with their own wallet provider.
+                        </p>
+                        <div className="tldr-box">
+                            <p><strong>TL;DR:</strong> You play the game for "GCM Points" (like arcade tickets). When you want to cash out, you give us an address, and our separate, secure payout system sends you actual `$GCM` crypto. The game and the crypto are kept completely separate.</p>
+                        </div>
                     </UIInfoCard>
                 </div>
             </div>
@@ -175,9 +180,6 @@ const UITheGameSection = () => {
 
             {/* Live Activity Feed */}
             <UIActivityFeed />
-
-            {/* Disclaimer at the bottom */}
-            <DisclaimerBlock />
         </section>
     );
 };

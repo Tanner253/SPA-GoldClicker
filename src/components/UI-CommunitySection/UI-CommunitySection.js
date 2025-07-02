@@ -17,6 +17,26 @@ const UICommunitySection = () => {
                     </p>
                 </div>
 
+                {/* Hype Section */}
+                <div className="hype-section">
+                    <div className="hype-item">
+                        <span className="hype-value">$1,000+</span>
+                        <span className="hype-label">Risk-Free Revenue Reinvested</span>
+                    </div>
+                    <div className="hype-item">
+                        <span className="hype-value">300+</span>
+                        <span className="hype-label">Player Installs & Growing</span>
+                    </div>
+                    <div className="hype-item">
+                        <span className="hype-value">Worldwide</span>
+                        <span className="hype-label">Players in Every Region</span>
+                    </div>
+                    <div className="hype-item">
+                        <span className="hype-value">3 Weeks</span>
+                        <span className="hype-label">Until Official $GCM Launch</span>
+                    </div>
+                </div>
+
                 <div className="community-main-content">
                     {/* Left Side - CTA */}
                     <div className="community-cta-card">
