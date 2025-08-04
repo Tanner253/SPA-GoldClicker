@@ -109,9 +109,9 @@ const HeroSection = () => {
             <div className="hero-announcement-card"> 
               <p className="hero-tagline hero-deployment-shoutout"> 
                 <span className="hero-special-deployment-text">
-                  WE ARE DEPLOYED IN THE ANDROID APP STORE FOR TESTERS
+                  NOW LIVE ON iOS & ANDROID! 1000+ DOWNLOADS ACHIEVED!
                 </span>
-                , PLEASE JOIN THE TESTERS TEAM TO EARN AIRDROPS!
+                <br />iOS TESTERS ACTIVELY MINING GOLD! GCM LAUNCH IMMINENT!
               </p>
             </div>
 
@@ -142,7 +142,7 @@ const HeroSection = () => {
               </div>
               
               {/* Warning and Positive notes remain */}
-              <p className="hero-warning-text">This is a development stream, please do not invest unless you understand the risks, IT IS A SUPPORT STREAM TO SUPPORT THE DEVELOPMENT OF THE GAME AND MARKET THE UPCOMING LAUNCH. IF THIS CHART DOES WELL ITS GOOD FOR GMC LAUNCH (4-6 weeks eta) which is good for everyone. 🚀💛</p>
+              <p className="hero-warning-text">This is a development stream, please do not invest unless you understand the risks. IT IS A SUPPORT STREAM TO SUPPORT THE DEVELOPMENT OF THE GAME AND MARKET THE UPCOMING LAUNCH. With iOS approval imminent, we're preparing for the official GCM launch and treasury fundraising phase. 🚀💛</p>
               <p className="hero-positive-note">
                 $CMINER sales by the dev (when supply unlocks post-GCM launch) will help fund the treasury, ensuring long-term project health. 
                 Rest assured, 100% of the initial dev supply is locked, safeguarding against any rug pull.

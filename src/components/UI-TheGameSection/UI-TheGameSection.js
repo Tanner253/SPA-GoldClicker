@@ -45,6 +45,22 @@ const UITheGameSection = () => {
                             <div className="prose-lg text-slate-300">
                                 <p>In a world of fleeting trends, Gold Clicker Mining is built for longevity. Unlike typical projects that rely on hype, $GCM's value is directly fueled by a continuous stream of ad revenue from the game.</p>
                                 <p>With a massive <strong>80% of net revenue</strong> injected back into the ecosystem, every player's engagement helps strengthen the foundation for the entire community. This creates a self-sustaining model designed for stable, long-term growth—a true blue-chip contender in the making.</p>
+                                <p><strong>Next Phase:</strong> Once iOS approval is secured, we'll begin livestreaming and executing strategic treasury fundraising activities. The roadmap is clear: raise funds → launch GCM → establish chart presence → integrate legal framework → deliver the complete ecosystem.</p>
+                            </div>
+
+                            {/* Download Now Button */}
+                            <div className="mt-8">
+                                <button
+                                    onClick={() => {
+                                        const communitySection = document.getElementById('community');
+                                        if (communitySection) {
+                                            communitySection.scrollIntoView({ behavior: 'smooth' });
+                                        }
+                                    }}
+                                    className="download-now-btn bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-full text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 animate-pulse"
+                                >
+                                    🚀 Download Now!
+                                </button>
                             </div>
                         </div>
                     </div>

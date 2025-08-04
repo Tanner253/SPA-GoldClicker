@@ -63,12 +63,20 @@ const UIHeroSection = () => {
                         Welcome to Gold Clicker Mining $GCM
                     </motion.h1>
                     <motion.p
-                        className="text-lg md:text-xl max-w-2xl"
+                        className="text-lg md:text-xl max-w-2xl mb-6"
                         variants={itemVariants}
                     >
                         The only risk free growing asset on solana. Click, earn, and watch
                         your fortune grow.
                     </motion.p>
+                    <motion.div
+                        className="bg-gradient-to-r from-green-600 to-blue-600 rounded-lg p-4 max-w-3xl mx-auto mb-4"
+                        variants={itemVariants}
+                    >
+                        <p className="text-white font-semibold text-center">
+                            🎉 <strong>MAJOR UPDATE:</strong> iOS Testing Now Live! • 1000+ Downloads Achieved • GCM Launch Imminent
+                        </p>
+                    </motion.div>
                 </motion.div>
 
                 {/* Scroll Down Button Footer */}

@@ -13,7 +13,7 @@ const UICommunitySection = () => {
                 <div className="community-header">
                     <h2 className="community-title">Join the Gold Clicker Revolution!</h2>
                     <p className="community-subtitle">
-                        The mines are open, and the gold rush is ON! Be among the first to stake your claim.
+                        🎉 <strong>Major Milestone:</strong> iOS testers are now actively mining gold on their devices! With 1000+ downloads achieved and iOS publication imminent, we're entering the final phase before the official $GCM token launch. Join the revolution that's about to reshape mobile gaming and DeFi!
                     </p>
                 </div>
 
@@ -24,16 +24,16 @@ const UICommunitySection = () => {
                         <span className="hype-label">Risk-Free Revenue Reinvested</span>
                     </div>
                     <div className="hype-item">
-                        <span className="hype-value">300+</span>
-                        <span className="hype-label">Player Installs & Growing</span>
+                        <span className="hype-value">1000+</span>
+                        <span className="hype-label">Downloads Achieved</span>
                     </div>
                     <div className="hype-item">
-                        <span className="hype-value">Worldwide</span>
-                        <span className="hype-label">Players in Every Region</span>
+                        <span className="hype-value">iOS + Android</span>
+                        <span className="hype-label">Now Testing on Both Platforms</span>
                     </div>
                     <div className="hype-item">
-                        <span className="hype-value">3 Weeks</span>
-                        <span className="hype-label">Until Official $GCM Launch</span>
+                        <span className="hype-value">Soon™</span>
+                        <span className="hype-label">$GCM Launch Pending iOS Approval</span>
                     </div>
                 </div>
 
@@ -41,27 +41,30 @@ const UICommunitySection = () => {
                     {/* Left Side - CTA */}
                     <div className="community-cta-card">
                         <div className="cta-header">
-                            <h3>Become an Early Pioneer!</h3>
-                            <p>Open testing is now LIVE. Your feedback will shape the future of the game and be among the first to experience new features, hunt for bugs, and help shape the future of Gold Clicker Mining!</p>
+                            <h3>Start mining $GCM today!</h3>
+                            <p>🚀 <strong>MAJOR MILESTONE:</strong> Gold Clicker Mining is officially launched on Android with iOS TestFlight now live! Be among the pioneers testing on both platforms, shaping the future of the game, and experiencing new features before anyone else!</p>
                         </div>
                         <div className="cta-buttons-container">
                             <a href="https://play.google.com/store/apps/details?id=com.osknyo.CryptonClicker" target="_blank" rel="noopener noreferrer" className="cta-button google-play-button">
                                 <FaGooglePlay className="button-icon" />
                                 <span>Download & Play Now!</span>
                                 <div className="shine-effect"></div>
+                                <div className="pulse-glow"></div>
                             </a>
-                            <div className="coming-soon-ios">
+                            <a href="https://testflight.apple.com/join/YJAajCq6" target="_blank" rel="noopener noreferrer" className="cta-button ios-button">
                                 <FaApple className="button-icon" />
-                                <span>Coming to iOS</span>
-                            </div>
+                                <span>Test on iOS Now!</span>
+                                <div className="shine-effect"></div>
+                                <div className="ios-glow"></div>
+                            </a>
                         </div>
                         <div className="cta-perks">
-                            <h4>Early Tester Perks:</h4>
+                            <h4>Player Benefits:</h4>
                             <ul>
-                                <li>Directly influence game development.</li>
-                                <li>Exclusive access to pre-release features.</li>
-                                <li>Earn a special "Pioneer" role in our community.</li>
-                                <li>Be part of a tight-knit group of core players.</li>
+                                <li>Shape the future of Gold Clicker Mining development.</li>
+                                <li>First access to new features and updates.</li>
+                                <li>Earn exclusive "Pioneer" status in our community.</li>
+                                <li>Join the core community of dedicated miners.</li>
                             </ul>
                         </div>
                         <UIMintFeed />
@@ -72,9 +75,9 @@ const UICommunitySection = () => {
                         <div className="community-stats-card">
                             <h4>Community Strength</h4>
                             <div className="stats-grid">
-                                <a href="https://t.me/GCMOfficialPortal" target="_blank" rel="noopener noreferrer" className="stat-item">
+                                <a href="https://t.me/+2VC4-Yay9WczN2Rh" target="_blank" rel="noopener noreferrer" className="stat-item">
                                     <FaTelegramPlane className="stat-icon telegram" />
-                                    <div className="stat-value">300+</div>
+                                    <div className="stat-value">500+</div>
                                     <div className="stat-label">Telegram Members</div>
                                 </a>
                                 <a href="https://discord.gg/mvbx7J295m" target="_blank" rel="noopener noreferrer" className="stat-item">
@@ -84,8 +87,8 @@ const UICommunitySection = () => {
                                 </a>
                                 <a href="https://play.google.com/store/apps/details?id=com.osknyo.CryptonClicker" target="_blank" rel="noopener noreferrer" className="stat-item">
                                     <FaUserPlus className="stat-icon testers" />
-                                    <div className="stat-value">300+</div>
-                                    <div className="stat-label">Active Testers</div>
+                                    <div className="stat-value">1000+</div>
+                                    <div className="stat-label">Total Downloads</div>
                                 </a>
                                 <a href="https://x.com/GCM_SOL" target="_blank" rel="noopener noreferrer" className="stat-item">
                                     <FiX className="stat-icon x" />
@@ -95,6 +98,9 @@ const UICommunitySection = () => {
                             </div>
                         </div>
                         <div className="support-card">
+                            <h4>🚀 GCM Token Launch Initiative</h4>
+                            <p><strong>Treasury Development Phase:</strong> We're raising $5,000 to establish the official $GCM token treasury and complete the ecosystem infrastructure. This funding will create the token chart, establish market liquidity, and implement the legal compliance framework for seamless in-game token distribution and player withdrawals.</p>
+                            <p className="mb-4"><strong>Strategic Roadmap:</strong> With iOS TestFlight live and Android officially launched, we're executing the final phase: community-driven treasury building through strategic CMINER activities, leading directly to GCM token launch and full ecosystem activation. Every contribution accelerates our path to delivering the complete gaming economy.</p>
                             <GoFundMeWidget />
                         </div>
                     </div>
@@ -103,7 +109,7 @@ const UICommunitySection = () => {
                 <div className="community-socials">
                     <h3 className="socials-title">Follow the Journey</h3>
                     <div className="social-links">
-                        <a href="https://t.me/GCMOfficialPortal" target="_blank" rel="noopener noreferrer" className="social-link telegram">
+                        <a href="https://t.me/+2VC4-Yay9WczN2Rh" target="_blank" rel="noopener noreferrer" className="social-link telegram">
                             <FaTelegramPlane />
                             <span>Telegram</span>
                         </a>
@@ -128,14 +134,14 @@ const UICommunitySection = () => {
                             <span>YouTube</span>
                         </a>
                         <div className="tester-button-container">
-                            <a href="https://play.google.com/store/apps/details?id=com.osknyo.CryptonClicker" target="_blank" rel="noopener noreferrer" className="social-link tester">
+                            <a href="https://play.google.com/store/apps/details?id=com.osknyo.CryptonClicker" target="_blank" rel="noopener noreferrer" className="social-link tester android">
                                 <FaGooglePlay />
-                                <span>Become a Tester</span>
+                                <span>Play Now!</span>
                             </a>
-                            <div className="coming-soon-ios-small">
+                            <a href="https://testflight.apple.com/join/YJAajCq6" target="_blank" rel="noopener noreferrer" className="social-link tester ios">
                                 <FaApple />
-                                <span>iOS Soon</span>
-                            </div>
+                                <span>Test on iOS!</span>
+                            </a>
                         </div>
                     </div>
                 </div>

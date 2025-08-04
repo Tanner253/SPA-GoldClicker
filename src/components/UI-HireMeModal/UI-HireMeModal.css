@@ -163,6 +163,15 @@
     color: #fff;
     margin-bottom: 20px;
 }
+
+.footer-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 .contact-btn {
     display: inline-flex;
     align-items: center;
@@ -180,6 +189,26 @@
     box-shadow: 0 5px 20px rgba(255, 215, 0, 0.5);
 }
 .contact-btn svg {
+    margin-right: 10px;
+}
+
+.portfolio-btn {
+    display: inline-flex;
+    align-items: center;
+    background: linear-gradient(45deg, #4f46e5, #7c3aed);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.portfolio-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(79, 70, 229, 0.5);
+}
+.portfolio-btn svg {
     margin-right: 10px;
 }
 

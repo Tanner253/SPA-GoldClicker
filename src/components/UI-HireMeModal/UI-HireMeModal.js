@@ -128,10 +128,16 @@ const UIHireMeModal = ({ isOpen, onClose }) => {
 
                         <div className="modal-footer">
                             <p>Ready to build something great together?</p>
-                            <a href="mailto:GoldClickerMining@gmail.com" className="contact-btn">
-                                <FiMail />
-                                <span>Contact Me</span>
-                            </a>
+                            <div className="footer-buttons">
+                                <a href="mailto:GoldClickerMining@gmail.com" className="contact-btn">
+                                    <FiMail />
+                                    <span>Contact Me</span>
+                                </a>
+                                <a href="https://osknyo.com" target="_blank" rel="noopener noreferrer" className="portfolio-btn">
+                                    <FiCode />
+                                    <span>Portfolio Website</span>
+                                </a>
+                            </div>
                         </div>
                     </motion.div>
                 </motion.div>

@@ -51,43 +51,43 @@ const GcmTokenomics = () => {
 
     return (
         <>
-            {/* Top Grid: Distribution & Allocation */}
-            <div className="grid lg:grid-cols-2 gap-12 items-stretch mb-16">
-                <div className="token-card">
-                    <h3 className="card-title"><FiTrendingUp /> Overall Supply Distribution</h3>
-                    <div className="chart-container">
-                        <Doughnut data={mainSupplyData} options={chartOptions} />
+                {/* Top Grid: Distribution & Allocation */}
+                <div className="grid lg:grid-cols-2 gap-12 items-stretch mb-16">
+                    <div className="token-card">
+                        <h3 className="card-title"><FiTrendingUp /> Overall Supply Distribution</h3>
+                        <div className="chart-container">
+                            <Doughnut data={mainSupplyData} options={chartOptions} />
+                        </div>
+                    </div>
+
+                    <div className="token-card">
+                        <h3 className="card-title"><FiLock /> Treasury & Ecosystem Allocation (50%)</h3>
+                        <p className="card-subtitle">A transparent breakdown of the treasury funds, secured with vesting schedules to ensure long-term stability.</p>
+                        <div className="progress-bar-container">
+                            {treasuryBreakdown.map((item, index) => (
+                                <div key={index} className="progress-item">
+                                    <div className="progress-labels">
+                                        <span className="label-text">{item.label} ({item.value}%)</span>
+                                        <span className="label-duration">{item.duration}</span>
+                                    </div>
+                                    <div className="progress-bar-bg">
+                                        <motion.div 
+                                            className="progress-bar-fg" 
+                                            style={{ width: `${item.value / 45 * 100}%` }}
+                                            initial={{ scaleX: 0 }}
+                                            whileInView={{ scaleX: 1 }}
+                                            viewport={{ once: true, amount: 0.8 }}
+                                            transition={{ duration: 1, delay: index * 0.2 }}
+                                        />
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
 
-                <div className="token-card">
-                    <h3 className="card-title"><FiLock /> Treasury & Ecosystem Allocation (50%)</h3>
-                    <p className="card-subtitle">A transparent breakdown of the treasury funds, secured with vesting schedules to ensure long-term stability.</p>
-                    <div className="progress-bar-container">
-                        {treasuryBreakdown.map((item, index) => (
-                            <div key={index} className="progress-item">
-                                <div className="progress-labels">
-                                    <span className="label-text">{item.label} ({item.value}%)</span>
-                                    <span className="label-duration">{item.duration}</span>
-                                </div>
-                                <div className="progress-bar-bg">
-                                    <motion.div 
-                                        className="progress-bar-fg" 
-                                        style={{ width: `${item.value / 45 * 100}%` }}
-                                        initial={{ scaleX: 0 }}
-                                        whileInView={{ scaleX: 1 }}
-                                        viewport={{ once: true, amount: 0.8 }}
-                                        transition={{ duration: 1, delay: index * 0.2 }}
-                                    />
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </div>
-
-            {/* Full-Width Flywheel Section */}
-            <div className="token-card flywheel-card">
+                {/* Full-Width Flywheel Section */}
+                <div className="token-card flywheel-card">
                 <h3 className="card-title"><FiRepeat /> The Self-Feeding Economic Loop</h3>
                 <div className="economic-loop-steps">
                     <div className="step-item"><span>1</span><p><strong>Players Engage:</strong> Play the game, click, upgrade, and watch rewarded ads.</p></div>
@@ -128,7 +128,7 @@ const UITokenomicsSection = () => {
                     >
                         $CMINER
                     </button>
-                </div>
+                     </div>
 
                 <div>
                     {activeTab === 'GCM' ? <GcmTokenomics /> : <CMinerTokenomics />}
@@ -138,4 +138,5 @@ const UITokenomicsSection = () => {
     );
 };
 
-export default UITokenomicsSection;
+export default UITokenomicsSection; 
+ 

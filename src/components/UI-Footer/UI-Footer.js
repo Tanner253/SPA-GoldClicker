@@ -15,6 +15,11 @@ const UIFooter = ({ onHireMeClick }) => {
                     <p className="footer-disclaimer">
                         $GCM is a memecoin for a game. Play responsibly. Not financial advice. The chart's longevity is supported by ad revenue, creating a unique economic model.
                     </p>
+                    <div className="bg-slate-800 rounded-lg p-3 mt-4 border-l-4 border-green-500">
+                        <p className="text-sm text-slate-300">
+                            <strong>🚀 Major Milestone:</strong> iOS TestFlight live, Android officially launched, 1000+ downloads achieved! We're executing the final treasury development phase - $5K target to launch the complete $GCM token ecosystem and activate the full gaming economy.
+                        </p>
+                    </div>
                 </div>
 
                 <div className="footer-column links-column">
@@ -32,7 +37,7 @@ const UIFooter = ({ onHireMeClick }) => {
                 <div className="footer-column contact-column">
                     <h3 className="footer-title">Get In Touch</h3>
                     <div className="social-links-footer">
-                        <a href="https://t.me/GCMOfficialPortal" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><FaTelegramPlane /></a>
+                        <a href="https://t.me/+2VC4-Yay9WczN2Rh" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><FaTelegramPlane /></a>
                         <a href="https://discord.gg/mvbx7J295m" target="_blank" rel="noopener noreferrer" aria-label="Discord"><FaDiscord /></a>
                         <a href="https://x.com/GCM_SOL" target="_blank" rel="noopener noreferrer" aria-label="X"><FiX /></a>
                         <a href="https://www.instagram.com/goldclickermining/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaInstagram /></a>
