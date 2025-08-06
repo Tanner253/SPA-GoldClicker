@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FiCopy, FiExternalLink, FiTarget, FiTrendingUp, FiStar, FiZap, FiArrowUpCircle } from 'react-icons/fi';
+import { FiCopy, FiExternalLink, FiTarget, FiTrendingUp, FiStar, FiZap, FiArrowUpCircle, FiAward, FiLock, FiUsers, FiGift } from 'react-icons/fi';
 import './UI-FundraiserSection.css';
 
 const UIFundraiserSection = () => {
@@ -143,7 +143,7 @@ const UIFundraiserSection = () => {
                             </div>
                             <div className="why-item critical-reality">
                                 <span className="why-number">🚨</span>
-                                <p><strong>THE REALITY:</strong> If we cannot raise the required treasury funds with $GCMF, then $GCM will never exist and the entire project will die. This fundraiser is an absolute last option - not being dramatic, just the truth.</p>
+                                <p><strong>THE REALITY:</strong> If we cannot raise the required treasury funds with $GCMF, then $GCM will never exist and the entire project will die. I'd rather receive donations through GoFundMe, but I know nobody will donate there - so $GCMF is the best idea I had. This fundraiser is an absolute last option - not being dramatic, just the truth.</p>
                             </div>
                             <div className="why-item gofundme-note">
                                 <span className="why-number">💡</span>
@@ -184,6 +184,151 @@ const UIFundraiserSection = () => {
                                 </motion.div>
                             );
                         })}
+                    </div>
+                </motion.div>
+
+                {/* Founders NFT Section */}
+                <motion.div 
+                    className="founders-nft-section"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8 }}
+                >
+                    <div className="founders-nft-card">
+                        <div className="founders-nft-header">
+                            <div className="founders-badge">
+                                <FiAward className="founders-badge-icon" />
+                                <span>EXCLUSIVE FOUNDERS NFT LINE</span>
+                            </div>
+                            <h3 className="founders-nft-title">
+                                🚀 Introducing: $GCMF Founders NFTs
+                            </h3>
+                            <p className="founders-nft-subtitle">
+                                Exclusive NFTs that add massive utility to $GCMF while propelling us past our 250k MC goal! (All details are TBD as I want to ensure the community will push for NFT's before I spend a bunch of time developing them)
+                            </p>
+                        </div>
+
+                        <div className="founders-nft-content">
+                            <div className="nft-launch-trigger">
+                                <div className="trigger-badge">
+                                    <FiTarget />
+                                    <span>LAUNCH TRIGGER</span>
+                                </div>
+                                <div className="trigger-details">
+                                    <div className="trigger-amount">100k MC STABLE</div>
+                                    <div className="trigger-description">
+                                        Once we hit and maintain 100k market cap as a support level, the Founders NFT line production, development, and launch will start. 
+                                        This should motivate everyone to buy and hold NOW to raise the floor.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="nft-details-grid">
+                                <div className="nft-detail-card">
+                                    <div className="nft-detail-icon">
+                                        <FiGift />
+                                    </div>
+                                    <h4>NFT Supply & Price</h4>
+                                    <ul>
+                                        <li><strong>600-800 Total Supply</strong> (Limited & Exclusive)</li>
+                                        <li><strong>0.1-0.5 SOL</strong> per mint (Final details TBD)</li>
+                                        <li><strong>Minted on Solana</strong> for low fees & fast transactions</li>
+                                    </ul>
+                                </div>
+
+                                <div className="nft-detail-card">
+                                    <div className="nft-detail-icon">
+                                        <FiTrendingUp />
+                                    </div>
+                                    <h4>Revenue Distribution</h4>
+                                    <ul>
+                                        <li><strong>80% → $GCMF Buyback & Burn</strong> (Propels price up!)</li>
+                                        <li><strong>20% → Marketing Wallet</strong> (Funds project growth)</li>
+                                        <li><strong>Direct path to 250k+ MC</strong> through burns</li>
+                                    </ul>
+                                </div>
+
+                                <div className="nft-detail-card exclusive">
+                                    <div className="nft-detail-icon">
+                                        <FiLock />
+                                    </div>
+                                    <h4>Exclusive Founder Benefits</h4>
+                                    <ul>
+                                        <li><strong>Founder-Only Games</strong> & Features</li>
+                                        <li><strong>Private Discord Channels</strong> & Roles</li>
+                                        <li><strong>Community Leadership</strong> Recognition</li>
+                                        <li><strong>Early Access</strong> to all future releases</li>
+                                        <li><strong>Whitelist Access</strong> to partner NFT drops at special prices</li>
+                                        <li><strong>FREE Airdrops</strong> of future in-game cosmetic NFTs (Founder exclusives/When Applicable)</li>
+                                        <li><strong>Special GCM Perks</strong> - Founders may find their mining experience... enhanced 👑✨</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div className="nft-strategy-flow">
+                                <h4 className="strategy-flow-title">
+                                    <FiZap /> The NFT Strategy: Exponential Growth Loop
+                                </h4>
+                                <div className="nft-flow-steps">
+                                    <div className="nft-flow-step">
+                                        <div className="flow-step-number">1</div>
+                                        <div className="flow-step-content">
+                                            <h5>Buy & Hold $GCMF</h5>
+                                            <p>Push to 100k MC stable to trigger NFT launch</p>
+                                        </div>
+                                    </div>
+                                    <div className="flow-arrow">→</div>
+                                    <div className="nft-flow-step">
+                                        <div className="flow-step-number">2</div>
+                                        <div className="flow-step-content">
+                                            <h5>Founders NFTs Launch</h5>
+                                            <p>600-800 exclusive NFTs mint at 0.1-0.5 SOL</p>
+                                        </div>
+                                    </div>
+                                    <div className="flow-arrow">→</div>
+                                    <div className="nft-flow-step">
+                                        <div className="flow-step-number">3</div>
+                                        <div className="flow-step-content">
+                                            <h5>80% SOL → $GCMF Burns</h5>
+                                            <p>Massive buyback & burn propels price to 250k+ MC</p>
+                                        </div>
+                                    </div>
+                                    <div className="flow-arrow">→</div>
+                                    <div className="nft-flow-step">
+                                        <div className="flow-step-number">4</div>
+                                        <div className="flow-step-content">
+                                            <h5>Treasury Funded</h5>
+                                            <p>Dev "dumps" 2% at 250k+ MC → GCM launches! 🚀</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="founders-cta">
+                                <div className="founders-cta-content">
+                                    <h4>🔥 Ready to Become a Founder?</h4>
+                                    <p>
+                                        The earlier you get in, the better your position. Buy $GCMF now to help trigger the NFT launch at 100k MC, 
+                                        then secure your Founder status with exclusive NFTs that will burn tokens and drive us to victory!
+                                    </p>
+                                    <div className="founders-benefits-tags">
+                                        <span className="benefit-tag">
+                                            <FiAward /> Founder Status
+                                        </span>
+                                        <span className="benefit-tag">
+                                            <FiLock /> Exclusive Access
+                                        </span>
+                                        <span className="benefit-tag">
+                                            <FiTrendingUp /> Price Appreciation
+                                        </span>
+                                        <span className="benefit-tag">
+                                            <FiUsers /> Community Leadership
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </motion.div>
 

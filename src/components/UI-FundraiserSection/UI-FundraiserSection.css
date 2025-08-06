@@ -407,6 +407,331 @@
     margin-bottom: 3rem;
 }
 
+/* Founders NFT Section */
+.founders-nft-section {
+    margin-bottom: 3rem;
+}
+
+.founders-nft-card {
+    background: linear-gradient(135deg, rgba(138, 43, 226, 0.15), rgba(75, 0, 130, 0.15));
+    backdrop-filter: blur(20px);
+    border: 3px solid;
+    border-image: linear-gradient(135deg, #8a2be2, #4b0082, #ff6b35) 1;
+    border-radius: 2rem;
+    padding: 3rem;
+    box-shadow: 0 20px 60px rgba(138, 43, 226, 0.3);
+    animation: nftGlow 4s ease-in-out infinite;
+}
+
+.founders-nft-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.founders-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, #8a2be2, #4b0082);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 2rem;
+    font-weight: 800;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 15px rgba(138, 43, 226, 0.4);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.founders-badge-icon {
+    animation: bounce 2s infinite;
+}
+
+.founders-nft-title {
+    font-size: 3rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, #8a2be2, #4b0082, #ff6b35, #ffd700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+    animation: gradientShift 4s ease infinite;
+}
+
+.founders-nft-subtitle {
+    font-size: 1.3rem;
+    color: #e2e8f0;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.nft-launch-trigger {
+    background: rgba(255, 215, 0, 0.1);
+    border: 2px solid #ffd700;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    animation: goldGlow 3s ease-in-out infinite;
+}
+
+.trigger-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, #ffd700, #f7931e);
+    color: #000;
+    padding: 0.5rem 1rem;
+    border-radius: 1.5rem;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+}
+
+.trigger-amount {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #ffd700;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+}
+
+.trigger-description {
+    font-size: 1.1rem;
+    color: #cbd5e1;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.nft-details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.nft-detail-card {
+    background: rgba(30, 27, 50, 0.7);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(138, 43, 226, 0.3);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.nft-detail-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(138, 43, 226, 0.6);
+    box-shadow: 0 10px 30px rgba(138, 43, 226, 0.3);
+}
+
+.nft-detail-card.exclusive {
+    border-color: #ffd700;
+    background: rgba(255, 215, 0, 0.05);
+    animation: exclusiveGlow 3s ease-in-out infinite;
+}
+
+.nft-detail-card.exclusive:hover {
+    border-color: #ffd700;
+    box-shadow: 0 10px 30px rgba(255, 215, 0, 0.4);
+}
+
+.nft-detail-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    background: linear-gradient(135deg, #8a2be2, #4b0082);
+    color: white;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.nft-detail-card.exclusive .nft-detail-icon {
+    background: linear-gradient(135deg, #ffd700, #f7931e);
+    color: #000;
+}
+
+.nft-detail-card h4 {
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.nft-detail-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nft-detail-card li {
+    color: #cbd5e1;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.nft-detail-card li::before {
+    content: '✨';
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.nft-detail-card.exclusive li::before {
+    content: '👑';
+}
+
+.nft-strategy-flow {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.strategy-flow-title {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 2rem;
+    text-align: center;
+    justify-content: center;
+}
+
+.nft-flow-steps {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.nft-flow-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 180px;
+}
+
+.flow-step-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    background: linear-gradient(135deg, #8a2be2, #4b0082);
+    color: white;
+    border-radius: 50%;
+    font-weight: 900;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 15px rgba(138, 43, 226, 0.4);
+}
+
+.flow-step-content h5 {
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.flow-step-content p {
+    color: #94a3b8;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.flow-arrow {
+    font-size: 1.5rem;
+    color: #8a2be2;
+    font-weight: bold;
+}
+
+.founders-cta {
+    background: linear-gradient(135deg, rgba(255, 107, 53, 0.1), rgba(247, 147, 30, 0.1));
+    border: 2px solid #ff6b35;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    text-align: center;
+}
+
+.founders-cta-content h4 {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.founders-cta-content p {
+    color: #cbd5e1;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.founders-benefits-tags {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.benefit-tag {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, #8a2be2, #4b0082);
+    color: white;
+    padding: 0.75rem 1.25rem;
+    border-radius: 1.5rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(138, 43, 226, 0.3);
+}
+
+.benefit-tag:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(138, 43, 226, 0.5);
+}
+
+/* NFT Animations */
+@keyframes nftGlow {
+    0%, 100% { box-shadow: 0 20px 60px rgba(138, 43, 226, 0.3); }
+    50% { box-shadow: 0 25px 80px rgba(138, 43, 226, 0.5); }
+}
+
+@keyframes goldGlow {
+    0%, 100% { box-shadow: 0 0 30px rgba(255, 215, 0, 0.3); }
+    50% { box-shadow: 0 0 50px rgba(255, 215, 0, 0.6); }
+}
+
+@keyframes exclusiveGlow {
+    0%, 100% { border-color: rgba(255, 215, 0, 0.5); }
+    50% { border-color: rgba(255, 215, 0, 0.8); }
+}
+
 .milestones-title {
     text-align: center;
     font-size: 2rem;
@@ -814,5 +1139,44 @@
         width: 100%;
         max-width: 300px;
         justify-content: center;
+    }
+    
+    /* Founders NFT Mobile Styles */
+    .founders-nft-title {
+        font-size: 2.2rem;
+    }
+    
+    .founders-nft-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .nft-details-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .nft-flow-steps {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .flow-arrow {
+        transform: rotate(90deg);
+        margin: 0.5rem 0;
+    }
+    
+    .founders-benefits-tags {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .benefit-tag {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+    }
+    
+    .trigger-amount {
+        font-size: 2rem;
     }
 } 
