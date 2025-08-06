@@ -75,7 +75,7 @@ const UICommunitySection = () => {
                         <div className="community-stats-card">
                             <h4>Community Strength</h4>
                             <div className="stats-grid">
-                                <a href="https://t.me/+2VC4-Yay9WczN2Rh" target="_blank" rel="noopener noreferrer" className="stat-item">
+                                <a href="https://t.me/GCMOfficialPortal" target="_blank" rel="noopener noreferrer" className="stat-item">
                                     <FaTelegramPlane className="stat-icon telegram" />
                                     <div className="stat-value">500+</div>
                                     <div className="stat-label">Telegram Members</div>
@@ -109,7 +109,7 @@ const UICommunitySection = () => {
                 <div className="community-socials">
                     <h3 className="socials-title">Follow the Journey</h3>
                     <div className="social-links">
-                        <a href="https://t.me/+2VC4-Yay9WczN2Rh" target="_blank" rel="noopener noreferrer" className="social-link telegram">
+                        <a href="https://t.me/GCMOfficialPortal" target="_blank" rel="noopener noreferrer" className="social-link telegram">
                             <FaTelegramPlane />
                             <span>Telegram</span>
                         </a>

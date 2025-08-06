@@ -6,6 +6,7 @@ import UIHeroSection from './components/HeroSection/UI-HeroSection';
 import UITheGameSection from './components/UI-TheGameSection/UI-TheGameSection';
 import UILiveChartSection from './components/UI-LiveChartSection/UI-LiveChartSection';
 import UITokenomicsSection from './components/UI-TokenomicsSection/UI-TokenomicsSection';
+import UIFundraiserSection from './components/UI-FundraiserSection/UI-FundraiserSection';
 import UICommunitySection from './components/UI-CommunitySection/UI-CommunitySection';
 import UIYouTubeVideoSection from './components/UI-YouTubeVideoSection/UI-YouTubeVideoSection';
 import UIFooter from './components/UI-Footer/UI-Footer';
@@ -57,45 +58,11 @@ function App() {
       <UITheGameSection />
       <UILiveChartSection />
       <UITokenomicsSection />
+      <UIFundraiserSection />
       <UICommunitySection />
       <UIYouTubeVideoSection />
       <UIFooter onHireMeClick={openHireMeModal} />
       <UIHireMeModal isOpen={isHireMeModalOpen} onClose={closeHireMeModal} />
-      {/* <SocialBanner />
-      <HeroSection />
-      <SectionDivider />
-      <div className="container">
-        <AboutGameSection />
-        <SectionDivider />
-        <GameplayVideoSection />
-        <SectionDivider />
-        <GoFundMeWidget />
-        <SectionDivider />
-        <DexScreenerSection />
-        <SectionDivider />
-        <TokenomicsSection />
-        <SectionDivider />
-        <KeyDifferentiatorsSection />
-        <SectionDivider />
-        <TechnicalDetailsSection />
-        <SectionDivider />
-        <EcosystemSection />
-        <SectionDivider />
-        <EarnMemecoinSection />
-        <SectionDivider />
-        <FeaturesSection />
-        <SectionDivider />
-        <AdModelSection />
-        <SectionDivider />
-        <BecomeTesterSection />
-        <SectionDivider />
-        <ActivityFeed />
-        <SectionDivider />
-        <GoFundMeSection />
-        <SectionDivider />
-        <CallToActionSection />
-      </div>
-      <Footer /> */}
     </div>
   );
 }

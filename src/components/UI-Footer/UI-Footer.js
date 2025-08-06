@@ -37,7 +37,7 @@ const UIFooter = ({ onHireMeClick }) => {
                 <div className="footer-column contact-column">
                     <h3 className="footer-title">Get In Touch</h3>
                     <div className="social-links-footer">
-                        <a href="https://t.me/+2VC4-Yay9WczN2Rh" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><FaTelegramPlane /></a>
+                        <a href="https://t.me/GCMOfficialPortal" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><FaTelegramPlane /></a>
                         <a href="https://discord.gg/mvbx7J295m" target="_blank" rel="noopener noreferrer" aria-label="Discord"><FaDiscord /></a>
                         <a href="https://x.com/GCM_SOL" target="_blank" rel="noopener noreferrer" aria-label="X"><FiX /></a>
                         <a href="https://www.instagram.com/goldclickermining/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaInstagram /></a>

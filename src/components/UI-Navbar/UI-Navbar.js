@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FiMenu, FiX } from 'react-icons/fi';
+import { FiMenu, FiX, FiTrendingUp } from 'react-icons/fi';
 import './UI-Navbar.css';
 
 const UINavbar = () => {
@@ -21,23 +21,26 @@ const UINavbar = () => {
         { title: 'Community', url: '#community' },
     ];
     
-    const allNavLinks = [...leftNavLinks, { title: 'The Game', url: '#the-game'}, ...rightNavLinks];
+    const allNavLinks = [...leftNavLinks, { title: 'The Game', url: '#the-game'}, ...rightNavLinks, { title: 'Fundraiser Chart', url: '#fundraiser-chart' }];
 
     return (
         <nav className="ui-navbar sticky top-0 left-0 w-full z-50">
             <div className="nav-container container mx-auto px-4 sm:px-6 lg:px-8">
-                {/* Top-left icon */}
-                <div className="top-left-icon">
-                    <a href={storeUrl} target="_blank" rel="noopener noreferrer">
-                        <img src={process.env.PUBLIC_URL + '/images/icon.png'} alt="Gold Clicker Game Icon" className="h-12 w-12" />
-                    </a>
+                {/* Top-left icon and website URL - Desktop only */}
+                <div className="top-left-section">
+                    <div className="top-left-icon">
+                        <a href={storeUrl} target="_blank" rel="noopener noreferrer">
+                            <img src={process.env.PUBLIC_URL + '/images/icon.png'} alt="Gold Clicker Game Icon" className="h-12 w-12" />
+                        </a>
+                    </div>
+       
                 </div>
 
                 <div className="flex items-center justify-between h-20">
                     {/* Logo for mobile, hidden on desktop */}
                     <div className="flex-shrink-0 md:hidden">
                          <a href="#home" className="text-white text-2xl font-bold">
-                            GoldClicker
+                            $GCM
                         </a>
                     </div>
 
@@ -62,6 +65,12 @@ const UINavbar = () => {
                                     {link.title}
                                 </a>
                             ))}
+                            {/* Exciting Fundraiser Chart Button */}
+                            <a href="#fundraiser-chart" className="fundraiser-chart-btn">
+                                <FiTrendingUp className="fundraiser-chart-icon" />
+                                <span className="fundraiser-chart-text">Fundraiser Chart</span>
+                                <div className="fundraiser-chart-glow"></div>
+                            </a>
                         </div>
                     </div>
                     
@@ -89,9 +98,10 @@ const UINavbar = () => {
                             <a
                                 key={index}
                                 href={link.url}
-                                className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                                className={`${link.title === 'Fundraiser Chart' ? 'fundraiser-chart-mobile' : 'text-gray-300 hover:bg-gray-700 hover:text-white'} block px-3 py-2 rounded-md text-base font-medium`}
                                 onClick={toggleMenu}
                             >
+                                {link.title === 'Fundraiser Chart' && <FiTrendingUp className="inline mr-2" />}
                                 {link.title}
                             </a>
                         ))}

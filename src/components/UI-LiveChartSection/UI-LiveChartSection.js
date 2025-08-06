@@ -42,7 +42,7 @@ const UILiveChartSection = () => {
                     <div className="chart-grid-item">
                         <div className="chart-embed-container">
                             <iframe 
-                                src="https://dexscreener.com/solana/DgjLq7AWAxf6Fn6LeMEdrimZn3kYwke2UJDWwFbUy8wT?embed=1&loadChartSettings=0&chartLeftToolbar=0&chartDefaultOnMobile=1&chartTheme=dark&theme=dark&chartStyle=1&chartType=marketCap&interval=1D"
+                                src="https://dexscreener.com/solana/FYFHVP5ktPXxevbfD7Dqd2X6FhxRY28K4spcGFQwpump?embed=1&loadChartSettings=0&chartLeftToolbar=0&chartDefaultOnMobile=1&chartTheme=dark&theme=dark&chartStyle=1&chartType=marketCap&interval=1D"
                                 title="DexScreener Chart for $GCM"
                             ></iframe>
                         </div>
