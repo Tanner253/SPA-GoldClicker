@@ -59,12 +59,13 @@ const CMinerTokenomics = () => {
                             <p className="mb-2"><strong>Total Supply:</strong> 979.8M remaining (the rest is burned).</p>
                             <p><strong>Developer Initial Holdings:</strong> 12%</p>
                         </div>
-                        <div className="mt-4">
+                        {/* Commented out CA link */}
+                        {/* <div className="mt-4">
                             <a href="https://pump.fun/coin/CA281fpA6AiHcDxZdmRJFVTMCzupxgK9JyVGBegPpump" target="_blank" rel="noopener noreferrer" className="ca-pill">
                                 <span className="ca-label">CA:</span>
                                 <span className="ca-address">CA281fp...gPpump</span>
                             </a>
-                        </div>
+                        </div> */}
                      </div>
                 </div>
 

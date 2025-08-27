@@ -3,10 +3,11 @@ import './App.css';
 
 import UINavbar from './components/UI-Navbar/UI-Navbar';
 import UIHeroSection from './components/HeroSection/UI-HeroSection';
+import UIInvestorMath from './components/UI-InvestorMath/UI-InvestorMath';
 import UITheGameSection from './components/UI-TheGameSection/UI-TheGameSection';
 import UILiveChartSection from './components/UI-LiveChartSection/UI-LiveChartSection';
 import UITokenomicsSection from './components/UI-TokenomicsSection/UI-TokenomicsSection';
-import UIFundraiserSection from './components/UI-FundraiserSection/UI-FundraiserSection';
+// import UIFundraiserSection from './components/UI-FundraiserSection/UI-FundraiserSection';
 import UICommunitySection from './components/UI-CommunitySection/UI-CommunitySection';
 import UIYouTubeVideoSection from './components/UI-YouTubeVideoSection/UI-YouTubeVideoSection';
 import UIFooter from './components/UI-Footer/UI-Footer';
@@ -55,10 +56,11 @@ function App() {
     <div className="App">
       <UINavbar />
       <UIHeroSection />
+      <UIInvestorMath />
       <UITheGameSection />
       <UILiveChartSection />
       <UITokenomicsSection />
-      <UIFundraiserSection />
+      {/* <UIFundraiserSection /> */}
       <UICommunitySection />
       <UIYouTubeVideoSection />
       <UIFooter onHireMeClick={openHireMeModal} />

@@ -2,7 +2,7 @@ import React from 'react';
 import './UI-CommunitySection.css';
 import { FaDiscord, FaTelegramPlane, FaGooglePlay, FaUserPlus, FaApple, FaInstagram, FaTiktok, FaYoutube } from 'react-icons/fa';
 import { FiX } from "react-icons/fi";
-import GoFundMeWidget from '../GoFundMeWidget/GoFundMeWidget';
+// import GoFundMeWidget from '../GoFundMeWidget/GoFundMeWidget';
 import UIMintFeed from '../UI-MintFeed/UIMintFeed'; // Import the new component
 
 const UICommunitySection = () => {
@@ -51,9 +51,9 @@ const UICommunitySection = () => {
                                 <div className="shine-effect"></div>
                                 <div className="pulse-glow"></div>
                             </a>
-                            <a href="https://testflight.apple.com/join/YJAajCq6" target="_blank" rel="noopener noreferrer" className="cta-button ios-button">
+                            <a href="https://apps.apple.com/app/gold-clicker-mining/id6738128809" target="_blank" rel="noopener noreferrer" className="cta-button ios-button">
                                 <FaApple className="button-icon" />
-                                <span>Test on iOS Now!</span>
+                                <span>Download on App Store!</span>
                                 <div className="shine-effect"></div>
                                 <div className="ios-glow"></div>
                             </a>
@@ -97,12 +97,13 @@ const UICommunitySection = () => {
                                 </a>
                             </div>
                         </div>
-                        <div className="support-card">
+                        {/* Commented out GoFundMe support card */}
+                        {/* <div className="support-card">
                             <h4>🚀 GCM Token Launch Initiative</h4>
                             <p><strong>Treasury Development Phase:</strong> We're raising $5,000 to establish the official $GCM token treasury and complete the ecosystem infrastructure. This funding will create the token chart, establish market liquidity, and implement the legal compliance framework for seamless in-game token distribution and player withdrawals.</p>
                             <p className="mb-4"><strong>Strategic Roadmap:</strong> With iOS TestFlight live and Android officially launched, we're executing the final phase: community-driven treasury building through strategic CMINER activities, leading directly to GCM token launch and full ecosystem activation. Every contribution accelerates our path to delivering the complete gaming economy.</p>
                             <GoFundMeWidget />
-                        </div>
+                        </div> */}
                     </div>
                 </div>
 
@@ -138,9 +139,9 @@ const UICommunitySection = () => {
                                 <FaGooglePlay />
                                 <span>Play Now!</span>
                             </a>
-                            <a href="https://testflight.apple.com/join/YJAajCq6" target="_blank" rel="noopener noreferrer" className="social-link tester ios">
+                            <a href="https://apps.apple.com/app/gold-clicker-mining/id6738128809" target="_blank" rel="noopener noreferrer" className="social-link tester ios">
                                 <FaApple />
-                                <span>Test on iOS!</span>
+                                <span>Download on iOS!</span>
                             </a>
                         </div>
                     </div>

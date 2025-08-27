@@ -40,6 +40,95 @@
     border: none;
 }
 
+/* GCM LAUNCHING SOON Styles */
+.launching-soon-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #1a1a3a 0%, #2d1b69 50%, #1a1a3a 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.launching-soon-content {
+    text-align: center;
+    z-index: 2;
+    position: relative;
+    padding: 2rem;
+}
+
+.launching-soon-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #ff6b35, #f7931e, #ffd700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    line-height: 1.2;
+}
+
+.launching-soon-subtitle {
+    font-size: 1.5rem;
+    color: #cbd5e1;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+.launching-soon-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    font-size: 1.1rem;
+    color: #94a3b8;
+    font-weight: 500;
+}
+
+.launching-soon-details p {
+    margin: 0;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 0.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.launching-soon-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(255, 107, 53, 0.3) 0%, rgba(247, 147, 30, 0.2) 50%, transparent 70%);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.launching-soon-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 30%, rgba(255, 107, 53, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(247, 147, 30, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(255, 215, 0, 0.05) 0%, transparent 70%);
+    animation: backgroundShift 8s ease-in-out infinite;
+}
+
+@keyframes backgroundShift {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 0.8; }
+}
+
 .meme-quote-grid-item {
     background: rgba(30, 27, 50, 0.7);
     padding: 1.5rem;
@@ -79,6 +168,80 @@
   100% { border-color: rgba(139, 63, 174, 0.2); }
 }
 
+/* Treasury Fund Status Section */
+.treasury-fund-status {
+    margin-top: 2rem;
+    background: rgba(30, 27, 50, 0.8);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 107, 53, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.fund-requirement {
+    margin-bottom: 1.5rem;
+}
+
+.fund-requirement h4,
+.launch-process h4 {
+    color: #ff6b35;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.fund-requirement p {
+    color: #cbd5e1;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+}
+
+.fund-requirement strong {
+    color: #fff;
+    font-weight: 700;
+}
+
+.launch-process ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.launch-process li {
+    color: #cbd5e1;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+    padding-left: 0.5rem;
+}
+
+.launch-process li:hover {
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .treasury-fund-status {
+        padding: 1rem;
+        margin-top: 1.5rem;
+    }
+    
+    .fund-requirement h4,
+    .launch-process h4 {
+        font-size: 1rem;
+    }
+    
+    .fund-requirement p,
+    .launch-process li {
+        font-size: 0.85rem;
+    }
+}
+
 @media (max-width: 1024px) {
     .chart-grid-container {
         grid-template-columns: 1fr;
@@ -92,7 +255,22 @@
         max-width: 500px;
         width: 100%;
     }
-    .chart-grid-item { order: 1; }
+    .chart-grid-item { 
+        order: 1; 
+        height: 600px; /* Reduce height on mobile */
+    }
     .item-1, .item-2, .item-3 { order: 0; }
     .item-4, .item-5, .item-6 { order: 2; }
+    
+    .launching-soon-title {
+        font-size: 2.5rem;
+    }
+    
+    .launching-soon-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .launching-soon-details {
+        font-size: 1rem;
+    }
 } 

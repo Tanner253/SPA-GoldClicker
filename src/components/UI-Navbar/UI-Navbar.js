@@ -21,7 +21,8 @@ const UINavbar = () => {
         { title: 'Community', url: '#community' },
     ];
     
-    const allNavLinks = [...leftNavLinks, { title: 'The Game', url: '#the-game'}, ...rightNavLinks, { title: 'Fundraiser Chart', url: '#fundraiser-chart' }];
+    // Removed Fundraiser Chart from allNavLinks
+    const allNavLinks = [...leftNavLinks, { title: 'The Game', url: '#the-game'}, ...rightNavLinks];
 
     return (
         <nav className="ui-navbar sticky top-0 left-0 w-full z-50">
@@ -65,12 +66,12 @@ const UINavbar = () => {
                                     {link.title}
                                 </a>
                             ))}
-                            {/* Exciting Fundraiser Chart Button */}
-                            <a href="#fundraiser-chart" className="fundraiser-chart-btn">
+                            {/* Commented out Exciting Fundraiser Chart Button */}
+                            {/* <a href="#fundraiser-chart" className="fundraiser-chart-btn">
                                 <FiTrendingUp className="fundraiser-chart-icon" />
                                 <span className="fundraiser-chart-text">Fundraiser Chart</span>
                                 <div className="fundraiser-chart-glow"></div>
-                            </a>
+                            </a> */}
                         </div>
                     </div>
                     
@@ -98,10 +99,11 @@ const UINavbar = () => {
                             <a
                                 key={index}
                                 href={link.url}
-                                className={`${link.title === 'Fundraiser Chart' ? 'fundraiser-chart-mobile' : 'text-gray-300 hover:bg-gray-700 hover:text-white'} block px-3 py-2 rounded-md text-base font-medium`}
+                                className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                                 onClick={toggleMenu}
                             >
-                                {link.title === 'Fundraiser Chart' && <FiTrendingUp className="inline mr-2" />}
+                                {/* Commented out Fundraiser Chart icon in mobile */}
+                                {/* {link.title === 'Fundraiser Chart' && <FiTrendingUp className="inline mr-2" />} */}
                                 {link.title}
                             </a>
                         ))}

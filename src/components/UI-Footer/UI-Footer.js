@@ -10,14 +10,20 @@ const UIFooter = ({ onHireMeClick }) => {
     return (
         <footer className="ui-footer">
             <div className="footer-container">
-                <div className="footer-column about-column">
-                    <h3 className="footer-title">Gold Clicker Mining</h3>
+                <div className="footer-column info-column">
+                    <h4 className="footer-heading">About Gold Clicker Mining</h4>
                     <p className="footer-disclaimer">
                         $GCM is a memecoin for a game. Play responsibly. Not financial advice. The chart's longevity is supported by ad revenue, creating a unique economic model.
                     </p>
-                    <div className="bg-slate-800 rounded-lg p-3 mt-4 border-l-4 border-green-500">
+                    {/* Commented out fundraiser reference */}
+                    {/* <div className="bg-slate-800 rounded-lg p-3 mt-4 border-l-4 border-green-500">
                         <p className="text-sm text-slate-300">
                             <strong>🚀 Major Milestone:</strong> iOS TestFlight live, Android officially launched, 1000+ downloads achieved! We're executing the final treasury development phase - $5K target to launch the complete $GCM token ecosystem and activate the full gaming economy.
+                        </p>
+                    </div> */}
+                    <div className="bg-slate-800 rounded-lg p-3 mt-4 border-l-4 border-green-500">
+                        <p className="text-sm text-slate-300">
+                            <strong>🚀 Major Milestone:</strong> iOS and Android versions are LIVE with 1000+ downloads achieved! Players are actively mining gold and earning GCM Points. The $GCM token launch is in final preparations!
                         </p>
                     </div>
                 </div>
