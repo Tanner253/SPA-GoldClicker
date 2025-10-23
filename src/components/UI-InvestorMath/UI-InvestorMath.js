@@ -151,7 +151,7 @@ const UIInvestorMath = () => {
                 {/* Revenue Note */}
                 <div className="revenue-note-compact">
                     <FiInfo className="note-icon" />
-                    <span><strong>Note:</strong> Revenue per 1K views varies by region (US/EU: $250-750, Global avg: $50-150). Additional revenue streams (subscriptions, IAP, NFTs) not included. Game already playable with 1000+ early testers.</span>
+                    <span><strong>Note:</strong> Revenue per 1K views varies by region (US/EU: $250-750, Global avg: $50-150). Additional revenue streams (subscriptions, IAP, NFTs) not included. Game already playable with 2,150+ active players (1.8K Android, 350 iOS).</span>
                 </div>
 
                 {/* Period Selector */}
@@ -288,7 +288,7 @@ const UIInvestorMath = () => {
                         <FiTrendingUp className="summary-icon" />
                         <div>
                             <h4>Real Business Model</h4>
-                            <p>Working game • Proven ad tech • 1000+ testers • Revenue before token launch • Sustainable economics</p>
+                            <p>Working game • Proven ad tech • 2,150+ active players • Revenue before token launch • Sustainable economics</p>
                         </div>
                     </div>
                     <div className="summary-section">

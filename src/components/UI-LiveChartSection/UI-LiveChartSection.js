@@ -1,8 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { FiCopy, FiExternalLink } from 'react-icons/fi';
 import './UI-LiveChartSection.css';
 
 const UILiveChartSection = () => {
+    const [copied, setCopied] = useState(false);
+    const contractAddress = "Bn6TFByapFAy9t3sD9WzCj3GdyayvqXNp7ynpUiv9yBr"; // For chart
+    const displayCA = "8gLG1UXVmJcTF6vvZdsuqLu44ZddUiyZ4XHyhboMfray"; // For display and copy
+
+    const copyToClipboard = async (text) => {
+        try {
+            await navigator.clipboard.writeText(text);
+            setCopied(true);
+            setTimeout(() => setCopied(false), 2000);
+        } catch (err) {
+            console.error('Failed to copy: ', err);
+        }
+    };
+
     const quotes = [
         { text: `"The only way you lose money is if you sell."`, author: "— Warren Buffet, probably" },
         { text: `"Diamond hands are forged in the fires of red candles."`, author: "— Ancient Proverb" },
@@ -16,8 +31,46 @@ const UILiveChartSection = () => {
         <section id="live-chart" className="ui-live-chart-section">
             <div className="container mx-auto px-4 py-16">
                 <div className="text-center mb-12">
-                     <h2 className="text-4xl md:text-5xl font-bold text-white">The Chart of Destiny</h2>
-                     <p className="text-slate-400 mt-2">Witness the journey. Remember, patience is key.</p>
+                     <h2 className="text-4xl md:text-5xl font-bold text-white">$GCM Live Chart</h2>
+                     <p className="text-slate-400 mt-2">Track the journey. Real-time price action.</p>
+                     
+                     {/* Contract Address Display */}
+                     <div className="ca-display-container">
+                        <div className="ca-label">Contract Address (CA):</div>
+                        <div className="ca-container">
+                            <code className="ca-text">{displayCA}</code>
+                            <div className="ca-buttons">
+                                <button 
+                                    onClick={() => copyToClipboard(displayCA)}
+                                    className={`ca-btn copy-btn ${copied ? 'copied' : ''}`}
+                                    title="Copy Contract Address"
+                                >
+                                    <FiCopy />
+                                    {copied ? 'Copied!' : 'Copy'}
+                                </button>
+                                <a 
+                                    href={`https://dexscreener.com/solana/${displayCA}`}
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="ca-btn external-btn"
+                                    title="View on DexScreener"
+                                >
+                                    <FiExternalLink />
+                                    DexScreener
+                                </a>
+                                <a 
+                                    href={`https://solscan.io/token/${displayCA}`}
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="ca-btn external-btn"
+                                    title="View on Solscan"
+                                >
+                                    <FiExternalLink />
+                                    Solscan
+                                </a>
+                            </div>
+                        </div>
+                     </div>
                 </div>
 
                 <div className="chart-grid-container">
@@ -41,97 +94,40 @@ const UILiveChartSection = () => {
                     
                     <div className="chart-grid-item">
                         <div className="chart-embed-container">
-                            {/* Commented out the original iframe */}
-                            {/* <iframe 
-                                src="https://dexscreener.com/solana/FYFHVP5ktPXxevbfD7Dqd2X6FhxRY28K4spcGFQwpump?embed=1&loadChartSettings=0&chartLeftToolbar=0&chartDefaultOnMobile=1&chartTheme=dark&theme=dark&chartStyle=1&chartType=marketCap&interval=1D"
-                                title="DexScreener Chart for $GCM"
-                            ></iframe> */}
+                            {/* Live DexScreener Chart */}
+                            <div id="dexscreener-embed">
+                                <iframe src={`https://dexscreener.com/solana/${contractAddress}?embed=1&loadChartSettings=0&chartDefaultOnMobile=1&chartTheme=dark&theme=dark&chartStyle=1&chartType=marketCap&interval=1`}></iframe>
+                            </div>
                             
-                            {/* GCM LAUNCHING SOON Message */}
-                            <div className="launching-soon-container">
-                                <motion.div 
-                                    className="launching-soon-content"
-                                    initial={{ opacity: 0, scale: 0.8 }}
-                                    whileInView={{ opacity: 1, scale: 1 }}
-                                    viewport={{ once: true }}
-                                    transition={{ duration: 0.8 }}
-                                >
-                                    <motion.h3 
-                                        className="launching-soon-title"
-                                        animate={{ 
-                                            textShadow: [
-                                                "0 0 20px #ff6b35",
-                                                "0 0 40px #f7931e", 
-                                                "0 0 60px #ffd700",
-                                                "0 0 40px #f7931e",
-                                                "0 0 20px #ff6b35"
-                                            ]
-                                        }}
-                                        transition={{ 
-                                            duration: 3, 
-                                            repeat: Infinity, 
-                                            repeatType: "reverse" 
-                                        }}
+                            {/* Alternative Chart Links */}
+                            <div className="chart-alternatives">
+                                <p className="chart-note">If chart doesn't load correctly, try these alternatives:</p>
+                                <div className="alt-chart-buttons">
+                                    <a 
+                                        href={`https://dexscreener.com/solana/${displayCA}`}
+                                        target="_blank" 
+                                        rel="noopener noreferrer"
+                                        className="alt-chart-btn"
                                     >
-                                        🚀 GCM LAUNCHING SOON 🚀
-                                    </motion.h3>
-                                    <motion.p 
-                                        className="launching-soon-subtitle"
-                                        initial={{ opacity: 0, y: 20 }}
-                                        whileInView={{ opacity: 1, y: 0 }}
-                                        viewport={{ once: true }}
-                                        transition={{ duration: 0.8, delay: 0.3 }}
+                                        Open Full DexScreener
+                                    </a>
+                                    <a 
+                                        href={`https://birdeye.so/token/${displayCA}?chain=solana`}
+                                        target="_blank" 
+                                        rel="noopener noreferrer"
+                                        className="alt-chart-btn"
                                     >
-                                        The chart will appear here once $GCM officially launches!
-                                    </motion.p>
-                                    <motion.div 
-                                        className="launching-soon-details"
-                                        initial={{ opacity: 0, y: 20 }}
-                                        whileInView={{ opacity: 1, y: 0 }}
-                                        viewport={{ once: true }}
-                                        transition={{ duration: 0.8, delay: 0.6 }}
+                                        View on Birdeye
+                                    </a>
+                                    <a 
+                                        href={`https://www.geckoterminal.com/solana/tokens/${displayCA}`}
+                                        target="_blank" 
+                                        rel="noopener noreferrer"
+                                        className="alt-chart-btn"
                                     >
-                                        <p>🎮 Game is LIVE on iOS & Android</p>
-                                        <p>💰 Players are earning GCM Points</p>
-                                        <p>📈 Token launch preparations underway</p>
-                                    </motion.div>
-                                    
-                                    {/* Treasury Fund Status */}
-                                    <motion.div 
-                                        className="treasury-fund-status"
-                                        initial={{ opacity: 0, y: 20 }}
-                                        whileInView={{ opacity: 1, y: 0 }}
-                                        viewport={{ once: true }}
-                                        transition={{ duration: 0.8, delay: 0.9 }}
-                                    >
-                                        <div className="fund-requirement">
-                                            <h4>🏦 Treasury Fund Status</h4>
-                                            <p>The only thing keeping us from launching is securing the <strong>$5K treasury fund</strong>.</p>
-                                            <p>I've been actively sourcing investment for the past <strong>4 months</strong>.</p>
-                                        </div>
-                                        <div className="launch-process">
-                                            <h4>🚀 Launch Process (Once Funded)</h4>
-                                            <ul>
-                                                <li>✅ Purchase chart on Raydium</li>
-                                                <li>✅ Immediately lock team supply (53%)</li>
-                                                <li>✅ Honor all withdrawal requests manually</li>
-                                                <li>✅ Process game airdrops manually</li>
-                                                <li>✅ Begin automated burn protocol</li>
-                                            </ul>
-                                        </div>
-                                    </motion.div>
-                                    <motion.div
-                                        className="launching-soon-glow"
-                                        animate={{ 
-                                            scale: [1, 1.2, 1],
-                                            opacity: [0.3, 0.7, 0.3]
-                                        }}
-                                        transition={{ 
-                                            duration: 2, 
-                                            repeat: Infinity 
-                                        }}
-                                    />
-                                </motion.div>
+                                        View on GeckoTerminal
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>

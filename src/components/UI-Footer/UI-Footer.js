@@ -23,7 +23,7 @@ const UIFooter = ({ onHireMeClick }) => {
                     </div> */}
                     <div className="bg-slate-800 rounded-lg p-3 mt-4 border-l-4 border-green-500">
                         <p className="text-sm text-slate-300">
-                            <strong>🚀 Major Milestone:</strong> iOS and Android versions are LIVE with 1000+ downloads achieved! Players are actively mining gold and earning GCM Points. The $GCM token launch is in final preparations!
+                            <strong>🚀 Major Milestone:</strong> iOS and Android versions are LIVE with 2,150+ downloads achieved (1.8K Android, 350 iOS)! Players are actively mining gold and earning GCM Points. $GCM TOKEN IS NOW LIVE AND TRADING! 🎉
                         </p>
                     </div>
                 </div>
@@ -43,11 +43,11 @@ const UIFooter = ({ onHireMeClick }) => {
                 <div className="footer-column contact-column">
                     <h3 className="footer-title">Get In Touch</h3>
                     <div className="social-links-footer">
-                        <a href="https://t.me/GCMOfficialPortal" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><FaTelegramPlane /></a>
+                        <a href="https://t.me/Gold_Clicker_Mining" target="_blank" rel="noopener noreferrer" aria-label="Telegram"><FaTelegramPlane /></a>
                         <a href="https://discord.gg/mvbx7J295m" target="_blank" rel="noopener noreferrer" aria-label="Discord"><FaDiscord /></a>
                         <a href="https://x.com/GCM_SOL" target="_blank" rel="noopener noreferrer" aria-label="X"><FiX /></a>
                         <a href="https://www.instagram.com/goldclickermining/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaInstagram /></a>
-                        <a href="https://www.tiktok.com/@goldclickermining?lang=en" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><FaTiktok /></a>
+                        <a href="https://www.tiktok.com/@osknyo" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><FaTiktok /></a>
                         <a href="https://www.youtube.com/@osknyo" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><FaYoutube /></a>
                     </div>
                 </div>

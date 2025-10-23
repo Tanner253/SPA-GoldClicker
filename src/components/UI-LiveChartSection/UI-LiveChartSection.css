@@ -274,3 +274,205 @@
         font-size: 1rem;
     }
 } 
+
+/* Contract Address Display */
+.ca-display-container {
+    margin: 2rem auto;
+    max-width: 800px;
+    background: rgba(30, 27, 50, 0.8);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    border: 1px solid rgba(255, 107, 53, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.ca-label {
+    color: #ff6b35;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.ca-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.ca-text {
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    word-break: break-all;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    min-width: 300px;
+}
+
+.ca-buttons {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.ca-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.copy-btn {
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: white;
+}
+
+.copy-btn:hover {
+    background: linear-gradient(135deg, #059669, #047857);
+    transform: translateY(-2px);
+}
+
+.copy-btn.copied {
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+}
+
+.external-btn {
+    background: linear-gradient(135deg, #6366f1, #4f46e5);
+    color: white;
+}
+
+.external-btn:hover {
+    background: linear-gradient(135deg, #4f46e5, #4338ca);
+    transform: translateY(-2px);
+}
+
+/* DexScreener Embed Styling */
+#dexscreener-embed {
+    position: relative;
+    width: 100%;
+    padding-bottom: 125%;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+@media(min-width: 1400px) {
+    #dexscreener-embed {
+        padding-bottom: 65%;
+    }
+}
+
+#dexscreener-embed iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border: 0;
+}
+
+/* Legacy Chart Iframe Styling (keeping for compatibility) */
+.dex-chart-iframe {
+    width: 100%;
+    height: 500px;
+    border: none;
+    border-radius: 1rem;
+    background: #000;
+}
+
+/* Alternative Chart Links */
+.chart-alternatives {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.chart-note {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.alt-chart-buttons {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.alt-chart-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background: rgba(30, 27, 50, 0.8);
+    color: #cbd5e1;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.alt-chart-btn:hover {
+    background: rgba(255, 107, 53, 0.2);
+    border-color: rgba(255, 107, 53, 0.5);
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .ca-display-container {
+        margin: 1.5rem auto;
+        padding: 1rem;
+    }
+    
+    .ca-text {
+        font-size: 0.8rem;
+        padding: 0.5rem 0.75rem;
+        min-width: 250px;
+    }
+    
+    .ca-buttons {
+        gap: 0.5rem;
+    }
+    
+    .ca-btn {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.8rem;
+    }
+    
+    .dex-chart-iframe {
+        height: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .ca-text {
+        font-size: 0.7rem;
+        min-width: 200px;
+    }
+    
+    .ca-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .ca-btn {
+        justify-content: center;
+        width: 100%;
+    }
+} 

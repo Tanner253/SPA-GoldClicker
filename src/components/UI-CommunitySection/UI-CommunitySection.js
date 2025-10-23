@@ -2,7 +2,7 @@ import React from 'react';
 import './UI-CommunitySection.css';
 import { FaDiscord, FaTelegramPlane, FaGooglePlay, FaUserPlus, FaApple, FaInstagram, FaTiktok, FaYoutube } from 'react-icons/fa';
 import { FiX } from "react-icons/fi";
-// import GoFundMeWidget from '../GoFundMeWidget/GoFundMeWidget';
+import GoFundMeWidget from '../GoFundMeWidget/GoFundMeWidget';
 import UIMintFeed from '../UI-MintFeed/UIMintFeed'; // Import the new component
 
 const UICommunitySection = () => {
@@ -12,8 +12,8 @@ const UICommunitySection = () => {
             <div className="community-container">
                 <div className="community-header">
                     <h2 className="community-title">Join the Gold Clicker Revolution!</h2>
-                    <p className="community-subtitle">
-                        🎉 <strong>Major Milestone:</strong> iOS testers are now actively mining gold on their devices! With 1000+ downloads achieved and iOS publication imminent, we're entering the final phase before the official $GCM token launch. Join the revolution that's about to reshape mobile gaming and DeFi!
+                    <p className="community-milestone-text">
+                        🎉 <strong>Major Milestone:</strong> iOS testers are now actively mining gold on their devices! With 2,150+ downloads achieved (1.8K Android, 350 iOS) and $GCM NOW LIVE AND TRADING, we've entered the growth phase of mobile gaming and DeFi integration. Join the revolution that's reshaping the industry!
                     </p>
                 </div>
 
@@ -24,7 +24,7 @@ const UICommunitySection = () => {
                         <span className="hype-label">Risk-Free Revenue Reinvested</span>
                     </div>
                     <div className="hype-item">
-                        <span className="hype-value">1000+</span>
+                        <span className="hype-value">2,150+</span>
                         <span className="hype-label">Downloads Achieved</span>
                     </div>
                     <div className="hype-item">
@@ -32,8 +32,8 @@ const UICommunitySection = () => {
                         <span className="hype-label">Now Testing on Both Platforms</span>
                     </div>
                     <div className="hype-item">
-                        <span className="hype-value">Soon™</span>
-                        <span className="hype-label">$GCM Launch Pending iOS Approval</span>
+                        <span className="hype-value">LIVE! 🚀</span>
+                        <span className="hype-label">$GCM IS NOW TRADING!</span>
                     </div>
                 </div>
 
@@ -42,7 +42,7 @@ const UICommunitySection = () => {
                     <div className="community-cta-card">
                         <div className="cta-header">
                             <h3>Start mining $GCM today!</h3>
-                            <p>🚀 <strong>MAJOR MILESTONE:</strong> Gold Clicker Mining is officially launched on Android with iOS TestFlight now live! Be among the pioneers testing on both platforms, shaping the future of the game, and experiencing new features before anyone else!</p>
+                            <p>🚀 <strong>MAJOR MILESTONE:</strong> Gold Clicker Mining is officially launched on Android with iOS TestFlight now live! $GCM TOKEN IS NOW TRADING! Be among the pioneers on both platforms, shaping the future of the game, and earning real $GCM tokens!</p>
                         </div>
                         <div className="cta-buttons-container">
                             <a href="https://play.google.com/store/apps/details?id=com.osknyo.CryptonClicker" target="_blank" rel="noopener noreferrer" className="cta-button google-play-button">
@@ -51,7 +51,7 @@ const UICommunitySection = () => {
                                 <div className="shine-effect"></div>
                                 <div className="pulse-glow"></div>
                             </a>
-                            <a href="https://apps.apple.com/app/gold-clicker-mining/id6738128809" target="_blank" rel="noopener noreferrer" className="cta-button ios-button">
+                            <a href="https://testflight.apple.com/join/YJAajCq6" target="_blank" rel="noopener noreferrer" className="cta-button ios-button">
                                 <FaApple className="button-icon" />
                                 <span>Download on App Store!</span>
                                 <div className="shine-effect"></div>
@@ -75,10 +75,12 @@ const UICommunitySection = () => {
                         <div className="community-stats-card">
                             <h4>Community Strength</h4>
                             <div className="stats-grid">
-                                <a href="https://t.me/GCMOfficialPortal" target="_blank" rel="noopener noreferrer" className="stat-item">
-                                    <FaTelegramPlane className="stat-icon telegram" />
-                                    <div className="stat-value">500+</div>
-                                    <div className="stat-label">Telegram Members</div>
+                                <a href="https://t.me/Gold_Clicker_Mining" target="_blank" rel="noopener noreferrer" className="stat-item">
+                                    <FaTelegramPlane className="stat-icon" />
+                                    <div className="stat-info">
+                                        <span className="stat-value">Join Now!</span>
+                                        <span className="stat-label">Telegram</span>
+                                    </div>
                                 </a>
                                 <a href="https://discord.gg/mvbx7J295m" target="_blank" rel="noopener noreferrer" className="stat-item">
                                     <FaDiscord className="stat-icon discord" />
@@ -87,7 +89,7 @@ const UICommunitySection = () => {
                                 </a>
                                 <a href="https://play.google.com/store/apps/details?id=com.osknyo.CryptonClicker" target="_blank" rel="noopener noreferrer" className="stat-item">
                                     <FaUserPlus className="stat-icon testers" />
-                                    <div className="stat-value">1000+</div>
+                                    <div className="stat-value">2,150+</div>
                                     <div className="stat-label">Total Downloads</div>
                                 </a>
                                 <a href="https://x.com/GCM_SOL" target="_blank" rel="noopener noreferrer" className="stat-item">
@@ -98,19 +100,22 @@ const UICommunitySection = () => {
                             </div>
                         </div>
                         {/* Commented out GoFundMe support card */}
-                        {/* <div className="support-card">
-                            <h4>🚀 GCM Token Launch Initiative</h4>
-                            <p><strong>Treasury Development Phase:</strong> We're raising $5,000 to establish the official $GCM token treasury and complete the ecosystem infrastructure. This funding will create the token chart, establish market liquidity, and implement the legal compliance framework for seamless in-game token distribution and player withdrawals.</p>
-                            <p className="mb-4"><strong>Strategic Roadmap:</strong> With iOS TestFlight live and Android officially launched, we're executing the final phase: community-driven treasury building through strategic CMINER activities, leading directly to GCM token launch and full ecosystem activation. Every contribution accelerates our path to delivering the complete gaming economy.</p>
-                            <GoFundMeWidget />
-                        </div> */}
+                        <div className="support-card">
+                            <h4>🎉 GCM Token IS LIVE!</h4>
+                            <p><strong>Strategic Roadmap:</strong> With iOS TestFlight live, Android officially launched, and $GCM now trading, we're executing the growth phase: expanding our player base, increasing token burns through gameplay, and building the complete gaming economy ecosystem!</p>
+                            
+                            {/* GoFundMe Widget */}
+                            <div className="gofundme-widget-container">
+                                <GoFundMeWidget />
+                            </div>
+                        </div>
                     </div>
                 </div>
 
                 <div className="community-socials">
                     <h3 className="socials-title">Follow the Journey</h3>
                     <div className="social-links">
-                        <a href="https://t.me/GCMOfficialPortal" target="_blank" rel="noopener noreferrer" className="social-link telegram">
+                        <a href="https://t.me/Gold_Clicker_Mining" target="_blank" rel="noopener noreferrer" className="social-link telegram">
                             <FaTelegramPlane />
                             <span>Telegram</span>
                         </a>
@@ -126,7 +131,7 @@ const UICommunitySection = () => {
                             <FaInstagram />
                             <span>Instagram</span>
                         </a>
-                        <a href="https://www.tiktok.com/@goldclickermining?lang=en" target="_blank" rel="noopener noreferrer" className="social-link tiktok">
+                        <a href="https://www.tiktok.com/@osknyo" target="_blank" rel="noopener noreferrer" className="social-link tiktok">
                             <FaTiktok />
                             <span>TikTok</span>
                         </a>
@@ -139,7 +144,7 @@ const UICommunitySection = () => {
                                 <FaGooglePlay />
                                 <span>Play Now!</span>
                             </a>
-                            <a href="https://apps.apple.com/app/gold-clicker-mining/id6738128809" target="_blank" rel="noopener noreferrer" className="social-link tester ios">
+                            <a href="https://testflight.apple.com/join/YJAajCq6" target="_blank" rel="noopener noreferrer" className="social-link tester ios">
                                 <FaApple />
                                 <span>Download on iOS!</span>
                             </a>

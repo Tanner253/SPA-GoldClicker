@@ -1,5 +1,5 @@
 import React from 'react';
-import { FiArrowDown } from 'react-icons/fi';
+import { FiArrowDown, FiClock, FiTrendingUp, FiDownload, FiDollarSign } from 'react-icons/fi';
 import { motion } from 'framer-motion';
 import UIHeroBackground from './UI-HeroBackground';
 
@@ -62,6 +62,42 @@ const UIHeroSection = () => {
                     >
                         Welcome to Gold Clicker Mining $GCM
                     </motion.h1>
+                    
+                    {/* Compact Stats Badges */}
+                    <motion.div
+                        className="flex flex-wrap items-center justify-center gap-3 mb-4"
+                        variants={itemVariants}
+                    >
+                        <div className="stat-badge">
+                            <FiDownload className="stat-badge-icon" />
+                            <span className="stat-badge-value">1.8K</span>
+                            <span className="stat-badge-label">Android</span>
+                            <span className="stat-badge-change positive">+78%</span>
+                        </div>
+                        <div className="stat-badge">
+                            <FiDownload className="stat-badge-icon" />
+                            <span className="stat-badge-value">350</span>
+                            <span className="stat-badge-label">iOS</span>
+                        </div>
+                        <div className="stat-badge">
+                            <FiTrendingUp className="stat-badge-icon" />
+                            <span className="stat-badge-value">+30%</span>
+                            <span className="stat-badge-label">Revenue</span>
+                        </div>
+                        <div className="stat-badge">
+                            <FiDollarSign className="stat-badge-icon" />
+                            <span className="stat-badge-value">POSITIVE</span>
+                            <span className="stat-badge-label">Profitable</span>
+                        </div>
+                    </motion.div>
+                    
+                    <motion.div
+                        className="flex items-center justify-center gap-2 text-slate-400 text-sm mb-4"
+                        variants={itemVariants}
+                    >
+                        <FiClock className="w-4 h-4" />
+                        <span>2.5 minute read</span>
+                    </motion.div>
                     <motion.p
                         className="text-lg md:text-xl max-w-2xl mb-6"
                         variants={itemVariants}
@@ -69,14 +105,79 @@ const UIHeroSection = () => {
                         The only risk free growing asset on solana. Click, earn, and watch
                         your fortune grow.
                     </motion.p>
-                    <motion.div
-                        className="bg-gradient-to-r from-green-600 to-blue-600 rounded-lg p-4 max-w-3xl mx-auto mb-4"
-                        variants={itemVariants}
-                    >
-                        <p className="text-white font-semibold text-center">
-                            🎉 <strong>MAJOR UPDATE:</strong> iOS Testing Now Live! • 1000+ Downloads Achieved • GCM Launch Imminent
-                        </p>
-                    </motion.div>
+
+                    {/* Key Info Grid Layout */}
+                    <div className="hero-info-grid">
+                        <motion.div
+                            className="hero-personal-note"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, amount: 0.8 }}
+                            transition={{ type: 'spring', stiffness: 100, delay: 0.2 }}
+                        >
+                            <p className="personal-note-text">
+                                I am a laid off software engineer who is about to lose everything. I have built real tech, on chain, doxxed for the past 8 months. I have built something really special. all I ask is for 5 mins of your time to read what ive built, and maybe download and play the game for yourself. I really, really appreciate your time.
+                            </p>
+                        </motion.div>
+                        
+                        <motion.div
+                            className="hero-info-item item-1"
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+                            viewport={{ once: true, amount: 0.8 }}
+                            transition={{ type: 'spring', stiffness: 100, delay: 0 }}
+                        >
+                            <p className="hero-info-text">GCM is a free to play game, where players can earn memecoin through gameplay. P2E</p>
+                        </motion.div>
+                        
+                        <motion.div
+                            className="hero-info-item item-2"
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+                            viewport={{ once: true, amount: 0.8 }}
+                            transition={{ type: 'spring', stiffness: 100, delay: 0.15 }}
+                        >
+                            <p className="hero-info-text">Players must onboard to solana to recieve earned memecoin.</p>
+                        </motion.div>
+                        
+                        <motion.div
+                            className="hero-info-item item-3"
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+                            viewport={{ once: true, amount: 0.8 }}
+                            transition={{ type: 'spring', stiffness: 100, delay: 0.3 }}
+                        >
+                            <p className="hero-info-text">As long as there are players playing the game the chart will increase in value</p>
+                        </motion.div>
+                        
+                        <motion.div
+                            className="hero-info-item item-4"
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+                            viewport={{ once: true, amount: 0.8 }}
+                            transition={{ type: 'spring', stiffness: 100, delay: 0.45 }}
+                        >
+                            <p className="hero-info-text">There are over 6b normies with cellphones, that is a lot of potential people to onboard.</p>
+                        </motion.div>
+                        
+                        <motion.div
+                            className="hero-pfp-container"
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: true, amount: 0.8 }}
+                            transition={{ type: 'spring', stiffness: 100, delay: 0.5 }}
+                        >
+                            <img 
+                                src={process.env.PUBLIC_URL + '/images/pfp.jpg'} 
+                                alt="Developer Profile" 
+                                className="hero-pfp-image"
+                            />
+                        </motion.div>
+                    </div>
                 </motion.div>
 
                 {/* Scroll Down Button Footer */}

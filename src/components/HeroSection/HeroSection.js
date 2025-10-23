@@ -109,9 +109,9 @@ const HeroSection = () => {
             <div className="hero-announcement-card"> 
               <p className="hero-tagline hero-deployment-shoutout"> 
                 <span className="hero-special-deployment-text">
-                  NOW LIVE ON iOS & ANDROID! 1000+ DOWNLOADS ACHIEVED!
+                  NOW LIVE ON iOS & ANDROID! 2,150+ DOWNLOADS ACHIEVED!
                 </span>
-                <br />iOS TESTERS ACTIVELY MINING GOLD! GCM LAUNCH IMMINENT!
+                <br />iOS TESTERS ACTIVELY MINING GOLD! $GCM HAS LAUNCHED! ��
               </p>
             </div>
 

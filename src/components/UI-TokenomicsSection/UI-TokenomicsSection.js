@@ -21,8 +21,8 @@ const GcmTokenomics = () => {
 
     const treasuryBreakdown = [
         { label: 'Locked for 2 Years', value: 25, duration: '2-Year Lock' },
-        { label: 'Locked for 1 Year', value: 15, duration: '1-Year Lock' },
-        { label: 'Locked for 6 Months', value: 5, duration: '6-Month Lock' },
+        { label: 'Locked for 6 Months', value: 15, duration: '6-Month Lock' },
+        { label: 'Locked for 3 Months', value: 5, duration: '3-Month Lock' },
     ];
 
     const chartOptions = {
