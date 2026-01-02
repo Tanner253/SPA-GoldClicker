@@ -23,7 +23,7 @@ const UIFooter = ({ onHireMeClick }) => {
                     </div> */}
                     <div className="bg-slate-800 rounded-lg p-3 mt-4 border-l-4 border-green-500">
                         <p className="text-sm text-slate-300">
-                            <strong>🚀 Major Milestone:</strong> iOS and Android versions are LIVE with 2,150+ downloads achieved (1.8K Android, 350 iOS)! Players are actively mining gold and earning GCM Points. $GCM TOKEN IS NOW LIVE AND TRADING! 🎉
+                            <strong>🚀 Major Milestone:</strong> iOS and Android versions are LIVE with 20K+ downloads achieved (18.5K Android, 1.5K iOS)! Players are actively mining gold and earning GCM Points. $GCM TOKEN IS NOW LIVE AND TRADING! 🎉
                         </p>
                     </div>
                 </div>
@@ -54,6 +54,7 @@ const UIFooter = ({ onHireMeClick }) => {
             </div>
             <div className="footer-bottom">
                 <p>&copy; {currentYear} Gold Clicker Mining ($GCM). All Rights Reserved.</p>
+                <p className="redeploying-notice">Redeploying in 2026</p>
                 <button onClick={onHireMeClick} className="hire-me-btn">
                     Looking for a Developer?
                 </button>

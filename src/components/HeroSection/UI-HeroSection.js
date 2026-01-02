@@ -70,13 +70,13 @@ const UIHeroSection = () => {
                     >
                         <div className="stat-badge">
                             <FiDownload className="stat-badge-icon" />
-                            <span className="stat-badge-value">1.8K</span>
+                            <span className="stat-badge-value">18.5K</span>
                             <span className="stat-badge-label">Android</span>
-                            <span className="stat-badge-change positive">+78%</span>
+                            <span className="stat-badge-change positive">+900%</span>
                         </div>
                         <div className="stat-badge">
                             <FiDownload className="stat-badge-icon" />
-                            <span className="stat-badge-value">350</span>
+                            <span className="stat-badge-value">1.5K</span>
                             <span className="stat-badge-label">iOS</span>
                         </div>
                         <div className="stat-badge">

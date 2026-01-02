@@ -13,7 +13,7 @@ const UICommunitySection = () => {
                 <div className="community-header">
                     <h2 className="community-title">Join the Gold Clicker Revolution!</h2>
                     <p className="community-milestone-text">
-                        🎉 <strong>Major Milestone:</strong> iOS testers are now actively mining gold on their devices! With 2,150+ downloads achieved (1.8K Android, 350 iOS) and $GCM NOW LIVE AND TRADING, we've entered the growth phase of mobile gaming and DeFi integration. Join the revolution that's reshaping the industry!
+                        🎉 <strong>Major Milestone:</strong> iOS testers are now actively mining gold on their devices! With 20K+ downloads achieved (18.5K Android, 1.5K iOS) and $GCM NOW LIVE AND TRADING, we've entered the growth phase of mobile gaming and DeFi integration. Join the revolution that's reshaping the industry!
                     </p>
                 </div>
 
@@ -24,7 +24,7 @@ const UICommunitySection = () => {
                         <span className="hype-label">Risk-Free Revenue Reinvested</span>
                     </div>
                     <div className="hype-item">
-                        <span className="hype-value">2,150+</span>
+                        <span className="hype-value">20K+</span>
                         <span className="hype-label">Downloads Achieved</span>
                     </div>
                     <div className="hype-item">
@@ -89,7 +89,7 @@ const UICommunitySection = () => {
                                 </a>
                                 <a href="https://play.google.com/store/apps/details?id=com.osknyo.CryptonClicker" target="_blank" rel="noopener noreferrer" className="stat-item">
                                     <FaUserPlus className="stat-icon testers" />
-                                    <div className="stat-value">2,150+</div>
+                                    <div className="stat-value">20K+</div>
                                     <div className="stat-label">Total Downloads</div>
                                 </a>
                                 <a href="https://x.com/GCM_SOL" target="_blank" rel="noopener noreferrer" className="stat-item">
