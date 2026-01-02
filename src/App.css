@@ -80,6 +80,19 @@
 
 /* Add more styles as components are built */
 
+/* Hero Section Mobile Fix */
+.hero-scroll-button {
+    bottom: 1.25rem;
+}
+
+@media (max-width: 768px) {
+    #home {
+        height: auto !important;
+        min-height: 100vh !important;
+        padding-bottom: 6rem;
+    }
+}
+
 /* Compact Stat Badges */
 .stat-badge {
     display: inline-flex;

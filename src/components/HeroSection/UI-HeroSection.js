@@ -181,7 +181,7 @@ const UIHeroSection = () => {
                 </motion.div>
 
                 {/* Scroll Down Button Footer */}
-                <div className="absolute bottom-5 left-1/2 -translate-x-1/2 z-20">
+                <div className="absolute bottom-5 md:bottom-5 left-1/2 -translate-x-1/2 z-20 hero-scroll-button">
                     <button
                         onClick={scrollToContent}
                         className="bg-black bg-opacity-70 backdrop-blur-md border border-white/20 rounded-full px-8 py-3 flex flex-col items-center text-white animate-bounce hover:bg-opacity-80 transition-all duration-300"
