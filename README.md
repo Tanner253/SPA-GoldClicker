@@ -1,4 +1,4 @@
-# Gold Clicker Mining ($GCM) - Play-to-Earn Crypto Game
+# Gold Clicker Mining ($GCM) - Play-to-Earn Crypto Game 
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![React](https://img.shields.io/badge/framework-React-blue.svg)](https://reactjs.org/)
