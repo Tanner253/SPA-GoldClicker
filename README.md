@@ -10,7 +10,7 @@
 <!-- Optional: Project Logo -->
 <!-- <p align="center"> -->
 <!--   <img src="PATH_TO_YOUR_LOGO_IMAGE.png" alt="Gold Clicker Mining Logo" width="200"/> -->
-<!-- </p> -->
+<!-- </p> --> gb
 
 **Welcome to Gold Clicker Mining ($GCM)! This site serves as a whitepaper and an interactive demonstration of our addictive free-to-play clicker game where you can earn real crypto rewards.**
 
