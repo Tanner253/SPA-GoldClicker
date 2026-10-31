@@ -1,36 +1,36 @@
-import { links } from '../content'
-import { TapBar } from './TapBar'
+import { hero, links } from '../content'
+import { Stage } from './Kit'
 
 export function Hero() {
   return (
-    <section className="hero" id="top">
+    <section className="hero" id="top" data-depth="0" data-zone="The surface">
       <div className="hero-inner">
-        <div className="hero-copy">
-          <p className="og-badge">OG since 2025</p>
+        <div className="hero-title">
+          <p className="og-badge">{hero.badge}</p>
           <h1>
-            <span className="stroke-text">Gold Clicker Mining</span>
-            <span className="hero-kicker">is coming back</span>
+            <span className="hero-name">{hero.title}</span>
+            <span className="hero-kicker">{hero.kicker}</span>
           </h1>
-          <p className="lede">
-            68,000+ downloads. One very tappable gold bar. Now the whole game is being rebuilt from
-            the ground up.
-          </p>
-          <div className="hero-actions">
-            <a className="btn btn-green" href={links.discord} target="_blank" rel="noreferrer">
+        </div>
+        <div className="hero-stage">
+          <Stage moment="dig" label={hero.stageLabel} hint={hero.stageHint} eager />
+        </div>
+        <div className="hero-copy">
+          <p className="lede">{hero.lede}</p>
+          <div className="actions">
+            <a className="btn btn-gold" href={links.discord} target="_blank" rel="noreferrer">
               Join the Discord
             </a>
-            <a className="btn btn-gold" href="#game">
+            <a className="btn btn-card" href="#mine">
               See the game
             </a>
           </div>
-          <p className="status">
+          <p className="status-line">
             <span className="status-dot" aria-hidden="true" />
-            Rebuild in progress. No date yet.
+            {hero.status}
           </p>
         </div>
-        <TapBar />
       </div>
-      <div className="hills" aria-hidden="true" />
     </section>
   )
 }

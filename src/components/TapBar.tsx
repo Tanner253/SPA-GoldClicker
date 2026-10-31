@@ -46,9 +46,8 @@ export function TapBar() {
 
   return (
     <div className="tap-stage">
-      <div className="tap-rays" aria-hidden="true" />
       <button className="tap-bar" type="button" onClick={handleTap} aria-label="Tap the gold bar">
-        <img src="/media/gold-bar.webp" alt="" width="760" height="792" draggable="false" />
+        <img src="/media/gold-bar.webp" alt="" width="760" height="792" loading="lazy" draggable="false" />
         {floaters.map((floater) => (
           <span
             key={floater.id}

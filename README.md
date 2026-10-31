@@ -11,7 +11,11 @@ npm run dev
 
 ## Edit the site
 
-All copy and links are in `src/content.ts`. Styling is in `src/styles.css`.
+All copy and links are in `src/content.ts`. Styling is in `src/styles.css`, and it follows the game's Style A: chunky pixel art, flat plum cards, candy buttons and Lilita One.
+
+Game art is in `public/media/game/`. The dig, merge and panel moments are in `src/motion/stages.ts`, and press and reveal timings are in `src/motion/feel.ts`. Anything that moves respects reduced motion.
+
+Mark anything not yet in the game as in development or coming, and give no release date.
 
 ## Publish
 

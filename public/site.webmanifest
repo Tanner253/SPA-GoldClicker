@@ -2,11 +2,19 @@
   "name": "Gold Clicker Mining",
   "short_name": "Gold Clicker",
   "icons": [
-    { "src": "/media/icon-192.png", "sizes": "192x192", "type": "image/png" },
-    { "src": "/media/icon-512.png", "sizes": "512x512", "type": "image/png" }
+    {
+      "src": "/media/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/media/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
   ],
   "start_url": "/",
   "display": "standalone",
-  "theme_color": "#2f8cf0",
-  "background_color": "#fff7e0"
+  "theme_color": "#1a1420",
+  "background_color": "#1a1420"
 }
