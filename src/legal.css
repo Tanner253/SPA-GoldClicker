@@ -1,0 +1,135 @@
+/* The plain pages: privacy, terms and account deletion. Long text stays in a reading face. */
+:root {
+  color-scheme: dark;
+  --ink: #1a1420;
+  --card: #241c2b;
+  --white: #fff8e7;
+  --muted: #c2b6c9;
+  --gold: #ffc93c;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  background: var(--ink);
+  color: var(--white);
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--gold);
+}
+
+:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 16px;
+  padding: 10px 16px;
+  border-radius: 12px;
+  background: var(--gold);
+  color: var(--ink);
+}
+
+.skip-link:focus {
+  top: 12px;
+}
+
+.legal-header {
+  padding: 18px 16px;
+  background: var(--card);
+  text-align: center;
+}
+
+.legal-header a {
+  font-family: 'Lilita One', 'Arial Black', sans-serif;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.legal {
+  flex: 1;
+  width: min(760px, 100%);
+  margin: 0 auto;
+  padding: 32px 16px 56px;
+}
+
+.legal h1,
+.legal h2 {
+  color: var(--gold);
+  font-family: 'Lilita One', 'Arial Black', sans-serif;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.legal h1 {
+  margin: 0 0 14px;
+  font-size: clamp(2.2rem, 8vw, 3rem);
+}
+
+.legal h2 {
+  margin: 34px 0 10px;
+  font-size: 1.5rem;
+}
+
+.legal h3 {
+  margin: 22px 0 8px;
+}
+
+.legal ul,
+.legal ol {
+  padding-left: 22px;
+}
+
+.legal-table {
+  overflow-x: auto;
+}
+
+.legal table {
+  width: 100%;
+  margin: 12px 0;
+  border-collapse: collapse;
+  font-size: 0.98rem;
+}
+
+.legal th,
+.legal td {
+  padding: 8px 10px;
+  border: 1px solid #3a2e42;
+  text-align: left;
+  vertical-align: top;
+}
+
+.legal th {
+  background: var(--card);
+}
+
+.legal-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px 20px;
+  padding: 18px 16px 24px;
+  background: var(--card);
+  color: var(--muted);
+}
+
+.legal-footer a {
+  display: inline-block;
+  padding: 10px 0;
+  color: inherit;
+}

@@ -1,34 +1,19 @@
-import { hero, links } from '../content'
-import { Stage } from './Kit'
+import { hero } from '../content'
+import { Miner, PlayBadge, Screen } from './Kit'
 
 export function Hero() {
   return (
-    <section className="hero" id="top" data-depth="0" data-zone="The surface">
+    <section className="hero" id="top">
       <div className="hero-inner">
-        <div className="hero-title">
-          <p className="og-badge">{hero.badge}</p>
-          <h1>
-            <span className="hero-name">{hero.title}</span>
-            <span className="hero-kicker">{hero.kicker}</span>
-          </h1>
-        </div>
-        <div className="hero-stage">
-          <Stage moment="dig" label={hero.stageLabel} hint={hero.stageHint} eager />
-        </div>
         <div className="hero-copy">
+          <p className="badge">{hero.badge}</p>
+          <h1>{hero.title}</h1>
           <p className="lede">{hero.lede}</p>
-          <div className="actions">
-            <a className="btn btn-gold" href={links.discord} target="_blank" rel="noreferrer">
-              Join the Discord
-            </a>
-            <a className="btn btn-card" href="#mine">
-              See the game
-            </a>
-          </div>
-          <p className="status-line">
-            <span className="status-dot" aria-hidden="true" />
-            {hero.status}
-          </p>
+          <PlayBadge />
+        </div>
+        <div className="hero-screen">
+          <Screen shot="shot-hero" clip="clip-rockjaw" alt={hero.clipAlt} eager />
+          <Miner strip="dig_down" frames={5} />
         </div>
       </div>
     </section>

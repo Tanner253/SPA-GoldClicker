@@ -11,3 +11,6 @@
 *.tsbuildinfo
 
 npm-debug.log*
+
+# Old art, kept on this PC only
+/old-media
