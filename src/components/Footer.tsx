@@ -1,9 +1,18 @@
-import { links } from '../content'
+import { links, socials } from '../content'
 
 export function Footer() {
   return (
     <footer className="site-footer">
       <p>&copy; {new Date().getFullYear()} Gold Clicker Mining</p>
+      <ul>
+        {socials.map((link) => (
+          <li key={link.label}>
+            <a href={link.href} target="_blank" rel="noopener noreferrer">
+              {link.label}
+            </a>
+          </li>
+        ))}
+      </ul>
       <ul>
         <li>
           <a href={links.privacy}>Privacy</a>
@@ -16,11 +25,6 @@ export function Footer() {
         </li>
         <li>
           <a href={links.email}>Contact</a>
-        </li>
-        <li>
-          <a href={links.x} target="_blank" rel="noopener noreferrer">
-            X
-          </a>
         </li>
       </ul>
     </footer>

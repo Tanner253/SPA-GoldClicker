@@ -9,6 +9,14 @@ export const links = {
   x: 'https://x.com/GCM_SOL',
 }
 
+export const socials = [
+  { label: 'X', href: links.x },
+  { label: 'Discord', href: 'https://discord.gg/mvbx7J295m' },
+  { label: 'Telegram', href: 'https://t.me/Gold_Clicker_Mining' },
+  { label: 'Instagram', href: 'https://www.instagram.com/goldclickermining/' },
+  { label: 'TikTok', href: 'https://www.tiktok.com/@osknyo' },
+]
+
 export const cta = {
   label: 'Get it on Google Play',
   note: 'Free to play, with optional ads and in-game purchases.',
