@@ -1,4 +1,4 @@
-import { cta } from '../content'
+import { cta, links } from '../content'
 
 // One of the game's own character strips, played at its 12 frames a second.
 export function Miner({ strip, frames, scale = 4 }: { strip: string; frames: number; scale?: number }) {
@@ -20,7 +20,9 @@ export function Miner({ strip, frames, scale = 4 }: { strip: string; frames: num
 export function PlayBadge() {
   return (
     <div className="play">
-      <p className="play-label">{cta.label}</p>
+      <a className="play-label" href={links.play} target="_blank" rel="noopener noreferrer">
+        {cta.label}
+      </a>
       <p className="play-note">{cta.note}</p>
     </div>
   )

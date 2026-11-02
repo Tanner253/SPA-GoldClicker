@@ -3,6 +3,7 @@ import { Features } from './components/Features'
 import { Footer } from './components/Footer'
 import { Hero } from './components/Hero'
 import { Miner, PlayBadge } from './components/Kit'
+import { Status } from './components/Status'
 import { initFeel } from './motion/feel'
 
 export function App() {
@@ -16,6 +17,7 @@ export function App() {
       <main id="main">
         <Hero />
         <Features />
+        <Status />
         <section className="closing">
           <div className="band band-clay" />
           <div className="closing-inner reveal">

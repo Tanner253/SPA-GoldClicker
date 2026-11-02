@@ -17,6 +17,11 @@ export function Footer() {
         <li>
           <a href={links.email}>Contact</a>
         </li>
+        <li>
+          <a href={links.x} target="_blank" rel="noopener noreferrer">
+            X
+          </a>
+        </li>
       </ul>
     </footer>
   )
