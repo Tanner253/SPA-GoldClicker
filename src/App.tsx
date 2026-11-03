@@ -5,6 +5,7 @@ import { Hero } from './components/Hero'
 import { Miner, PlayBadge } from './components/Kit'
 import { Loop } from './components/Loop'
 import { Status } from './components/Status'
+import { Themes } from './components/Themes'
 import { initFeel } from './motion/feel'
 
 export function App() {
@@ -19,6 +20,7 @@ export function App() {
         <Hero />
         <Loop />
         <Features />
+        <Themes />
         <Status />
         <section className="closing">
           <div className="band band-clay" />

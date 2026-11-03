@@ -492,6 +492,112 @@ div:nth-child(2n) > .band {
   }
 }
 
+/* Camp themes: a row of phones you swipe on a phone, a grid from 900px. */
+.feature-space::before {
+  background: #170f2e;
+}
+
+.themes-inner {
+  width: min(1040px, 100%);
+  margin: 0 auto;
+}
+
+.themes-head {
+  padding: 0 16px;
+}
+
+.theme-name {
+  margin: 26px 0 0;
+}
+
+.theme-line {
+  color: var(--muted);
+}
+
+.tour {
+  display: flex;
+  gap: 20px;
+  margin-top: 28px;
+  padding: 6px 16px 22px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-padding-inline: 16px;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.tour::-webkit-scrollbar {
+  display: none;
+}
+
+.tour > li {
+  display: grid;
+  flex: 0 0 min(290px, 72vw);
+  align-content: start;
+  gap: 8px;
+  scroll-snap-align: start;
+}
+
+.tour .screen {
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.tour h3 {
+  margin: 0;
+  color: var(--gold);
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.tour p {
+  color: var(--muted);
+  line-height: 1.3;
+}
+
+.crew-card {
+  width: 100%;
+  border-radius: 24px;
+  background: var(--ink);
+  box-shadow: 0 9px 0 rgb(7 6 12 / 70%);
+}
+
+.more-title {
+  margin: 20px 16px 0;
+  color: var(--white);
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.more-title + .tour {
+  margin-top: 8px;
+}
+
+@media (min-width: 900px) {
+  .themes-head {
+    padding: 0 16px 8px;
+  }
+
+  .tour {
+    justify-content: center;
+    gap: 40px;
+    overflow: visible;
+  }
+
+  .tour > li {
+    flex: 0 1 300px;
+  }
+
+  .tour > .tour-crew {
+    flex-basis: 360px;
+  }
+
+  .tour-more {
+    flex-wrap: wrap;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

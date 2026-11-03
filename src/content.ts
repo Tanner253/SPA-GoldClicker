@@ -127,6 +127,38 @@ export const features: Feature[] = [
   },
 ]
 
+// Camp themes: whole new looks for the merge camp. Jelly Armada gets the full tour.
+// To add a theme to "More looks", drop one picture in public/media/game/ and add one entry to `more`. It is a phone
+// screenshot, 540 wide, and `shot` is its file name without the .webp.
+export type Look = { id: string; name: string; line: string; shot: string; alt: string; height?: number }
+
+export const themes = {
+  title: 'Camp themes',
+  lede: 'Whole new looks for your merge camp. New scenery to poke at, and a crew dressed to match. Looks only, so nobody gets stronger by being fancier.',
+  tourName: 'Jelly Armada',
+  tourLine: 'Saucers, aliens and one very shiny rock.',
+  scenery: {
+    title: 'Tap the scenery',
+    text: 'Poke a planet, a saucer or a tiny alien. They talk back.',
+    shot: 'theme-jelly-scenery',
+    alt: 'The Jelly Armada camp: a crystal rock under a ringed planet, with alien saucers, speech bubbles and a crew of jelly miners on the board.',
+  },
+  eye: {
+    title: 'Tap the eye',
+    text: 'It hides the buttons, so you can see the whole camp.',
+    shot: 'theme-jelly-eye',
+    alt: 'The same Jelly Armada camp with the buttons hidden, showing the full scene.',
+  },
+  crew: {
+    title: 'The crew dress to match',
+    text: 'Every miner pulls on a jelly suit. Helmets keep their level colors.',
+    shot: 'theme-jelly-crew',
+    alt: 'Twelve jelly-blue miners, level 1 to 12, each in a different colored helmet.',
+  },
+  moreTitle: 'More looks',
+  more: [] as Look[],
+}
+
 export const status = {
   version: 'Version 2.1.4',
   title: 'Rebuilt from the ground up',
