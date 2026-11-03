@@ -157,9 +157,9 @@ export const themes = {
   },
   moreTitle: 'More looks',
   more: [
-    { id: 'dino', name: 'Dino Dig', line: 'Volcanoes, ferns and a very large dinosaur.', shot: 'theme-dino', alt: 'The Dino Dig camp: a volcano, palm trees and a long-necked dinosaur around a golden rock, with a crew of miners on the board.', height: 1096 },
-    { id: 'pyramid', name: 'Pyramid Gold', line: 'Pyramids, camels and a desert sunset.', shot: 'theme-pyramid', alt: 'The Pyramid Gold camp: pyramids, a camel and palm trees at sunset around a sandy rock, with a bandaged crew of miners on the board.', height: 1096 },
-    { id: 'graveyard', name: 'Graveyard Shift', line: 'A full moon, a creepy hearse and a crew of zombies.', shot: 'theme-graveyard', alt: 'The Graveyard Shift camp: a full moon, a hearse and gravestones around a mossy rock, with a crew of green zombie miners on the board.', height: 1096 },
+    { id: 'dino', name: 'Dino Dig', line: 'A jungle valley, a smoking volcano and a caveman crew.', shot: 'theme-dino', alt: 'The Dino Dig camp: a jungle valley with a smoking volcano and a herd on the hills around a golden rock, with a caveman crew on the board.', height: 1169 },
+    { id: 'pyramid', name: 'Pyramid Gold', line: 'Pyramids at dusk, a camel caravan and a mummy crew.', shot: 'theme-pyramid', alt: 'The Pyramid Gold camp: pyramids at dusk and a camel caravan on the dunes around a sandy rock, with a mummy crew on the board.', height: 1169 },
+    { id: 'graveyard', name: 'Graveyard Shift', line: 'A moonlit graveyard, a friendly ghost and a zombie crew.', shot: 'theme-graveyard', alt: 'The Graveyard Shift camp: a moonlit graveyard with bats and a friendly ghost around a mossy rock, with a zombie crew on the board.', height: 1169 },
   ] as Look[],
 }
 
