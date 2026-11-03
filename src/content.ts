@@ -156,7 +156,11 @@ export const themes = {
     alt: 'Twelve jelly-blue miners, level 1 to 12, each in a different colored helmet.',
   },
   moreTitle: 'More looks',
-  more: [] as Look[],
+  more: [
+    { id: 'dino', name: 'Dino Dig', line: 'Volcanoes, ferns and a very large dinosaur.', shot: 'theme-dino', alt: 'The Dino Dig camp: a volcano, palm trees and a long-necked dinosaur around a golden rock, with a crew of miners on the board.', height: 1096 },
+    { id: 'pyramid', name: 'Pyramid Gold', line: 'Pyramids, camels and a desert sunset.', shot: 'theme-pyramid', alt: 'The Pyramid Gold camp: pyramids, a camel and palm trees at sunset around a sandy rock, with a bandaged crew of miners on the board.', height: 1096 },
+    { id: 'graveyard', name: 'Graveyard Shift', line: 'A full moon, a creepy hearse and a crew of zombies.', shot: 'theme-graveyard', alt: 'The Graveyard Shift camp: a full moon, a hearse and gravestones around a mossy rock, with a crew of green zombie miners on the board.', height: 1096 },
+  ] as Look[],
 }
 
 export const status = {
