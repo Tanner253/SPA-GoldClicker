@@ -12,7 +12,7 @@ export function Hero() {
           <PlayBadge />
         </div>
         <div className="hero-screen">
-          <Screen shot="shot-hero" clip="clip-rockjaw" alt={hero.clipAlt} eager />
+          <Screen shot="shot-merge" clip="clip-merge" alt={hero.clipAlt} height={960} eager />
           <Miner strip="dig_down" frames={5} />
         </div>
       </div>

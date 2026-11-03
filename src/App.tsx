@@ -3,6 +3,7 @@ import { Features } from './components/Features'
 import { Footer } from './components/Footer'
 import { Hero } from './components/Hero'
 import { Miner, PlayBadge } from './components/Kit'
+import { Loop } from './components/Loop'
 import { Status } from './components/Status'
 import { initFeel } from './motion/feel'
 
@@ -16,6 +17,7 @@ export function App() {
       </a>
       <main id="main">
         <Hero />
+        <Loop />
         <Features />
         <Status />
         <section className="closing">

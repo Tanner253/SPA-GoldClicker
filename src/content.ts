@@ -25,8 +25,19 @@ export const cta = {
 export const hero = {
   badge: 'Free mining game',
   title: 'Gold Clicker Mining',
-  lede: 'Dig deep. Grab the gold. Get out before your air runs out.',
-  clipAlt: 'A miner fighting Rockjaw, a huge stone jaw that bites down from the roof of the mine.',
+  lede: 'Merge miners. Smash rocks. Dive for gold. Come back stronger.',
+  clipAlt: 'Real gameplay: miners merge on the camp board and a stronger miner pops out.',
+}
+
+export const loop = {
+  title: 'How it works',
+  steps: [
+    { title: 'Tap and merge', text: 'Smash rocks at camp. Drop two matching miners together and a stronger one pops out.' },
+    { title: 'Dig a run', text: 'Dive for gold and trapped miners. Get out before your air does.' },
+    { title: 'Pick your card', text: 'Every lift deals you cards. Each one changes the run.' },
+    { title: 'Come back stronger', text: 'Your gold and your rescues go straight back into camp.' },
+  ],
+  note: 'Then go again. The rock got tougher, and so did you.',
 }
 
 export type Feature = {
@@ -34,52 +45,85 @@ export type Feature = {
   tone: 'clay' | 'slate' | 'throat' | 'sky'
   title: string
   text: string
-  shot: string
-  height?: number
   alt: string
+  shot?: string
+  clip?: string
+  sprite?: string
+  height?: number
 }
 
 export const features: Feature[] = [
   {
-    id: 'mine',
-    tone: 'clay',
-    title: 'Every dive is a dash',
-    text: 'Carve your own way down. Scoop up gold and gems, watch your air, and dodge TNT, bats and falling boulders. Every lift deals a new card, so no two runs play the same.',
-    shot: 'shot-mine',
-    alt: 'A mine run in Clay Beds, with gold, gems and boulders in the rock around the miner.',
-  },
-  {
     id: 'camp',
     tone: 'clay',
-    title: 'Merge your crew',
-    text: 'Drop a miner on its match to make a stronger one. Send your crew at new kinds of stone and bosses with faces of their own, and they keep digging while you’re away.',
-    shot: 'shot-camp',
-    alt: 'The camp: a big rock above a bunkhouse full of miners at their bunks, with Hire and Dig buttons.',
+    title: 'Two go in. A better one comes out.',
+    text: 'Every tap on the rock crunches. Every merge pops. Fill your bunkhouse and your crew keeps swinging, even while you’re away.',
+    shot: 'shot-board',
+    height: 790,
+    alt: 'The camp: a cracked rock above a bunkhouse full of miners at every level, with Hire and Dig buttons.',
   },
   {
-    id: 'rockjaw',
+    id: 'dive',
+    tone: 'clay',
+    title: 'No two dives are the same',
+    text: 'Every run is a fresh mine. Chase gold, dodge TNT, bats and boulders, and pull trapped miners out to grow your crew. Just watch your air.',
+    shot: 'shot-dig',
+    clip: 'clip-dig',
+    height: 960,
+    alt: 'Real gameplay: a miner digs down through the rock past veins of gold.',
+  },
+  {
+    id: 'lift',
+    tone: 'slate',
+    title: 'Bank it, or flip a card',
+    text: 'Reach a lift and you choose: take your haul home, or keep digging with a new card in hand. Wide Bit clears both sides of you. Blast Suit shrugs off explosions. Over 40 cards to unlock, so every build digs differently.',
+    shot: 'shot-lift',
+    height: 670,
+    alt: 'The Lift Station: three cards to flip, with Wide Bit turned over.',
+  },
+  {
+    id: 'walls',
     tone: 'throat',
-    title: 'Beat Rockjaw',
-    text: 'At 300m the rock grows teeth. Dodge the bite, knock the teeth out, and keep digging down through The Throat.',
+    title: 'Then the rock bites back',
+    text: 'At camp, bosses stand in your way, each with a face of its own. In the mine, Rockjaw waits at 300m. Knock its teeth out and the shaft keeps going.',
     shot: 'shot-rockjaw',
-    alt: 'The Rockjaw fight: a tooth knocked out of the huge stone jaw, with a gold ring around the hit.',
+    height: 580,
+    alt: 'The Rockjaw fight: a miner on a row of teeth under a huge stone jaw.',
+  },
+  {
+    id: 'strike',
+    tone: 'clay',
+    title: 'Stuck? Go on strike.',
+    text: 'Hit a wall and fire a Strike. Your board clears, your front line stays, and your whole crew comes back hitting far harder.',
+    shot: 'shot-strike',
+    height: 790,
+    alt: 'The camp just after a boss breaks, with the Strike button lit up beside the rock.',
+  },
+  {
+    id: 'gems',
+    tone: 'slate',
+    title: 'Gem veins',
+    text: 'Now and then a rare rock turns up packed with Gems. You get 15 seconds, and every tap pays. Go.',
+    sprite: 'gem',
+    alt: 'A big blue gem.',
   },
   {
     id: 'town',
     tone: 'sky',
-    title: 'Move into Town',
-    text: 'Walk the street, climb the ladders and take on quests from the Mayor, Hattie and Pike.',
+    title: 'Meet the neighbors',
+    text: 'Between digs, walk the Town, hire a helper for your next run, and take on quests from the Mayor, Hattie and Pike.',
     shot: 'shot-town',
-    alt: 'The Town: a timber headframe and bunting, with the miner and the Mayor side by side on the street.',
+    height: 650,
+    alt: 'The Town at dusk: miners outside a house, with a Good haul greeting in a speech bubble.',
   },
   {
     id: 'outfit',
     tone: 'slate',
-    title: 'Dress your miner',
-    text: 'Over 100 hats, coats, pets and moves to find, plus whole new looks for your camp. Looks only, so nothing here changes how strong you are.',
+    title: 'Dress for the job',
+    text: 'Over 100 hats, coats, pets and moves, plus whole new looks for your camp. Looks only, so nobody gets stronger by being fancier.',
     shot: 'shot-outfit',
-    height: 862,
-    alt: 'The Outfitter: a miner in a hard hat outside the shop, above a grid of hats to try on.',
+    height: 580,
+    alt: 'The Outfitter: a miner in a hard hat outside the shop, trying on a look.',
   },
 ]
 
