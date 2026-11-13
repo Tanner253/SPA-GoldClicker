@@ -6,6 +6,7 @@ import { Miner, PlayBadge } from './components/Kit'
 import { Loop } from './components/Loop'
 import { Status } from './components/Status'
 import { Themes } from './components/Themes'
+import { Trailer } from './components/Trailer'
 import { initFeel } from './motion/feel'
 
 export function App() {
@@ -18,6 +19,7 @@ export function App() {
       </a>
       <main id="main">
         <Hero />
+        <Trailer />
         <Loop />
         <Features />
         <Themes />
