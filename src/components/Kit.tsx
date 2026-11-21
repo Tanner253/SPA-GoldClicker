@@ -17,13 +17,29 @@ export function Miner({ strip, frames, scale = 4 }: { strip: string; frames: num
   )
 }
 
-export function PlayBadge() {
+export function PlayBadge({ community = false }: { community?: boolean }) {
   return (
     <div className="play">
-      <a className="play-label" href={links.play} target="_blank" rel="noopener noreferrer">
-        {cta.label}
-      </a>
+      <div className="play-row">
+        <a className="play-label" href={links.play} target="_blank" rel="noopener noreferrer">
+          {cta.label}
+        </a>
+        <a className="play-web" href={links.web} target="_blank" rel="noopener noreferrer">
+          {cta.web}
+        </a>
+      </div>
       <p className="play-note">{cta.note}</p>
+      {community && (
+        <ul className="community">
+          {cta.community.map((link) => (
+            <li key={link.label}>
+              <a href={link.href} target="_blank" rel="noopener noreferrer">
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   )
 }

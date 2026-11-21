@@ -6,12 +6,14 @@ export const links = {
   deleteAccount: '/delete-account/',
   email: 'mailto:goldclickermining@gmail.com',
   play: 'https://play.google.com/store/apps/details?id=com.osknyo.CryptonClicker',
+  web: 'https://play.earngcm.fun/',
+  discord: 'https://discord.gg/mvbx7J295m',
   x: 'https://x.com/GCM_SOL',
 }
 
 export const socials = [
   { label: 'X', href: links.x },
-  { label: 'Discord', href: 'https://discord.gg/mvbx7J295m' },
+  { label: 'Discord', href: links.discord },
   { label: 'Telegram', href: 'https://t.me/Gold_Clicker_Mining' },
   { label: 'Instagram', href: 'https://www.instagram.com/goldclickermining/' },
   { label: 'TikTok', href: 'https://www.tiktok.com/@osknyo' },
@@ -19,13 +21,86 @@ export const socials = [
 
 export const cta = {
   label: 'Get it on Google Play',
+  web: 'Play free in your browser',
   note: 'Free to play, with optional ads and in-game purchases.',
+  community: [
+    { label: 'Join the Discord', href: links.discord },
+    { label: 'Follow on X', href: links.x },
+  ],
+}
+
+// The numbers strip under the hero. Every figure must be true: installs are the owner's figure, the rest are counts
+// read from the game server on `asOf` (python GCM-Web/review.py insights, and an aggregate count of settled runs).
+// Round down, and change `asOf` when you change a number.
+export const stats = {
+  asOf: 'Figures as of 20 November 2026.',
+  items: [
+    { value: '73,000+', label: 'installs' },
+    { value: '26,000+', label: 'dives dug on the new server' },
+    { value: '700,000+', label: 'merges in the last two weeks' },
+    { value: '86,000+', label: 'monsters beaten in Deep Survivor' },
+  ],
+}
+
+// A row of phone screenshots with a line each. Pictures are 540 wide webp files in public/media/game/.
+export type Shot = { shot: string; title: string; text: string; alt: string; height?: number; tag?: string }
+
+export const deep = {
+  badge: 'New game mode',
+  title: 'Deep Survivor',
+  lede: 'Hold the cave for as long as you can. Monsters pour in every round, your pick swings by itself, and every level up hands you a new weapon or makes one stronger.',
+  points: [
+    'Team up with 2 to 4 players in co-op',
+    'Servers in the US and Europe',
+    'A boss every five rounds',
+    'Evolve your weapons. Your pets fight too',
+  ],
+  video: 'ds-trailer',
+  poster: 'ds-poster',
+  videoLabel: 'Deep Survivor trailer: real gameplay of a miner holding off a cave full of monsters.',
+  shots: [
+    { shot: 'ds-boss', title: 'A boss every five rounds', text: 'Break it, then get ready for the next wave.', alt: 'Deep Survivor: a boss fight, with beams of light cutting through a crowd of monsters.' },
+    { shot: 'ds-evolve', title: 'Evolve your weapons', text: 'Level up a weapon far enough and it turns into something much bigger.', alt: 'Deep Survivor: the Evolve card, with Prism Beam ready to evolve.' },
+    { shot: 'ds-pets', title: 'Your pets fight too', text: 'Bring your pets down and they join the fight.', alt: 'Deep Survivor: a miner and pets fighting a crowd of monsters in a glowing cave.' },
+    { shot: 'coop-party', title: 'Bring your friends', text: 'Share a party code, fill up to four seats and go down together.', alt: 'Deep Survivor co-op: the Play with Friends card with a party code and two of four seats filled.' },
+  ] as Shot[],
+}
+
+export const modes = {
+  title: 'More ways to play',
+  lede: 'Your camp, your crew and your looks come with you into every mode.',
+  shots: [
+    { shot: 'rush-gates', title: 'Crew Rush', text: 'Steer your crew through the best gates, grow the crowd and smash the boss rock at the end.', alt: 'Crew Rush: a crowd of miners heading for a row of gates marked x2 and /2.' },
+    { shot: 'rush-boss', title: 'Weekly Crew Rush board', text: 'Every run counts toward this week’s best. How far up can you get?', alt: 'Crew Rush: a huge crowd of miners charging a boss rock at the end of the tunnel.' },
+    { shot: 'dash-station', title: 'Minecart Dash', text: 'Ride the rails, jump the gaps and grab the gold. Our next game mode.', alt: 'The Mine Entrance in Town, with the Minecart Dash station by the tracks.', tag: 'Coming soon' },
+  ] as Shot[],
+}
+
+export const wardrobe = {
+  title: 'The new Wardrobe',
+  lede: 'Over 100 cosmetics to mix and match: hats, coats, tools, pets, mounts, auras and more. Pick Body A or Body B, tap anything to try it on, and save your favourite looks. Looks only, so nobody gets stronger by being fancier.',
+  shots: [
+    { shot: 'wardrobe-body-a', title: 'Body A', text: 'Try on anything before you buy it.', alt: 'The Wardrobe with Body A chosen, a miner in a yellow hard hat holding a pick.' },
+    { shot: 'wardrobe-body-b', title: 'Body B', text: 'Every look fits both bodies.', alt: 'The Wardrobe with Body B chosen, the same outfit on the second body type.' },
+    { shot: 'wardrobe-mount', title: 'Ride in style', text: 'Mounts, auras, trails and entrances for when you walk into Town.', alt: 'The Wardrobe showing a miner riding the Big Big Mole mount.' },
+  ] as Shot[],
+}
+
+export const town = {
+  title: 'A whole Town to explore',
+  lede: 'Between digs, walk the Town with other players. Chat, form a party, train your pets and take on jobs from the locals.',
+  shots: [
+    { shot: 'town-map', title: 'The Town map', text: 'A hand-painted map of every room. Tap a place and walk straight there.', alt: 'The painted Town map, with the Tavern, Workshop, World Shaft, Market and other places marked.' },
+    { shot: 'town-plaza', title: 'Parties and chat', text: 'Meet other miners in the Plaza, team up and dig together.', alt: 'The Town Plaza full of miners chatting under the World Shaft tower.' },
+    { shot: 'pet-card', title: 'Pets with a bond', text: 'Raise your bond and your pet learns tricks and helps on your digs.', alt: 'A pet card for an owl at bond level 7, with its dig talent, Gem Nose.' },
+    { shot: 'pet-toss', title: 'Train them every day', text: 'Play a quick round of Treat Toss to grow your bond.', alt: 'Treat Toss: a pet catching falling treats while dodging TNT.' },
+  ] as Shot[],
 }
 
 export const hero = {
   badge: 'Free mining game',
   title: 'Gold Clicker Mining',
-  lede: 'Merge miners. Smash rocks. Dive for gold. Come back stronger.',
+  lede: 'Merge miners. Smash rocks. Dive for gold. Now with Deep Survivor, Crew Rush and co-op with friends.',
   clipAlt: 'Real gameplay: miners merge on the camp board and a stronger miner pops out.',
 }
 
@@ -107,24 +182,6 @@ export const features: Feature[] = [
     sprite: 'gem',
     alt: 'A big blue gem.',
   },
-  {
-    id: 'town',
-    tone: 'sky',
-    title: 'Meet the neighbors',
-    text: 'Between digs, walk the Town, hire a helper for your next run, and take on quests from the Mayor, Hattie and Pike.',
-    shot: 'shot-town',
-    height: 650,
-    alt: 'The Town at dusk: miners outside a house, with a Good haul greeting in a speech bubble.',
-  },
-  {
-    id: 'outfit',
-    tone: 'slate',
-    title: 'Dress for the job',
-    text: 'Over 100 hats, coats, pets and moves, plus whole new looks for your camp. Looks only, so nobody gets stronger by being fancier.',
-    shot: 'shot-outfit',
-    height: 580,
-    alt: 'The Outfitter: a miner in a hard hat outside the shop, trying on a look.',
-  },
 ]
 
 // Camp themes: whole new looks for the merge camp. Jelly Armada gets the full tour.
@@ -164,18 +221,18 @@ export const themes = {
 }
 
 export const status = {
-  version: 'Version 2.1.4',
-  title: 'Rebuilt from the ground up',
-  text: 'Gold Clicker Mining has been remade from scratch, with new gameplay, new art and a new server, and it gets better with every update.',
-  newLabel: 'New in this update',
+  version: 'Version 2.4.13',
+  title: 'Rebuilt from the ground up, and growing fast',
+  text: 'Gold Clicker Mining has been remade from scratch, with new gameplay, new art and a new server, and big updates keep landing.',
+  newLabel: 'New lately',
   newItems: [
-    'Bigger, rarer bosses, each with a face of their own',
-    '16 kinds of stone to break as you go deeper',
-    'Gem veins: rare rocks that pay out Gems on every tap',
-    'Jelly Armada, the first full camp theme',
-    '14 songs, with shuffle or your own pick',
-    'A rebuilt skill Tree and a weekly Deepest Dive board',
+    'Deep Survivor, with co-op for 2 to 4 players',
+    'Crew Rush and its weekly board',
+    'A server in Europe for faster play',
+    'The new Wardrobe, with Body A and Body B',
+    'A painted Town map, pets to train, parties and chat',
+    'Over 100 new cosmetics, from hats to mounts',
   ],
   nextLabel: 'What we’re working on',
-  nextItems: ['Friends', 'Guilds', 'Open chat', 'Digging with friends'],
+  nextItems: ['Minecart Dash', 'More bosses and weapons for Deep Survivor', 'More looks for the Wardrobe'],
 }
