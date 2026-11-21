@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { Features } from './components/Features'
 import { Footer } from './components/Footer'
+import { Header } from './components/Header'
 import { Hero } from './components/Hero'
 import { Miner, PlayBadge } from './components/Kit'
 import { DeepSurvivor } from './components/DeepSurvivor'
@@ -20,6 +21,7 @@ export function App() {
       <a className="skip-link" href="#main">
         Skip to content
       </a>
+      <Header />
       <main id="main">
         <Hero />
         <Stats />

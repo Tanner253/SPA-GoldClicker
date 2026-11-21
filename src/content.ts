@@ -19,6 +19,22 @@ export const socials = [
   { label: 'TikTok', href: 'https://www.tiktok.com/@osknyo' },
 ]
 
+// The sticky header: the game's name, a few sections, the Play button and a menu on a phone.
+export const nav = {
+  name: 'Gold Clicker Mining',
+  links: [
+    { id: 'deep-survivor', label: 'Deep Survivor' },
+    { id: 'modes', label: 'Modes' },
+    { id: 'wardrobe', label: 'Wardrobe' },
+    { id: 'town', label: 'Town' },
+    { id: 'news', label: 'What’s new' },
+  ],
+  play: 'Get the game',
+  playShort: 'Play',
+  web: 'Play in your browser',
+  menu: 'Menu',
+}
+
 export const cta = {
   label: 'Get it on Google Play',
   web: 'Play free in your browser',

@@ -2,7 +2,7 @@ import { status } from '../content'
 
 export function Status() {
   return (
-    <section className="status">
+    <section className="status" id="news">
       <div className="status-inner reveal">
         <p className="badge">{status.version}</p>
         <h2>{status.title}</h2>
